@@ -1,0 +1,126 @@
+# Copyright (c) 2019-2023, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#
+
+import /vendor/etc/init/hw/init.samsung.bsp.rc
+import /vendor/etc/init/hw/init.samsung.display.rc
+import /vendor/etc/init/hw/init.samsung.dp.rc
+import /vendor/etc/init/hw/init.samsung.power.rc
+import /vendor/etc/init/hw/init.qti.ss-ramdump.sh
+
+on early-init
+    mkdir /mnt/vendor/efs 0771 radio system
+    mkdir /mnt/vendor/persist 0771 root system
+
+on init
+    symlink /dev/block/platform/soc/1d84000.ufshc/by-name/steady  /dev/block/steady
+    symlink /dev/block/platform/soc/1d84000.ufshc/by-name/persistent  /dev/block/persistent
+
+# Create carrier folder for HiddenMenu
+on post-fs
+    mkdir /efs/carrier 0755 system system
+    restorecon_recursive /efs
+
+    restorecon_recursive /mnt/vendor/efs
+    chown radio system /mnt/vendor/efs
+    chmod 0771 /mnt/vendor/efs
+
+    chown system radio /efs
+    chmod 0771 /efs
+    restorecon /efs
+
+on post-fs-data
+    # carrier partition
+    chown system system /carrier
+    chmod 0771 /carrier
+    restorecon /carrier
+
+# sensors
+    chown system system /mnt/vendor/persist/sensors/registry/registry/sns_cm
+
+# Meta event
+    chown system radio /sys/class/sensors/sensor_dev/flush
+
+# If AP debug_level is low, recovery mode for ALL peripheral will be endabled
+on post-fs-data && property:ro.boot.debug_level=0x4f4c
+   setprop persist.vendor.ssr.restart_level ALL_ENABLE
+   setprop persist.vendor.ssr.enable_ramdumps 1
+   setprop persist.vendor.sensors.debug.hal_trigger_ssr true
+   setprop persist.vendor.sensors.debug.hal_trigger_crash false
+
+# Sensor property setting
+on post-fs-data && property:ro.boot.debug_level=0x494d
+   setprop persist.vendor.sensors.debug.hal_trigger_crash true
+   setprop persist.vendor.sensors.debug.hal_trigger_ssr false
+
+on post-fs-data && property:ro.boot.debug_level=0x4948
+   setprop persist.vendor.sensors.debug.hal_trigger_crash true
+   setprop persist.vendor.sensors.debug.hal_trigger_ssr false
+
+# Enable recovery mode for modem only (CP Ramdump OFF && dbg_level MID)
+on post-fs-data && property:ro.boot.cp_debug_level=0x55FF && property:ro.boot.debug_level=0x494d
+   setprop persist.vendor.ssr.restart_level mss
+   setprop persist.vendor.ssr.enable_ramdumps 0
+
+# Enable recovery mode for modem only (CP Ramdump OFF && dbg_level HI)
+on post-fs-data && property:ro.boot.cp_debug_level=0x55FF && property:ro.boot.debug_level=0x4948
+   setprop persist.vendor.ssr.restart_level mss
+   setprop persist.vendor.ssr.enable_ramdumps 0
+
+# Disable recovery mode for modem only (CP Ramdump ON && dbg_level MID)
+on post-fs-data && property:ro.boot.cp_debug_level=0x5500 && property:ro.boot.debug_level=0x494d
+   setprop persist.vendor.ssr.restart_level ALL_DISABLE
+   setprop persist.vendor.ssr.enable_ramdumps 0
+
+# Disable recovery mode for modem only (CP Ramdump ON && dbg_level HI)
+on post-fs-data && property:ro.boot.cp_debug_level=0x5500 && property:ro.boot.debug_level=0x4948
+   setprop persist.vendor.ssr.restart_level ALL_DISABLE
+   setprop persist.vendor.ssr.enable_ramdumps 0
+
+on early-boot
+
+on early-boot && property:ro.binary.type=factory
+    umount /product/vm-system
+
+on boot
+
+service factory_ssc /vendor/bin/factory.ssc
+    class core
+    user system
+    group system radio inet diag net_admin net_raw sdcard_rw sdcard_r media_rw
+
+on property:sys.boot_completed=1
+    setprop ro.factory.sensor.delay.init 1
+
+on property:sys.dexopt.ctrl=true
+    setprop dalvik.vm.dex2oat-cpu-set "0,1,5,6"
+    setprop dalvik.vm.dex2oat-threads 4
+
+on property:sys.dexopt.ctrl=false
+    setprop dalvik.vm.dex2oat-cpu-set ""
+    setprop dalvik.vm.dex2oat-threads ""

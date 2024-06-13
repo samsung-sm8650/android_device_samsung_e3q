@@ -1,0 +1,309 @@
+//
+// Copyright (C) 2024 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+// Init scripts
+sh_binary {
+    name: "dcc_extension.sh",
+    src: "bin/dcc_extension.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "hdm_status.sh",
+    src: "bin/hdm_status.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.class_main.sh",
+    src: "bin/init.class_main.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.crda.sh",
+    src: "bin/init.crda.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.kernel.post_boot-cliffs.sh",
+    src: "bin/init.kernel.post_boot-cliffs.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.kernel.post_boot-pineapple.sh",
+    src: "bin/init.kernel.post_boot-pineapple.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.kernel.post_boot.sh",
+    src: "bin/init.kernel.post_boot.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.mdm.sh",
+    src: "bin/init.mdm.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.class_core.sh",
+    src: "bin/init.qcom.class_core.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.coex.sh",
+    src: "bin/init.qcom.coex.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.early_boot.sh",
+    src: "bin/init.qcom.early_boot.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.efs.sync.sh",
+    src: "bin/init.qcom.efs.sync.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.post_boot.sh",
+    src: "bin/init.qcom.post_boot.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.sdio.sh",
+    src: "bin/init.qcom.sdio.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.sensors.sh",
+    src: "bin/init.qcom.sensors.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.sh",
+    src: "bin/init.qcom.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.usb.sh",
+    src: "bin/init.qcom.usb.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qti.display_boot.sh",
+    src: "bin/init.qti.display_boot.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qti.kernel.debug-cliffs.sh",
+    src: "bin/init.qti.kernel.debug-cliffs.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qti.kernel.debug-pineapple.sh",
+    src: "bin/init.qti.kernel.debug-pineapple.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qti.kernel.debug.sh",
+    src: "bin/init.qti.kernel.debug.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qti.kernel.early_debug-pineapple.sh",
+    src: "bin/init.qti.kernel.early_debug-pineapple.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qti.kernel.early_debug.sh",
+    src: "bin/init.qti.kernel.early_debug.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qti.kernel.sh",
+    src: "bin/init.qti.kernel.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qti.media.sh",
+    src: "bin/init.qti.media.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qti.qcv.sh",
+    src: "bin/init.qti.qcv.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qti.time.daemon.sh",
+    src: "bin/init.qti.time.daemon.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qti.write.sh",
+    src: "bin/init.qti.write.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.vendor.sensordebug.sh",
+    src: "bin/init.vendor.sensordebug.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.vendor.sensordebug.ssr_dump.sh",
+    src: "bin/init.vendor.sensordebug.ssr_dump.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "install-recovery.sh",
+    src: "bin/install-recovery.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "qca6234-service.sh",
+    src: "bin/qca6234-service.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "system_dlkm_modprobe.sh",
+    src: "bin/system_dlkm_modprobe.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "vendor_modprobe.sh",
+    src: "bin/vendor_modprobe.sh",
+    vendor: true,
+}
+
+// Init configuration files
+prebuilt_etc {
+    name: "init.e3q.rc",
+    src: "etc/init.e3q.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.qcom.factory.rc",
+    src: "etc/init.qcom.factory.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.qcom.rc",
+    src: "etc/init.qcom.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.qcom.usb.rc",
+    src: "etc/init.qcom.usb.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.qti.kernel.rc",
+    src: "etc/init.qti.kernel.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.qti.ss-ramdump.sh",
+    src: "etc/init.qti.ss-ramdump.sh",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.qti.ufs.rc",
+    src: "etc/init.qti.ufs.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.samsung.bsp.rc",
+    src: "etc/init.samsung.bsp.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.samsung.display.rc",
+    src: "etc/init.samsung.display.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.samsung.dp.rc",
+    src: "etc/init.samsung.dp.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.samsung.power.rc",
+    src: "etc/init.samsung.power.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.samsung.rc",
+    src: "etc/init.samsung.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.target.rc",
+    src: "etc/init.target.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+// fstab
+prebuilt_etc {
+    name: "fstab.qcom",
+    src: "etc/fstab.qcom",
+    vendor: true,
+}
