@@ -111,12 +111,19 @@ BOARD_AVB_VENDOR_BOOT_ROLLBACK_INDEX := 1
 BOARD_AVB_VENDOR_BOOT_ROLLBACK_INDEX_LOCATION := 1
 
 # VINTF
-DEVICE_FRAMEWORK_MANIFEST_FILE += $(DEVICE_PATH)/framework_manifest.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
+    $(DEVICE_PATH)/configs/vintf/compatibility_matrix.device.xml \
+    $(DEVICE_PATH)/configs/vintf/compatibility_matrix.samsung.xml \
+    hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
     vendor/lineage/config/device_framework_matrix.xml
-DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
+DEVICE_FRAMEWORK_MANIFEST_FILE += $(DEVICE_PATH)/configs/vintf/framework_manifest.xml
+DEVICE_MATRIX_FILE := \
+    $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xml \
+    hardware/qcom-caf/common/compatibility_matrix.xml
 DEVICE_MANIFEST_SKUS := pineapple
-DEVICE_MANIFEST_PINEAPPLE_FILES += $(DEVICE_PATH)/manifest_pineapple.xml
+DEVICE_MANIFEST_PINEAPPLE_FILES := \
+    $(DEVICE_PATH)/configs/vintf/manifest_pineapple.xml \
+    $(DEVICE_PATH)/configs/vintf/manifest_samsung.xml
 
 # Inherit the proprietary files
 include vendor/samsung/e3q/BoardConfigVendor.mk

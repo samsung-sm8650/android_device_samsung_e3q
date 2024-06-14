@@ -1,0 +1,39 @@
+<manifest version="7.0" type="device" target-level="8">
+    <hal format="aidl">
+        <name>vendor.samsung.hardware.gnss</name>
+        <version>2</version>
+        <fqname>ISehGnss/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.samsung.hardware.hyper</name>
+        <version>2</version>
+        <fqname>ISehHyPer/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.samsung.hardware.media.mpp</name>
+        <version>2</version>
+        <fqname>ISehMppStore/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.samsung.hardware.security.hdcp.wifidisplay</name>
+        <version>2</version>
+        <fqname>ISehHdcp/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.samsung.hardware.snap</name>
+        <version>2</version>
+        <fqname>ISehSnap/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.samsung.hardware.sysinput</name>
+        <version>2</version>
+        <interface>
+            <name>ISehSysInputDev</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>ISehSysInputCallback</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+</manifest>
