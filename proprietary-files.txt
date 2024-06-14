@@ -484,10 +484,6 @@ vendor/firmware/CAMERA_ICP.mbn
 vendor/firmware/CAMERA_ICP.mdt
 vendor/firmware/CAMERA_ICP_170.elf
 
-# CAS
-vendor/bin/hw/android.hardware.cas-service.example-lazy
-vendor/etc/vintf/manifest/android.hardware.cas-service.xml
-
 # CDSP
 vendor/bin/cdsprpcd
 vendor/etc/init/vendor.qti.cdsprpc-service.rc
@@ -752,17 +748,6 @@ vendor/lib64/vendor.qti.hardware.dpmaidlservice-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.dpmservice@1.0.so
 vendor/lib64/vendor.qti.hardware.dpmservice@1.1.so
 
-# DRM
-vendor/apex/com.google.android.widevine.nonupdatable.apex
-vendor/bin/hw/android.hardware.drm-service.clearkey
-vendor/etc/init/android.hardware.drm-service.clearkey.rc
-vendor/etc/vintf/manifest/android.hardware.drm-service.clearkey.xml
-vendor/lib64/mediacas/libclearkeycasplugin.so
-vendor/lib64/mediadrm/libdrmclearkeyplugin.so
-vendor/lib64/libcpion.so
-vendor/lib64/liboemcrypto.so
-vendor/lib64/libtrustedapploader.so
-
 # DRM (Qualcomm Secure Execution Environment)
 system_ext/lib64/vendor.qti.hardware.qseecom-V1-ndk.so
 system_ext/lib64/vendor.qti.hardware.qseecom@1.0.so
@@ -826,7 +811,6 @@ vendor/bin/loc_launcher
 vendor/bin/lowi-server
 vendor/bin/xtra-daemon
 vendor/etc/init/android.hardware.gnss-aidl-service-qti.rc
-vendor/etc/vintf/manifest/android.hardware.gnss-aidl-service-qti.xml
 vendor/etc/vintf/manifest/vendor.qti.gnss-service.xml
 vendor/lib64/hw/vendor.samsung.hardware.gnss-aidl-impl-sec.so
 vendor/lib64/libdataitems.so
@@ -1381,10 +1365,8 @@ vendor/bin/hw/vendor.samsung.hardware.biometrics.face-service
 vendor/bin/hw/vendor.samsung.hardware.biometrics.fingerprint-service
 vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
 vendor/bin/hw/vendor.samsung.hardware.frcmc-service
-vendor/bin/hw/vendor.samsung.hardware.health-service
 vendor/bin/hw/vendor.samsung.hardware.hyper-service
 vendor/bin/hw/vendor.samsung.hardware.khdm-service
-vendor/bin/hw/vendor.samsung.hardware.light-service
 vendor/bin/hw/vendor.samsung.hardware.media.converter@1.0-service
 vendor/bin/hw/vendor.samsung.hardware.mpos-service
 vendor/bin/hw/vendor.samsung.hardware.security.drk-service
@@ -1607,7 +1589,6 @@ vendor/etc/init/loc-launcher.rc
 vendor/etc/init/memtrack_qti.rc
 vendor/etc/init/mpos-default-sec.rc
 vendor/etc/init/mppserver.rc
-vendor/etc/init/nfc-service-nxp.rc
 vendor/etc/init/nicmd.rc
 vendor/etc/init/pa_daemon_qsee.rc
 vendor/etc/init/power-default-sec.rc
@@ -1642,7 +1623,6 @@ vendor/etc/init/vendor.samsung.hardware.authfw-service.rc
 vendor/etc/init/vendor.samsung.hardware.biometrics.fingerprint-service.rc
 vendor/etc/init/vendor.samsung.hardware.camera.provider-service_64.rc
 vendor/etc/init/vendor.samsung.hardware.frcmc-service.rc
-vendor/etc/init/vendor.samsung.hardware.health-service.rc
 vendor/etc/init/vendor.samsung.hardware.media.converter@1.0-service.rc
 vendor/etc/init/vendor.samsung.hardware.security.drk-service.rc
 vendor/etc/init/vendor.samsung.hardware.security.engmode-service.rc
@@ -1824,16 +1804,12 @@ vendor/etc/vintf/manifest/bttpi-saidl.xml
 vendor/etc/vintf/manifest/drk_manifest.xml
 vendor/etc/vintf/manifest/dumpstate-default.xml
 vendor/etc/vintf/manifest/face-default-sec.xml
-vendor/etc/vintf/manifest/hyper-default-sec.xml
 vendor/etc/vintf/manifest/iweaver_aidl_v2_manifest.xml
 vendor/etc/vintf/manifest/khdm-default-sec.xml
-vendor/etc/vintf/manifest/lights-default-sec.xml
 vendor/etc/vintf/manifest/manifest_non_qmaa.xml
 vendor/etc/vintf/manifest/manifest_non_qmaa_extn.xml
 vendor/etc/vintf/manifest/memtrack_qti.xml
 vendor/etc/vintf/manifest/mpos-default-sec.xml
-vendor/etc/vintf/manifest/mppserver.xml
-vendor/etc/vintf/manifest/nfc-service-nxp.xml
 vendor/etc/vintf/manifest/power-samsung.xml
 vendor/etc/vintf/manifest/qms-saidl.xml
 vendor/etc/vintf/manifest/sec_c2_manifest_default0_1_2.xml
@@ -1848,13 +1824,11 @@ vendor/etc/vintf/manifest/vendor.samsung.hardware.authfw-manifest.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.biometrics.fingerprint-service.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.camera.provider-service.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.frcmc-service.xml
-vendor/etc/vintf/manifest/vendor.samsung.hardware.health-service.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.radio.exclude.qcom.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.radio_manifest_2_34.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.security.engmode-manifest.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.security.fkeymaster-service.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.security.hdcp.keyprovisioning-default.xml
-vendor/etc/vintf/manifest/vendor.samsung.hardware.security.hdcp.wifidisplay-default.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.security.hermes.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.security.rtts-manifest.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.security.sem@1.0-manifest.xml
@@ -1863,8 +1837,6 @@ vendor/etc/vintf/manifest/vendor.samsung.hardware.security.vaultkeeper-manifest.
 vendor/etc/vintf/manifest/vendor.samsung.hardware.security.widevine.keyprov-service.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.security.wsm.service-manifest.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.sehradio_manifest_2_34.xml
-vendor/etc/vintf/manifest/vendor.samsung.hardware.snap-default.xml
-vendor/etc/vintf/manifest/vendor.samsung.hardware.sysinput-default.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.thermal-default.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.tlc.ddar-default.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.tlc.iccc@1.0-manifest.xml
@@ -2580,9 +2552,7 @@ vendor/lib64/vendor.samsung.hardware.bluetooth.audio-impl.so
 vendor/lib64/vendor.samsung.hardware.camera.device-V1-ndk.so
 vendor/lib64/vendor.samsung.hardware.camera.provider-V1-ndk.so
 vendor/lib64/vendor.samsung.hardware.frcmc-V1-ndk.so
-vendor/lib64/vendor.samsung.hardware.health-V1-ndk.so
 vendor/lib64/vendor.samsung.hardware.khdm-V1-ndk.so
-vendor/lib64/vendor.samsung.hardware.light-V1-ndk.so
 vendor/lib64/vendor.samsung.hardware.media.converter-V1-ndk.so
 vendor/lib64/vendor.samsung.hardware.media.converter-V2-ndk.so
 vendor/lib64/vendor.samsung.hardware.media.mpp-V2-ndk.so
