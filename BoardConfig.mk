@@ -4,13 +4,16 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+BUILD_BROKEN_INCORRECT_PARTITION_IMAGES := true
+
 DEVICE_PATH := device/samsung/e3q
 
 # Architecture
 TARGET_ARCH := arm64
-TARGET_ARCH_VARIANT := armv8-a
+TARGET_ARCH_VARIANT := armv9-a
 TARGET_CPU_ABI := arm64-v8a
-TARGET_CPU_ABI2 := 
 TARGET_CPU_VARIANT := generic
 TARGET_CPU_VARIANT_RUNTIME := kryo300
 
@@ -52,17 +55,21 @@ BOARD_DTBOIMG_PARTITION_SIZE := 16777216
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 110034944
 BOARD_INIT_BOOT_IMAGE_PARTITION_SIZE := 8388608
 BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 100663296
-BOARD_SUPER_PARTITION_SIZE := 9126805504 # TODO: Fix hardcoded value
+BOARD_SUPER_PARTITION_SIZE := 14105444352
 BOARD_SUPER_PARTITION_GROUPS := samsung_dynamic_partitions
 BOARD_SAMSUNG_DYNAMIC_PARTITIONS_PARTITION_LIST := \
     odm \
-    vendor_dlkm \
-    system \
     product \
-    system_ext \
+    system \
     system_dlkm \
-    vendor
-BOARD_SAMSUNG_DYNAMIC_PARTITIONS_SIZE := 9122611200 # TODO: Fix hardcoded value
+    system_ext \
+    vendor \
+    vendor_dlkm
+BOARD_SAMSUNG_DYNAMIC_PARTITIONS_SIZE := 14101250048 # (BOARD_SUPER_PARTITION_SIZE - 4MiB)
+
+BOARD_PARTITION_LIST := $(call to-upper, $(BOARD_SAMSUNG_DYNAMIC_PARTITIONS_PARTITION_LIST))
+$(foreach p, $(BOARD_PARTITION_LIST), $(eval BOARD_$(p)IMAGE_FILE_SYSTEM_TYPE := erofs))
+$(foreach p, $(BOARD_PARTITION_LIST), $(eval TARGET_COPY_OUT_$(p) := $(call to-lower, $(p))))
 
 # Platform
 TARGET_BOARD_PLATFORM := pineapple
@@ -87,6 +94,10 @@ TARGET_USERIMAGES_USE_F2FS := true
 # Security patch level
 VENDOR_SECURITY_PATCH := 2024-06-01
 
+# Sepolicy
+include device/qcom/sepolicy_vndr/SEPolicy.mk
+include device/lineage/sepolicy/libperfmgr/sepolicy.mk
+
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
@@ -100,11 +111,12 @@ BOARD_AVB_VENDOR_BOOT_ROLLBACK_INDEX := 1
 BOARD_AVB_VENDOR_BOOT_ROLLBACK_INDEX_LOCATION := 1
 
 # VINTF
+DEVICE_FRAMEWORK_MANIFEST_FILE += $(DEVICE_PATH)/framework_manifest.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     vendor/lineage/config/device_framework_matrix.xml
 DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
 DEVICE_MANIFEST_SKUS := pineapple
-DEVICE_MANIFEST_PINEAPPLE_FILES += $(COMMON_PATH)/manifest_pineapple.xml
+DEVICE_MANIFEST_PINEAPPLE_FILES += $(DEVICE_PATH)/manifest_pineapple.xml
 
 # Inherit the proprietary files
 include vendor/samsung/e3q/BoardConfigVendor.mk
