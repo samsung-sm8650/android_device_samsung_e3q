@@ -5,7 +5,7 @@ vendor/bin/adsprpcd
 vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc
 vendor/lib64/libadsp_default_listener.so
 vendor/lib64/libadsprpc.so
-vendor/lib64/libvmmem.so
+-vendor/lib64/libvmmem.so
 
 # ADSP modules
 vendor/lib/rfsa/adsp/libdsp_streamer_binning.so
@@ -53,21 +53,21 @@ vendor/lib64/hw/audio.usb.default.so
 vendor/lib64/libPeripheralStateUtils.so
 vendor/lib64/lib_SamsungRec_08020.so
 vendor/lib64/lib_lvacfs.so
-vendor/lib64/libagm.so
+-vendor/lib64/libagm.so
 vendor/lib64/libagmclient.so
 vendor/lib64/libalsautils.so
 vendor/lib64/libar-acdb.so
 vendor/lib64/libar-gpr.so
-vendor/lib64/libar-gsl.so
-vendor/lib64/libar-pal.so
+-vendor/lib64/libar-gsl.so
+-vendor/lib64/libar-pal.so
 vendor/lib64/libarmemlog.so
-vendor/lib64/libats.so
+-vendor/lib64/libats.so
 vendor/lib64/libaudio_log_utils.so
 vendor/lib64/libdiag.so
 vendor/lib64/libfloatingfeature.so
 vendor/lib64/libjson.so
 vendor/lib64/liblx-ar_util.so
-vendor/lib64/liblx-osal.so
+-vendor/lib64/liblx-osal.so
 vendor/lib64/libmediautils_vendor.so
 vendor/lib64/libminkdescriptor.so
 vendor/lib64/libminksocket_vendor.so
@@ -84,9 +84,9 @@ vendor/lib64/libsecaudiolevel.so
 vendor/lib64/libsecnativefeature.so
 vendor/lib64/libspeakercalibration.so
 vendor/lib64/libvui_intf.so
-vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so
+-vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.AGMIPC@1.0.so
-vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so
+-vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.pal@1.0.so
 
 # Audio (FX modules)
@@ -490,7 +490,7 @@ vendor/etc/init/vendor.qti.cdsprpc-service.rc
 vendor/lib64/libcdsp_default_listener.so
 vendor/lib64/libcdsprpc.so
 vendor/lib64/libfastcvdsp_stub.so
-vendor/lib64/libfastcvopt.so
+-vendor/lib64/libfastcvopt.so
 
 # CNE
 system_ext/lib64/com.quicinc.cne.api@1.0.so
@@ -1232,7 +1232,7 @@ vendor/lib64/vendor.qti.voiceprint@1.0.so
 # Thermal (Qualcomm)
 system_ext/lib64/vendor.qti.hardware.limits@1.0.so
 system_ext/lib64/vendor.qti.hardware.limits@1.1.so
-vendor/lib64/libthermalclient.so
+-vendor/lib64/libthermalclient.so
 
 # Thermal configs
 vendor/etc/thermal-engine.conf
