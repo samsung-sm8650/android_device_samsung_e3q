@@ -38,7 +38,6 @@ PRODUCT_PACKAGES += \
     init.crda.sh \
     init.kernel.post_boot-cliffs.sh \
     init.kernel.post_boot-pineapple.sh \
-    init.kernel.post_boot.sh \
     init.mdm.sh \
     init.qcom.class_core.sh \
     init.qcom.coex.sh \
