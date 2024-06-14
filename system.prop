@@ -157,7 +157,6 @@ pm.dexopt.shared=speed
 qcom.hw.aac.encoder=true
 qemu.hw.mainkeys=0
 ro.actionable_compatible_property.enabled=true
-ro.allow.mock.location=0
 ro.binary.type=user
 ro.build.2ndbrand=false
 ro.build.PDA=S928BXXS2AXEF

@@ -51,10 +51,8 @@ ro.com.google.cdb.spa1=bsxasm1
 ro.com.google.clientidbase=android-samsung-ss
 ro.com.google.clientidbase.tx=android-samsung-rvod2
 ro.com.google.gmsversion=14_202310
-ro.dalvik.vm.enable_uffd_gc=false
 ro.frp.pst=/dev/block/persistent
 ro.opa.eligible_device=true
-ro.product.cpu.pagesize.max=4096
 ro.setupwizard.mode=OPTIONAL
 ro.setupwizard.rotation_locked=false
 ro.setupwizard.wifi_on_exit=false
@@ -62,5 +60,4 @@ setupwizard.feature.enable_quick_start_flow=true
 setupwizard.feature.enable_stencil_partner_customization=1
 setupwizard.feature.support_oem_large_screen_landscape_temporary_by_sys_prop=true
 setupwizard.phenotype_sync_timeout_ms=90000
-setupwizard.theme=glif_v3_light
 
