@@ -1158,10 +1158,8 @@ vendor/lib64/libsec_semRil.so
 vendor/lib64/vendor.qti.esepowermanager@1.0.so
 
 # Security
-vendor/bin/hw/android.hardware.security.keymint-service
 vendor/bin/hw/android.hardware.security.keymint-service-spu-qti
 vendor/etc/init/android.hardware.security.keymint-service-spu-qti.rc
-vendor/etc/init/android.hardware.security.keymint-service.rc
 vendor/etc/vintf/manifest/android.hardware.security.keymint-service-spu-qti.xml
 vendor/lib64/libcppbor_external.so
 vendor/lib64/libhermes_cred.so
@@ -1587,7 +1585,6 @@ vendor/etc/init/init.audio.samsung.rc
 vendor/etc/init/init.embmssl_server.rc
 vendor/etc/init/init.fingerprint.rc
 vendor/etc/init/init.nfc.samsung.rc
-vendor/etc/init/init.qccvendor.rc
 vendor/etc/init/init.qlm-service.rc
 vendor/etc/init/init.qti.display_boot.rc
 vendor/etc/init/init.qti.fm.rc
@@ -1877,8 +1874,6 @@ vendor/etc/vintf/manifest/vendor.samsung.hardware.tlc.ucm-manifest.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.uwb@1.0-service.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.vibrator-default.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.wifi-service.xml
-vendor/etc/vintf/manifest_cliffs.xml
-vendor/etc/vintf/manifest_pineapple.xml
 vendor/etc/DsgpPolicy.csv
 vendor/etc/Hapticsconfig.xml
 vendor/etc/IPACM_Filter_cfg.xml
@@ -1913,7 +1908,6 @@ vendor/etc/libuwb-feature.conf
 vendor/etc/libuwb-nxp.conf
 vendor/etc/libuwb-nxp_old_eureka.conf
 vendor/etc/libuwb-uci.conf
-vendor/etc/linker.config.pb
 vendor/etc/mem_logger_config.xml
 vendor/etc/mercury.json
 vendor/etc/mercury_hv.json
