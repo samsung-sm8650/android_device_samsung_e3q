@@ -108,6 +108,12 @@ sh_binary {
 }
 
 sh_binary {
+    name: "init.qti.display_boot.sh",
+    src: "bin/init.qti.display_boot.sh",
+    vendor: true,
+}
+
+sh_binary {
     name: "init.qti.kernel.debug-cliffs.sh",
     src: "bin/init.qti.kernel.debug-cliffs.sh",
     vendor: true,
