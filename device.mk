@@ -8,7 +8,6 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # API levels
-BOARD_API_LEVEL := 34
 PRODUCT_SHIPPING_API_LEVEL := 34
 
 # fastbootd
