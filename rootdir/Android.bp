@@ -301,3 +301,17 @@ prebuilt_etc {
     src: "etc/fstab.qcom",
     vendor: true,
 }
+
+prebuilt_etc {
+    name: "ueventd-odm.rc",
+    filename: "ueventd.rc",
+    src: "etc/ueventd-odm.rc",
+    device_specific: true,
+}
+
+prebuilt_etc {
+    name: "ueventd.qcom.rc",
+    filename: "ueventd.rc",
+    src: "etc/ueventd.qcom.rc",
+    vendor: true,
+}

@@ -1,0 +1,10 @@
+# Keymint
+vendor.samsung.hardware.keymint.ISehKeyMintExtension/default                                       u:object_r:hal_keymint_service:s0
+vendor.samsung.hardware.keymint.ISehKeyMintFactory/default                                         u:object_r:hal_keymint_service:s0
+
+# Hyper
+vendor.samsung.hardware.hyper.ISehHyPer/default      u:object_r:hal_hyper_service:s0
+
+# RIL
+vendor.samsung.hardware.radio.network.ISehRadioNetwork/slot1  u:object_r:hal_radio_service:s0
+vendor.samsung.hardware.radio.network.ISehRadioNetwork/slot2  u:object_r:hal_radio_service:s0
