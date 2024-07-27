@@ -33,7 +33,6 @@ TARGET_USES_VULKAN := true
 
 # DTB / DTBO
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
-BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_USES_QCOM_MERGE_DTBS_SCRIPT := true
 TARGET_NEEDS_DTBOIMAGE := true
 
@@ -43,36 +42,48 @@ BOARD_MKBOOTIMG_INIT_ARGS += --header_version $(BOARD_INIT_BOOT_HEADER_VERSION)
 
 # Kernel
 BOARD_KERNEL_CMDLINE := \
-    video=vfb:640x400,bpp=32,memsize=3072000 \
-    printk.devkmsg=on \
     firmware_class.path=/vendor/firmware_mnt/image \
+    loop.max_part=7 \
+    printk.devkmsg=on \
+    video=vfb:640x400,bpp=32,memsize=3072000 \
+    bootconfig \
     androidboot.hardware=qcom \
     androidboot.memcg=1 \
     androidboot.usbcontroller=a600000.dwc3 \
     androidboot.load_modules_parallel=false \
     androidboot.hypervisor.protected_vm.supported=true \
-    loop.max_part=7
+    androidboot.selinux=permissive
+
+BOARD_BOOTCONFIG := \
+    androidboot.hardware=qcom \
+    androidboot.memcg=1 \
+    androidboot.usbcontroller=a600000.dwc3 \
+    androidboot.load_modules_parallel=false \
+    androidboot.hypervisor.protected_vm.supported=true \
+    androidboot.selinux=permissive
+
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
-# TARGET_KERNEL_SOURCE := kernel/samsung/sm8650
-# TARGET_KERNEL_CONFIG := \
-#     gki_defconfig \
-#     vendor/pineapple_GKI.config \
+TARGET_KERNEL_SOURCE := kernel/samsung/sm8650
+TARGET_KERNEL_CONFIG := \
+    gki_defconfig \
+    vendor/pineapple_GKI.config \
+    vendor/e3q-lego.config
 
 # Prebuilt kernel
-BOARD_PREBUILT_DTBOIMAGE := $(KERNEL_PATH)/dtbo.img
-BOARD_PREBUILT_DTBIMAGE_DIR := $(KERNEL_PATH)/dtb
-TARGET_NO_KERNEL_OVERRIDE := true
-TARGET_KERNEL_SOURCE := $(KERNEL_PATH)/kernel-headers
-BOARD_KERNEL_SEPARATED_DTBO :=
-PRODUCT_COPY_FILES += $(KERNEL_PATH)/kernel:kernel
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(KERNEL_PATH)/recovery/,$(TARGET_COPY_OUT_RECOVERY)/root/lib/modules) \
-    $(call find-copy-subdir-files,*,$(KERNEL_PATH)/vendor_dlkm/,$(TARGET_COPY_OUT_VENDOR_DLKM)/lib/modules) \
-    $(call find-copy-subdir-files,*,$(KERNEL_PATH)/vendor_ramdisk/,$(TARGET_COPY_OUT_VENDOR_RAMDISK)/lib/modules) \
-    $(call find-copy-subdir-files,*,$(KERNEL_PATH)/system_dlkm/,$(TARGET_COPY_OUT_SYSTEM_DLKM)/lib/modules/6.1.25-android14-11-28243294-abS928BXXS2AXEF)
+# BOARD_PREBUILT_DTBOIMAGE := $(KERNEL_PATH)/dtbo.img
+# BOARD_PREBUILT_DTBIMAGE_DIR := $(KERNEL_PATH)/dtb
+# TARGET_NO_KERNEL_OVERRIDE := true
+# TARGET_KERNEL_SOURCE := $(KERNEL_PATH)/kernel-headers
+# BOARD_KERNEL_SEPARATED_DTBO :=
+# PRODUCT_COPY_FILES += $(KERNEL_PATH)/kernel:kernel
+# PRODUCT_COPY_FILES += \
+#     $(call find-copy-subdir-files,*,$(KERNEL_PATH)/recovery/,$(TARGET_COPY_OUT_RECOVERY)/root/lib/modules) \
+#     $(call find-copy-subdir-files,*,$(KERNEL_PATH)/vendor_dlkm/,$(TARGET_COPY_OUT_VENDOR_DLKM)/lib/modules) \
+#     $(call find-copy-subdir-files,*,$(KERNEL_PATH)/vendor_ramdisk/,$(TARGET_COPY_OUT_VENDOR_RAMDISK)/lib/modules) \
+#     $(call find-copy-subdir-files,*,$(KERNEL_PATH)/system_dlkm/,$(TARGET_COPY_OUT_SYSTEM_DLKM)/lib/modules/6.1.25-android14-11-28243294-abS928BXXS2AXEF)
 
 # Kernel modules
 BOARD_SYSTEM_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load.system_dlkm))
@@ -83,39 +94,42 @@ BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/m
 BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load.recovery))
 BOOT_KERNEL_MODULES := $(strip $(shell cat $(DEVICE_PATH)/modules.load.recovery $(DEVICE_PATH)/modules.include.vendor_ramdisk))
 SYSTEM_KERNEL_MODULES := $(strip $(shell cat $(DEVICE_PATH)/modules.include.system_dlkm))
+BOARD_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load.recovery))
+BOARD_RECOVERY_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load.recovery))
+RECOVERY_KERNEL_MODULES := $(BOARD_RECOVERY_RAMDISK_KERNEL_MODULES_LOAD)
 
-# TARGET_KERNEL_EXT_MODULE_ROOT := kernel/samsung/sm8650-modules
-# TARGET_KERNEL_EXT_MODULES := \
-#     qcom/opensource/mmrm-driver \
-#     qcom/opensource/mm-drivers/hw_fence \
-#     qcom/opensource/mm-drivers/msm_ext_display \
-#     qcom/opensource/mm-drivers/sync_fence \
-#     qcom/opensource/securemsm-kernel \
-#     qcom/opensource/audio-kernel \
-#     qcom/opensource/camera-kernel \
-#     qcom/opensource/dataipa/drivers/platform/msm \
-#     qcom/opensource/datarmnet-ext/mem \
-#     qcom/opensource/datarmnet/core \
-#     qcom/opensource/datarmnet-ext/aps \
-#     qcom/opensource/datarmnet-ext/offload \
-#     qcom/opensource/datarmnet-ext/shs \
-#     qcom/opensource/datarmnet-ext/perf \
-#     qcom/opensource/datarmnet-ext/perf_tether \
-#     qcom/opensource/datarmnet-ext/sch \
-#     qcom/opensource/datarmnet-ext/wlan \
-#     qcom/opensource/display-drivers/msm \
-#     qcom/opensource/synx-kernel \
-#     qcom/opensource/dsp-kernel \
-#     qcom/opensource/eva-kernel \
-#     qcom/opensource/video-driver \
-#     qcom/opensource/graphics-kernel \
-#     qcom/opensource/wlan/platform \
-#     qcom/opensource/wlan/qcacld-3.0 \
-#     qcom/opensource/bt-kernel \
-#     qcom/opensource/spu-kernel \
-#     qcom/opensource/mm-sys-kernel/ubwcp \
-#     qcom/opensource/touch-drivers \
-#     nxp/opensource/driver
+TARGET_KERNEL_EXT_MODULE_ROOT := kernel/samsung/sm8650-modules
+TARGET_KERNEL_EXT_MODULES := \
+    qcom/opensource/mmrm-driver \
+    qcom/opensource/mm-drivers/hw_fence \
+    qcom/opensource/mm-drivers/msm_ext_display \
+    qcom/opensource/mm-drivers/sync_fence \
+    qcom/opensource/securemsm-kernel \
+    qcom/opensource/audio-kernel \
+    qcom/opensource/camera-kernel \
+    qcom/opensource/dataipa/drivers/platform/msm \
+    qcom/opensource/datarmnet-ext/mem \
+    qcom/opensource/datarmnet/core \
+    qcom/opensource/datarmnet-ext/aps \
+    qcom/opensource/datarmnet-ext/offload \
+    qcom/opensource/datarmnet-ext/shs \
+    qcom/opensource/datarmnet-ext/perf \
+    qcom/opensource/datarmnet-ext/perf_tether \
+    qcom/opensource/datarmnet-ext/sch \
+    qcom/opensource/datarmnet-ext/wlan \
+    qcom/opensource/display-drivers/msm \
+    qcom/opensource/synx-kernel \
+    qcom/opensource/dsp-kernel \
+    qcom/opensource/eva-kernel \
+    qcom/opensource/video-driver \
+    qcom/opensource/graphics-kernel \
+    qcom/opensource/wlan/platform \
+    qcom/opensource/wlan/qcacld-3.0 \
+    qcom/opensource/bt-kernel \
+    qcom/opensource/spu-kernel \
+    qcom/opensource/mm-sys-kernel/ubwcp \
+    qcom/opensource/touch-drivers \
+    nxp/opensource/driver
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
@@ -178,6 +192,7 @@ TARGET_VENDOR_DLKM_PROP += $(DEVICE_PATH)/vendor_dlkm.prop
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 BOARD_HAS_DOWNLOAD_MODE := true
 BOARD_INCLUDE_RECOVERY_DTBO := true
+BOARD_USES_FULL_RECOVERY_IMAGE := true
 BOARD_RECOVERY_MKBOOTIMG_ARGS := --header_version 2
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_USERIMAGES_USE_EXT4 := true

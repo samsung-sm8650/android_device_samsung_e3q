@@ -5,9 +5,11 @@ gh_arm_drv.ko
 sched-walt.ko
 qcom_ipc_logging.ko
 qcom-pdc.ko
-phy-qcom-ufs.ko
+phy-qcom-emu.ko
 phy-qcom-ufs-qmp-v4-pineapple.ko
+phy-qcom-ufs-qmp-v4.ko
 phy-qcom-ufs-qrbtc-sdm845.ko
+phy-qcom-ufs.ko
 pinctrl-msm.ko
 pinctrl-pineapple.ko
 pinctrl-cliffs.ko
@@ -124,9 +126,6 @@ msm_show_resume_irq.ko
 mhi.ko
 mhi_dev_uci.ko
 mhi_dev_satellite.ko
-phy-qcom-ufs-qmp-v4-kalama.ko
-phy-qcom-ufs-qmp-v4.ko
-phy-qcom-ufs-qmp-v4-waipio.ko
 pinctrl-spmi-gpio.ko
 pinctrl-spmi-mpp.ko
 pwm-qti-lpg.ko
@@ -200,7 +199,6 @@ smsc75xx.ko
 smsc95xx.ko
 msm_sharedmem.ko
 phy-generic.ko
-phy-qcom-emu.ko
 phy-msm-ssusb-qmp.ko
 phy-msm-snps-eusb2.ko
 dwc3-msm.ko
@@ -278,7 +276,6 @@ sec_qc_hw_param.ko
 sec_qc_rst_exinfo.ko
 sec_reboot_cmd.ko
 sec_rdx_bootdev.ko
-hdm.ko
 sec_panel_notifier_v2.ko
 pmic_class.ko
 usb_typec_manager.ko
