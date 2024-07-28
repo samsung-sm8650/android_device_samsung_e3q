@@ -42,17 +42,16 @@ BOARD_MKBOOTIMG_INIT_ARGS += --header_version $(BOARD_INIT_BOOT_HEADER_VERSION)
 
 # Kernel
 BOARD_KERNEL_CMDLINE := \
-    firmware_class.path=/vendor/firmware_mnt/image \
-    loop.max_part=7 \
-    printk.devkmsg=on \
-    video=vfb:640x400,bpp=32,memsize=3072000 \
-    bootconfig \
     androidboot.hardware=qcom \
     androidboot.memcg=1 \
     androidboot.usbcontroller=a600000.dwc3 \
     androidboot.load_modules_parallel=false \
     androidboot.hypervisor.protected_vm.supported=true \
-    androidboot.selinux=permissive
+    androidboot.selinux=permissive \
+    firmware_class.path=/vendor/firmware_mnt/image \
+    loop.max_part=7 \
+    printk.devkmsg=on \
+    video=vfb:640x400,bpp=32,memsize=3072000 \
 
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
