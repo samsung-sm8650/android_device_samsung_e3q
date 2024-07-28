@@ -24,6 +24,11 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
     fastbootd
 
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper-V1-ndk.vendor \
+    android.hardware.gatekeeper@1.0.vendor
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@1.0.vendor \
@@ -44,6 +49,11 @@ PRODUCT_PACKAGES += \
     android.hardware.security.rkp-V3-ndk.vendor \
     android.hardware.security.secureclock-V1-ndk.vendor \
     android.hardware.security.sharedsecret-V1-ndk.vendor
+
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.keystore.app_attest_key.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.keystore.app_attest_key.xml \
+    frameworks/native/data/etc/android.software.device_id_attestation.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.device_id_attestation.xml \
+    hardware/interfaces/security/keymint/aidl/default/android.hardware.hardware_keystore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.hardware_keystore.xml
 
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
@@ -120,6 +130,10 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/samsung \
     kernel/samsung/sm8650 \
     kernel/samsung/sm8650-modules
+
+# Vendor service manager
+PRODUCT_PACKAGES += \
+    vndservicemanager
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/samsung/e3q/e3q-vendor.mk)
