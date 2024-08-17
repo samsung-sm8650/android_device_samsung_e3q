@@ -1144,7 +1144,7 @@ vendor/lib64/vendor.qti.esepowermanager@1.0.so
 # Security
 vendor/bin/hw/android.hardware.security.keymint-service
 vendor/etc/init/android.hardware.security.keymint-service.rc
-vendor/etc/vintf/manifest/android.hardware.security.keymint-service-spu-qti.xmlvendor/etc/vintf/manifest/android.hardware.security.keymint-service.xml
+vendor/etc/vintf/manifest/android.hardware.security.keymint-service-spu-qti.xml:vendor/etc/vintf/manifest/android.hardware.security.keymint-service.xml
 vendor/lib64/libcppbor_external.so
 vendor/lib64/libhermes_cred.so
 vendor/lib64/libkeymaster4_1support.so
