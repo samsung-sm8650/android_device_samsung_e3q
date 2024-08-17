@@ -281,7 +281,6 @@ pmic_class.ko
 usb_typec_manager.ko
 if_cb_manager.ko
 max77705_charger.ko
-input_booster_lkm.ko
 max77775_charger.ko
 common_muic.ko
 sec_switch_class.ko
