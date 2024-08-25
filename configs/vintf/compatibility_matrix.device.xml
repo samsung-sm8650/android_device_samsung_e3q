@@ -3,15 +3,15 @@
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are
 met:
-    * Redistributions of source code must retain the above copyright
-      notice, this list of conditions and the following disclaimer.
-    * Redistributions in binary form must reproduce the above
-      copyright notice, this list of conditions and the following
-      disclaimer in the documentation and/or other materials provided
-      with the distribution.
-    * Neither the name of The Linux Foundation nor the names of its
-      contributors may be used to endorse or promote products derived
-      from this software without specific prior written permission.
+* Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+* Redistributions in binary form must reproduce the above
+copyright notice, this list of conditions and the following
+disclaimer in the documentation and/or other materials provided
+with the distribution.
+* Neither the name of The Linux Foundation nor the names of its
+contributors may be used to endorse or promote products derived
+from this software without specific prior written permission.
 
 THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
 WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
@@ -31,74 +31,73 @@ Changes from Qualcomm Innovation Center are provided under the following license
 Copyright (c) 2023-2024 Qualcomm Innovation Center, Inc. All rights reserved.
 SPDX-License-Identifier: BSD-3-Clause-Clear.
 -->
-
 <compatibility-matrix version="7.0" type="framework">
-   <hal format="hidl" optional="true">
-       <name>vendor.qti.hardware.scve.panorama</name>
-       <version>1.0</version>
-       <interface>
-          <name>IPanoramaTracking</name>
-          <instance>panoTracking</instance>
-       </interface>
-       <interface>
-           <name>IPanoramaStitching</name>
-           <instance>panoStitching</instance>
-       </interface>
-   </hal>
-   <hal format="hidl" optional="true">
-       <name>vendor.qti.hardware.scve.objecttracker</name>
-       <version>1.0</version>
-       <interface>
-         <name>IObjectTracker</name>
-         <instance>objectTracker</instance>
-       </interface>
-   </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.scve.panorama</name>
+        <version>1.0</version>
+        <interface>
+            <name>IPanoramaTracking</name>
+            <instance>panoTracking</instance>
+        </interface>
+        <interface>
+            <name>IPanoramaStitching</name>
+            <instance>panoStitching</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.scve.objecttracker</name>
+        <version>1.0</version>
+        <interface>
+            <name>IObjectTracker</name>
+            <instance>objectTracker</instance>
+        </interface>
+    </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.perf</name>
-         <version>2.0-3</version>
-         <interface>
+        <version>2.0-3</version>
+        <interface>
             <name>IPerf</name>
             <instance>default</instance>
-         </interface>
+        </interface>
     </hal>
     <hal format="aidl" optional="true">
         <name>vendor.qti.hardware.perf2</name>
-         <version>1</version>
-         <interface>
+        <version>1</version>
+        <interface>
             <name>IPerf</name>
             <instance>default</instance>
-         </interface>
+        </interface>
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.display.color</name>
         <version>1.0-7</version>
         <interface>
-             <name>IDisplayColor</name>
-             <instance>default</instance>
+            <name>IDisplayColor</name>
+            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.display.postproc</name>
         <version>1.0</version>
         <interface>
-             <name>IDisplayPostproc</name>
-             <instance>default</instance>
+            <name>IDisplayPostproc</name>
+            <instance>default</instance>
         </interface>
     </hal>
     <hal format="aidl" optional="true">
         <name>vendor.qti.hardware.display.color</name>
         <version>1</version>
         <interface>
-             <name>IDisplayColor</name>
-             <instance>default</instance>
+            <name>IDisplayColor</name>
+            <instance>default</instance>
         </interface>
     </hal>
     <hal format="aidl" optional="true">
         <name>vendor.qti.hardware.display.postproc</name>
         <version>1</version>
         <interface>
-             <name>IDisplayPostproc</name>
-             <instance>default</instance>
+            <name>IDisplayPostproc</name>
+            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
@@ -106,16 +105,16 @@ SPDX-License-Identifier: BSD-3-Clause-Clear.
         <version>1.0</version>
         <version>2.0</version>
         <interface>
-             <name>IDemuraFileFinder</name>
-             <instance>default</instance>
+            <name>IDemuraFileFinder</name>
+            <instance>default</instance>
         </interface>
     </hal>
     <hal format="aidl" optional="true">
         <name>vendor.qti.hardware.display.demura</name>
         <version>1</version>
         <interface>
-             <name>IDemuraFileFinder</name>
-             <instance>default</instance>
+            <name>IDemuraFileFinder</name>
+            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
@@ -206,62 +205,62 @@ SPDX-License-Identifier: BSD-3-Clause-Clear.
             <instance>default</instance>
         </interface>
     </hal>
-   <hal format="hidl" optional="true">
-       <name>android.hardware.radio</name>
-       <version>1.0-4</version>
-       <interface>
-          <name>IRadio</name>
-          <instance>slot1</instance>
-          <instance>slot2</instance>
-       </interface>
-       <interface>
-           <name>ISap</name>
-           <instance>slot1</instance>
-           <instance>slot2</instance>
-       </interface>
-   </hal>
-   <hal format="hidl" optional="true">
-       <name>vendor.qti.hardware.seccam</name>
-       <version>1.0</version>
-       <interface>
-           <name>ISecCam</name>
-           <instance>default</instance>
-       </interface>
-   </hal>
-   <hal format="hidl" optional="true">
-       <name>vendor.qti.hardware.improvetouch.touchcompanion</name>
-       <version>1.0</version>
-       <interface>
-           <name>ITouchCompanion</name>
-           <instance>TouchCompanionService</instance>
-       </interface>
-   </hal>
-   <hal format="hidl" optional="true">
+    <hal format="hidl" optional="true">
+        <name>android.hardware.radio</name>
+        <version>1.0-4</version>
+        <interface>
+            <name>IRadio</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+        <interface>
+            <name>ISap</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.seccam</name>
+        <version>1.0</version>
+        <interface>
+            <name>ISecCam</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.improvetouch.touchcompanion</name>
+        <version>1.0</version>
+        <interface>
+            <name>ITouchCompanion</name>
+            <instance>TouchCompanionService</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.bluetooth_audio</name>
         <version>2.0-1</version>
         <interface>
             <name>IBluetoothAudioProvidersFactory</name>
             <instance>default</instance>
         </interface>
-   </hal>
-   <hal format="hidl" optional="true">
-       <name>com.qualcomm.qti.imscmservice</name>
-       <version>2.0-2</version>
-       <interface>
-         <name>IImsCmService</name>
-         <instance>qti.ims.connectionmanagerservice</instance>
-       </interface>
-   </hal>
-   <hal format="hidl" optional="true">
-       <name>com.qualcomm.qti.uceservice</name>
-       <version>2.0-1</version>
-       <version>2.2</version>
-       <version>2.3</version>
-       <interface>
-         <name>IUceService</name>
-         <instance>com.qualcomm.qti.uceservice</instance>
-       </interface>
-   </hal>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>com.qualcomm.qti.imscmservice</name>
+        <version>2.0-2</version>
+        <interface>
+            <name>IImsCmService</name>
+            <instance>qti.ims.connectionmanagerservice</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>com.qualcomm.qti.uceservice</name>
+        <version>2.0-1</version>
+        <version>2.2</version>
+        <version>2.3</version>
+        <interface>
+            <name>IUceService</name>
+            <instance>com.qualcomm.qti.uceservice</instance>
+        </interface>
+    </hal>
     <hal format="hidl" optional="true">
         <name>com.qualcomm.qti.wifidisplayhal</name>
         <version>1.0</version>
@@ -428,12 +427,12 @@ SPDX-License-Identifier: BSD-3-Clause-Clear.
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-         <name>com.dsi.ant</name>
-         <version>1.0</version>
-         <interface>
-             <name>IAnt</name>
-             <instance>default</instance>
-         </interface>
+        <name>com.dsi.ant</name>
+        <version>1.0</version>
+        <interface>
+            <name>IAnt</name>
+            <instance>default</instance>
+        </interface>
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.iop</name>
@@ -451,36 +450,36 @@ SPDX-License-Identifier: BSD-3-Clause-Clear.
             <instance>default</instance>
         </interface>
     </hal>
-   <hal format="hidl" optional="true">
-       <name>vendor.qti.hardware.radio.am</name>
-       <version>1.0</version>
-       <interface>
-           <name>IQcRilAudio</name>
-           <instance>slot1</instance>
-           <instance>slot2</instance>
-       </interface>
-   </hal>
-   <hal format="aidl" optional="true">
-       <name>vendor.qti.hardware.radio.am</name>
-       <version>1</version>
-       <interface>
-           <name>IQcRilAudio</name>
-           <instance>slot1</instance>
-           <instance>slot2</instance>
-       </interface>
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.radio.am</name>
+        <version>1.0</version>
+        <interface>
+            <name>IQcRilAudio</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.qti.hardware.radio.am</name>
+        <version>1</version>
+        <interface>
+            <name>IQcRilAudio</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.radio.ims</name>
-           <version>1.0-9</version>
-           <interface>
-               <name>IImsRadio</name>
-               <instance>imsradio0</instance>
-               <instance>imsradio1</instance>
-           </interface>
+        <version>1.0-9</version>
+        <interface>
+            <name>IImsRadio</name>
+            <instance>imsradio0</instance>
+            <instance>imsradio1</instance>
+        </interface>
     </hal>
     <hal format="aidl" optional="true">
         <name>vendor.qti.hardware.radio.ims</name>
-        <version>1-12</version>
+        <version>1-15</version>
         <interface>
             <name>IImsRadio</name>
             <instance>imsradio0</instance>
@@ -523,21 +522,21 @@ SPDX-License-Identifier: BSD-3-Clause-Clear.
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.radio.qcrilhook</name>
-           <version>1.0</version>
-           <interface>
-               <name>IQtiOemHook</name>
-               <instance>oemhook0</instance>
-               <instance>oemhook1</instance>
-           </interface>
+        <version>1.0</version>
+        <interface>
+            <name>IQtiOemHook</name>
+            <instance>oemhook0</instance>
+            <instance>oemhook1</instance>
+        </interface>
     </hal>
     <hal format="aidl" optional="true">
         <name>vendor.qti.hardware.radio.qcrilhook</name>
-           <version>1</version>
-           <interface>
-               <name>IQtiOemHook</name>
-               <instance>oemhook0</instance>
-               <instance>oemhook1</instance>
-           </interface>
+        <version>1</version>
+        <interface>
+            <name>IQtiOemHook</name>
+            <instance>oemhook0</instance>
+            <instance>oemhook1</instance>
+        </interface>
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.radio.qtiradio</name>
@@ -837,14 +836,14 @@ SPDX-License-Identifier: BSD-3-Clause-Clear.
             <instance>wigighostapd</instance>
         </interface>
     </hal>
-   <hal format="hidl" optional="true">
-       <name>vendor.qti.ims.callinfo</name>
-       <version>1.0</version>
-       <interface>
-         <name>IService</name>
-         <instance>default</instance>
-       </interface>
-   </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.ims.callinfo</name>
+        <version>1.0</version>
+        <interface>
+            <name>IService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.data.factory</name>
         <version>1.0</version>
@@ -854,7 +853,7 @@ SPDX-License-Identifier: BSD-3-Clause-Clear.
             <instance>default</instance>
         </interface>
     </hal>
-   <hal format="hidl" optional="true">
+    <hal format="hidl" optional="true">
         <name>vendor.display.config</name>
         <version>1.0-15</version>
         <version>2.0</version>
@@ -862,7 +861,7 @@ SPDX-License-Identifier: BSD-3-Clause-Clear.
             <name>IDisplayConfig</name>
             <instance>default</instance>
         </interface>
-  </hal>
+    </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.wipower</name>
         <version>1.0</version>
@@ -928,70 +927,70 @@ SPDX-License-Identifier: BSD-3-Clause-Clear.
             <name>IPowerModule</name>
             <instance>default</instance>
         </interface>
-   </hal>
-   <hal format="hidl" optional="true">
-       <name>android.hardware.radio.config</name>
-       <version>1.0-1</version>
-       <interface>
-           <name>IRadioConfig</name>
-           <instance>default</instance>
-       </interface>
-   </hal>
-   <hal format="hidl" optional="true">
-       <name>vendor.qti.hardware.capabilityconfigstore</name>
-       <version>1.0</version>
-       <interface>
-           <name>ICapabilityConfigStore</name>
-           <instance>default</instance>
-       </interface>
-   </hal>
-   <hal format="hidl" optional="true">
-       <name>vendor.qti.hardware.data.iwlan</name>
-       <version>1.0-1</version>
-       <interface>
-           <name>IIWlan</name>
-           <instance>slot1</instance>
-           <instance>slot2</instance>
-       </interface>
-   </hal>
-   <hal format="aidl" optional="true">
-       <name>vendor.qti.hardware.data.iwlandata</name>
-       <version>1</version>
-       <interface>
-           <name>IIWlan</name>
-           <instance>slot1</instance>
-           <instance>slot2</instance>
-       </interface>
-   </hal>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.radio.config</name>
+        <version>1.0-1</version>
+        <interface>
+            <name>IRadioConfig</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.capabilityconfigstore</name>
+        <version>1.0</version>
+        <interface>
+            <name>ICapabilityConfigStore</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.data.iwlan</name>
+        <version>1.0-1</version>
+        <interface>
+            <name>IIWlan</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.qti.hardware.data.iwlandata</name>
+        <version>1</version>
+        <interface>
+            <name>IIWlan</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
 
-   <hal format="hidl" optional="true">
-       <name>vendor.qti.hardware.cvp</name>
-       <version>1.0</version>
-       <interface>
-         <name>ICvp</name>
-         <instance>cvphalservice</instance>
-       </interface>
-   </hal>
-   <hal format="hidl" optional="true">
-       <name>vendor.qti.hardware.audiohalext</name>
-       <version>1.0</version>
-       <interface>
-           <name>IAudioHalExt</name>
-           <instance>default</instance>
-       </interface>
-   </hal>
-   <!-- Codec2 HAl service -->
-   <hal format="hidl" optional="true">
-       <name>android.hardware.media.c2</name>
-       <version>1.0</version>
-       <version>1.2</version>
-       <interface>
-           <name>IComponentStore</name>
-           <instance>default</instance>
-           <instance>software</instance>
-       </interface>
-   </hal>
-   <hal format="hidl" optional="true">
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.cvp</name>
+        <version>1.0</version>
+        <interface>
+            <name>ICvp</name>
+            <instance>cvphalservice</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.audiohalext</name>
+        <version>1.0</version>
+        <interface>
+            <name>IAudioHalExt</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <!-- Codec2 HAl service -->
+    <hal format="hidl" optional="true">
+        <name>android.hardware.media.c2</name>
+        <version>1.0</version>
+        <version>1.2</version>
+        <interface>
+            <name>IComponentStore</name>
+            <instance>default</instance>
+            <instance>software</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.display.allocator</name>
         <version>1.0</version>
         <version>3.0</version>
@@ -1029,7 +1028,7 @@ SPDX-License-Identifier: BSD-3-Clause-Clear.
             <name>IQtiComposer</name>
             <instance>default</instance>
         </interface>
-   </hal>
+    </hal>
     <!-- QSPM-HAL hidl service-->
     <hal format="hidl" optional="true">
         <name>vendor.qti.qspmhal</name>
@@ -1048,7 +1047,7 @@ SPDX-License-Identifier: BSD-3-Clause-Clear.
             <instance>default</instance>
         </interface>
     </hal>
-   <hal format="hidl" optional="true">
+    <hal format="hidl" optional="true">
         <name>vendor.qti.diaghal</name>
         <version>1.0</version>
         <interface>
@@ -1081,27 +1080,27 @@ SPDX-License-Identifier: BSD-3-Clause-Clear.
             <name>IEvsEnumerator</name>
             <instance>default</instance>
         </interface>
-     </hal>
-     <hal format="hidl" optional="true">
-         <name>vendor.qti.automotive.qcarcam</name>
-         <version>1.0</version>
-         <interface>
-             <name>IQcarCamera</name>
-             <instance>default</instance>
-         </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.automotive.qcarcam</name>
+        <version>1.0</version>
+        <interface>
+            <name>IQcarCamera</name>
+            <instance>default</instance>
+        </interface>
     </hal>
     <!-- System Helper HAL Service -->
     <hal format="hidl" optional="true">
-         <name>vendor.qti.hardware.systemhelper</name>
-         <version>1.0</version>
-         <interface>
-             <name>ISystemEvent</name>
-             <instance>default</instance>
-         </interface>
-         <interface>
-             <name>ISystemResource</name>
-             <instance>default</instance>
-         </interface>
+        <name>vendor.qti.hardware.systemhelper</name>
+        <version>1.0</version>
+        <interface>
+            <name>ISystemEvent</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>ISystemResource</name>
+            <instance>default</instance>
+        </interface>
     </hal>
     <!-- System Helper AIDL Service -->
     <hal format="aidl" optional="true">
@@ -1336,13 +1335,13 @@ SPDX-License-Identifier: BSD-3-Clause-Clear.
     </hal>
 
     <hal format="hidl" optional="true">
-       <name>vendor.qti.hardware.limits</name>
-       <transport>hwbinder</transport>
-       <version>1.0-2</version>
-       <interface>
-           <name>ILimits</name>
-           <instance>default</instance>
-       </interface>
+        <name>vendor.qti.hardware.limits</name>
+        <transport>hwbinder</transport>
+        <version>1.0-2</version>
+        <interface>
+            <name>ILimits</name>
+            <instance>default</instance>
+        </interface>
     </hal>
     <!-- Audio Graph Manager service -->
     <hal format="hidl" optional="true">
@@ -1428,8 +1427,8 @@ SPDX-License-Identifier: BSD-3-Clause-Clear.
         <name>vendor.qti.hardware.wifi.wificfr</name>
         <version>1</version>
         <interface>
-           <name>IWificfr</name>
-           <instance>default</instance>
+            <name>IWificfr</name>
+            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
@@ -1612,17 +1611,17 @@ SPDX-License-Identifier: BSD-3-Clause-Clear.
         </interface>
     </hal>
     <hal format="aidl" optional="true">
-    <name>vendor.qti.hardware.qspa</name>
-    <version>1</version>
-    <interface>
-         <name>IQspa</name>
-         <instance>default</instance>
-    </interface>
+        <name>vendor.qti.hardware.qspa</name>
+        <version>1</version>
+        <interface>
+            <name>IQspa</name>
+            <instance>default</instance>
+        </interface>
     </hal>
 
     <!-- UMD Adaptor Service -->
     <hal format="hidl" optional="true">
-        <name>vendor.qti.hardware.umd</name>
+        <name>vendor.qti.hardware.umd</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
@@ -1642,6 +1641,20 @@ SPDX-License-Identifier: BSD-3-Clause-Clear.
         </interface>
         <interface>
             <name>ICameraVstSysCallback</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <!-- Power State HAL -->
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.power.powerstateservice</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IPowerStateService</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>IPowerStateUtility</name>
             <instance>default</instance>
         </interface>
     </hal>

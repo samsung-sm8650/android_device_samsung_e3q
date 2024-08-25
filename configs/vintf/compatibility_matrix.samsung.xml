@@ -3,21 +3,6 @@ Copyright (C) 2024 The LineageOS Project
 SPDX-License-Identifier: Apache-2.0
 -->
 <compatibility-matrix version="7.0" type="framework">
-    <hal format="hidl" optional="true">
-        <name>android.hardware.health</name>
-        <version>2.0-1</version>
-        <interface>
-            <name>IHealth</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.light</name>
-        <interface>
-            <name>ILights</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <hal format="aidl" optional="true">
         <name>vendor.samsung.hardware.authfw</name>
         <interface>
@@ -33,9 +18,33 @@ SPDX-License-Identifier: Apache-2.0
         </interface>
     </hal>
     <hal format="aidl" optional="true">
+        <name>vendor.samsung.hardware.gnss</name>
+        <version>2</version>
+        <interface>
+            <name>ISehGnss</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.samsung.hardware.hyper</name>
+        <version>2</version>
+        <interface>
+            <name>ISehHyPer</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
         <name>vendor.samsung.hardware.khdm</name>
         <interface>
             <name>ISehKhdm</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.samsung.hardware.media.mpp</name>
+        <version>2</version>
+        <interface>
+            <name>ISehMppStore</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -125,6 +134,14 @@ SPDX-License-Identifier: Apache-2.0
         </interface>
     </hal>
     <hal format="aidl" optional="true">
+        <name>vendor.samsung.hardware.security.hdcp.wifidisplay</name>
+        <version>2</version>
+        <interface>
+            <name>ISehHdcp</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
         <name>vendor.samsung.hardware.security.hermes</name>
         <interface>
             <name>ISehHermesCommand</name>
@@ -176,6 +193,26 @@ SPDX-License-Identifier: Apache-2.0
         </interface>
     </hal>
     <hal format="aidl" optional="true">
+        <name>vendor.samsung.hardware.snap</name>
+        <version>2</version>
+        <interface>
+            <name>ISehSnap</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.samsung.hardware.sysinput</name>
+        <version>2</version>
+        <interface>
+            <name>ISehSysInputCallback</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>ISehSysInputDev</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
         <name>vendor.samsung.hardware.tlc.ddar</name>
         <interface>
             <name>ISehDdar</name>
@@ -223,58 +260,6 @@ SPDX-License-Identifier: Apache-2.0
         <name>vendor.samsung.hardware.wifi.nan</name>
         <interface>
             <name>IWifiVendorNan</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.samsung.hardware.gnss</name>
-        <version>2</version>
-        <interface>
-            <name>ISehGnss</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.samsung.hardware.hyper</name>
-        <version>2</version>
-        <interface>
-            <name>ISehHyPer</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.samsung.hardware.media.mpp</name>
-        <version>2</version>
-        <interface>
-            <name>ISehMppStore</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.samsung.hardware.security.hdcp.wifidisplay</name>
-        <version>2</version>
-        <interface>
-            <name>ISehHdcp</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.samsung.hardware.snap</name>
-        <version>2</version>
-        <interface>
-            <name>ISehSnap</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.samsung.hardware.sysinput</name>
-        <version>2</version>
-        <interface>
-            <name>ISehSysInputDev</name>
-            <instance>default</instance>
-        </interface>
-        <interface>
-            <name>ISehSysInputCallback</name>
             <instance>default</instance>
         </interface>
     </hal>
