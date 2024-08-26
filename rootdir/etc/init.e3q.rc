@@ -27,6 +27,13 @@
 #
 #
 
+service logger /system/bin/logcat -b all -D -f /metadata/boot_log.txt
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
 on early-init
 
 on init
@@ -34,6 +41,7 @@ on init
 on late-init
 
 on post-fs
+    start logger
 
 on late-fs
 

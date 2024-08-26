@@ -472,7 +472,6 @@ vendor/etc/init/vendor.qti.hardware.secureprocessor@1.0.rc
 vendor/lib64/hw/gatekeeper.mdfpp.so
 vendor/lib64/hw/libspuqtigatekeeper.so
 vendor/lib64/libspcom.so
-vendor/lib64/libspukeymintdeviceutils.so
 vendor/lib64/vendor.qti.hardware.secureprocessor.common@1.0-helper.so
 vendor/lib64/vendor.qti.hardware.secureprocessor.common@1.0.so
 vendor/lib64/vendor.qti.hardware.secureprocessor.config@1.0.so
@@ -534,6 +533,36 @@ vendor/lib64/libipanat.so
 vendor/lib64/libnetfilter_conntrack.so
 vendor/lib64/libnfnetlink.so
 vendor/lib64/liboffloadhal.so
+
+# Keymaster
+vendor/bin/vendor.samsung.hardware.security.fkeymaster-service
+vendor/etc/init/vendor.samsung.hardware.security.fkeymaster-service.rc
+vendor/etc/vintf/manifest/vendor.samsung.hardware.security.fkeymaster-service.xml
+vendor/lib64/android.hardware.keymaster@3.0.so
+vendor/lib64/android.hardware.keymaster@4.0.so
+vendor/lib64/android.hardware.keymaster@4.1.so
+vendor/lib64/android.hardware.keymaster-V4-ndk.so
+vendor/lib64/libkeymaster4_1support.so
+vendor/lib64/libkeymaster4support.so
+vendor/lib64/libkeymaster_messages.so
+vendor/lib64/libkeymaster_portable.so
+vendor/lib64/libpuresoftkeymasterdevice.so
+vendor/lib64/vendor.samsung.hardware.security.fkeymaster-V1-ndk.so
+
+# Keymint
+vendor/bin/hw/android.hardware.security.keymint-service
+vendor/bin/hw/android.hardware.security.keymint-service-spu-qti
+vendor/etc/init/android.hardware.security.keymint-service.rc
+vendor/etc/init/android.hardware.security.keymint-service-spu-qti.rc
+vendor/lib64/android.hardware.security.keymint-V1-ndk.so
+vendor/lib64/android.hardware.security.keymint-V3-ndk.so
+vendor/lib64/libskeymint10device.so
+vendor/lib64/libskeymint_cli.so
+vendor/lib64/libspukeymintdeviceutils.so
+vendor/lib64/libspukeymint.so
+vendor/lib64/libspukeymintutils.so
+vendor/lib64/vendor.samsung.hardware.keymint-V3-ndk.so
+vendor/lib64/libsecril-client.so
 
 # Local time
 vendor/lib64/hw/local_time.default.so
@@ -614,16 +643,6 @@ vendor/etc/media_profiles_V1_0.xml
 vendor/etc/media_profiles_cliffs_v0.xml
 vendor/etc/media_profiles_cliffs_v1.xml
 vendor/etc/media_profiles_pineapple.xml
-
-# NFC
-vendor/bin/hw/android.hardware.nfc-service.nxp
-vendor/lib64/nfc_nci_nxpsn.so
-vendor/lib64/vendor.samsung.hardware.nfc_aidl-V1-ndk.so
-
-# NFC configs
-etc/libnfc-nci.conf
-vendor/etc/nfc/libnfc-nxp_RF.conf
-vendor/etc/libnfc-nxp.conf
 
 # PASR
 vendor/etc/init/vendor.qti.memory.pasrmanager-service.rc
@@ -815,20 +834,11 @@ vendor/lib64/libsec_semRil.so
 vendor/lib64/vendor.qti.esepowermanager@1.0.so
 
 # Security
-vendor/bin/hw/android.hardware.security.keymint-service
-vendor/etc/init/android.hardware.security.keymint-service.rc
-vendor/etc/vintf/manifest/android.hardware.security.keymint-service-spu-qti.xml:vendor/etc/vintf/manifest/android.hardware.security.keymint-service.xml
 vendor/lib64/libcppbor_external.so
 vendor/lib64/libhermes_cred.so
-vendor/lib64/libkeymaster4_1support.so
 vendor/lib64/libsec_esek.so
 vendor/lib64/libsec_semHalTlc.so
-vendor/lib64/libskeymint10device.so
-vendor/lib64/libskeymint_cli.so
 vendor/lib64/libspictrl.so
-vendor/lib64/libspukeymint.so
-vendor/lib64/libspukeymintutils.so
-vendor/lib64/vendor.samsung.hardware.keymint-V3-ndk.so
 
 # Sensors
 vendor/bin/hw/android.hardware.sensors-service.multihal
@@ -1088,7 +1098,6 @@ vendor/bin/ubwcp_test64
 vendor/bin/utility_cache_test.tflite
 vendor/bin/vaultkeeperd
 vendor/bin/vendor.samsung.hardware.security.engmode-service
-vendor/bin/vendor.samsung.hardware.security.fkeymaster-service
 vendor/bin/vendor.samsung.hardware.security.hdcp.wifidisplay-service
 vendor/bin/vendor.samsung.hardware.security.proca@2.0-service
 vendor/bin/vendor.samsung.hardware.security.rtts-service
@@ -1169,7 +1178,6 @@ vendor/etc/init/imsdaemon.rc
 vendor/etc/init/init.audio.samsung.rc
 vendor/etc/init/init.embmssl_server.rc
 vendor/etc/init/init.fingerprint.rc
-vendor/etc/init/init.nfc.samsung.rc
 vendor/etc/init/init.qlm-service.rc
 vendor/etc/init/init.qti.display_boot.rc
 vendor/etc/init/init.qti.fm.rc
@@ -1229,7 +1237,6 @@ vendor/etc/init/vendor.samsung.hardware.frcmc-service.rc
 vendor/etc/init/vendor.samsung.hardware.media.converter@1.0-service.rc
 vendor/etc/init/vendor.samsung.hardware.security.drk-service.rc
 vendor/etc/init/vendor.samsung.hardware.security.engmode-service.rc
-vendor/etc/init/vendor.samsung.hardware.security.fkeymaster-service.rc
 vendor/etc/init/vendor.samsung.hardware.security.hdcp.keyprovisioning-default.rc
 vendor/etc/init/vendor.samsung.hardware.security.hdcp.wifidisplay-default.rc
 vendor/etc/init/vendor.samsung.hardware.security.hermes.rc
@@ -1429,7 +1436,6 @@ vendor/etc/vintf/manifest/vendor.samsung.hardware.frcmc-service.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.radio.exclude.qcom.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.radio_manifest_2_34.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.security.engmode-manifest.xml
-vendor/etc/vintf/manifest/vendor.samsung.hardware.security.fkeymaster-service.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.security.hdcp.keyprovisioning-default.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.security.hermes.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.security.rtts-manifest.xml
@@ -1526,7 +1532,6 @@ vendor/firmware/kiwi/phy_ucode20.elf
 vendor/firmware/kiwi/qdss_trace_config_v2.cfg
 vendor/firmware/kiwi/regdb.bin
 vendor/firmware/mfc/mfc_fw_flash_nu1668.bin
-vendor/firmware/nfc/libsn300u_fw.so
 vendor/firmware/tsp_stm/fts2ba61y_e3q.bin
 vendor/firmware/tsp_synaptics/s3916a_e3.bin
 vendor/firmware/tsp_synaptics/s3916t_e3.bin
@@ -2162,7 +2167,6 @@ vendor/lib64/vendor.samsung.hardware.radio.channel-V1-ndk.so
 vendor/lib64/vendor.samsung.hardware.security.drk-V1-ndk.so
 vendor/lib64/vendor.samsung.hardware.security.drk@2.0.so
 vendor/lib64/vendor.samsung.hardware.security.engmode-V1-ndk.so
-vendor/lib64/vendor.samsung.hardware.security.fkeymaster-V1-ndk.so
 vendor/lib64/vendor.samsung.hardware.security.hdcp.keyprovisioning-V1-ndk_platform.so
 vendor/lib64/vendor.samsung.hardware.security.hdcp.wifidisplay-V2-ndk.so
 vendor/lib64/vendor.samsung.hardware.security.hermes-V1-ndk.so

@@ -26,8 +26,8 @@ PRODUCT_PACKAGES += \
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper-V1-ndk.vendor \
-    android.hardware.gatekeeper@1.0.vendor
+    android.hardware.gatekeeper@1.0-impl \
+    android.hardware.gatekeeper@1.0-service
 
 # Health
 PRODUCT_PACKAGES += \
@@ -53,7 +53,14 @@ PRODUCT_PACKAGES += \
     android.hardware.security.keymint-V3-ndk.vendor \
     android.hardware.security.rkp-V3-ndk.vendor \
     android.hardware.security.secureclock-V1-ndk.vendor \
-    android.hardware.security.sharedsecret-V1-ndk.vendor
+    android.hardware.security.sharedsecret-V1-ndk.vendor \
+    android.hardware.security.sharedsecret-V2-ndk.vendor \
+    android.hardware.weaver-V2-ndk.vendor
+
+# idk FIXME
+PRODUCT_PACKAGES += \
+    libjson \
+    libjsoncpp.vendor \
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.keystore.app_attest_key.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.keystore.app_attest_key.xml \
