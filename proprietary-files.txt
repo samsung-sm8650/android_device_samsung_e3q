@@ -563,6 +563,7 @@ vendor/lib64/libspukeymint.so
 vendor/lib64/libspukeymintutils.so
 vendor/lib64/vendor.samsung.hardware.keymint-V3-ndk.so
 vendor/lib64/libsecril-client.so
+vendor/etc/vintf/manifest/android.hardware.security.keymint-service-spu-qti.xml
 
 # Local time
 vendor/lib64/hw/local_time.default.so
@@ -702,6 +703,10 @@ vendor/etc/pwr/PSMPowerOptFeature.xml
 vendor/etc/pwr/PowerFeatureConfig.xml
 vendor/etc/pwr/StandbyFeature.xml
 vendor/etc/pwr/VideoPowerOptFeature.xml
+
+# Protobuf
+vendor/lib64/libprotobuf-cpp-full-21.7.so
+vendor/lib64/libprotobuf-cpp-lite-21.7.so
 
 # QCC
 system_ext/etc/init/vendor.qti.hardware.qccsyshal@1.2-service.rc

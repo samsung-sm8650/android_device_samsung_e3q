@@ -43,7 +43,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor \
     android.hardware.keymaster-V4-ndk.vendor \
-    libkeymaster_messages.vendor
+    libkeymaster_messages.vendor \
+    libkeymaster4_1support.vendor
 
 # Keymint
 PRODUCT_PACKAGES += \
@@ -146,6 +147,10 @@ PRODUCT_SOONG_NAMESPACES += \
 # Vendor service manager
 PRODUCT_PACKAGES += \
     vndservicemanager
+
+# VNDK
+PRODUCT_PACKAGES += \
+    libcrypto-v33
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/samsung/e3q/e3q-vendor.mk)
