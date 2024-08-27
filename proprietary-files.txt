@@ -1,4 +1,4 @@
-# Unpinned blobs from e3qxxx-user 14 UP1A.231005.007 S928BXXS2AXEF release-keys
+# Unpinned blobs from e3qxxx-user 14 UP1A.231005.007 S928BXXS3AXGF release-keys
 
 # ADSP
 vendor/bin/adsprpcd
