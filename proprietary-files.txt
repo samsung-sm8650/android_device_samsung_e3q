@@ -549,21 +549,26 @@ vendor/lib64/libkeymaster_portable.so
 vendor/lib64/libpuresoftkeymasterdevice.so
 vendor/lib64/vendor.samsung.hardware.security.fkeymaster-V1-ndk.so
 
-# Keymint
+# Security
 vendor/bin/hw/android.hardware.security.keymint-service
 vendor/bin/hw/android.hardware.security.keymint-service-spu-qti
 vendor/etc/init/android.hardware.security.keymint-service.rc
 vendor/etc/init/android.hardware.security.keymint-service-spu-qti.rc
+vendor/etc/vintf/manifest/android.hardware.security.keymint-service-spu-qti.xml
 vendor/lib64/android.hardware.security.keymint-V1-ndk.so
-vendor/lib64/android.hardware.security.keymint-V3-ndk.so
+vendor/lib64/libcppbor_external.so
+vendor/lib64/libhermes_cred.so
+vendor/lib64/libkeymaster4_1support.so
+vendor/lib64/libsec_esek.so
+vendor/lib64/libsecril-client.so
+vendor/lib64/libsec_semHalTlc.so
 vendor/lib64/libskeymint10device.so
 vendor/lib64/libskeymint_cli.so
+vendor/lib64/libspictrl.so
 vendor/lib64/libspukeymintdeviceutils.so
 vendor/lib64/libspukeymint.so
 vendor/lib64/libspukeymintutils.so
 vendor/lib64/vendor.samsung.hardware.keymint-V3-ndk.so
-vendor/lib64/libsecril-client.so
-vendor/etc/vintf/manifest/android.hardware.security.keymint-service-spu-qti.xml
 
 # Local time
 vendor/lib64/hw/local_time.default.so

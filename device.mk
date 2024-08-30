@@ -16,6 +16,9 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
+# Add common definitions for Qualcomm
+$(call inherit-product, hardware/qcom-caf/common/common.mk)
+
 # API levels
 PRODUCT_SHIPPING_API_LEVEL := 34
 
@@ -41,6 +44,7 @@ PRODUCT_PACKAGES += \
 
 # Keymaster
 PRODUCT_PACKAGES += \
+    #android.hardware.keymaster@4.0-service.samsung \
     android.hardware.keymaster@4.1.vendor \
     android.hardware.keymaster-V4-ndk.vendor \
     libkeymaster_messages.vendor \

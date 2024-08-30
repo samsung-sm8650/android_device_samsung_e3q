@@ -36,4 +36,14 @@
             <instance>default</instance>
         </interface>
     </hal>
+        <hal format="aidl">
+        <name>vendor.samsung.hardware.keymint</name>
+        <version>3</version>
+        <fqname>ISehKeyMintExtension/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.samsung.hardware.keymint</name>
+        <version>3</version>
+        <fqname>ISehKeyMintFactory/default</fqname>
+    </hal>
 </manifest>
