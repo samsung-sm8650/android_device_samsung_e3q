@@ -22,6 +22,14 @@ $(call inherit-product, hardware/qcom-caf/common/common.mk)
 # API levels
 PRODUCT_SHIPPING_API_LEVEL := 34
 
+# Authsecret
+PRODUCT_PACKAGES += \
+    android.hardware.authsecret@1.0.vendor
+
+# ConfigStore
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.capabilityconfigstore@1.0.vendor
+
 # fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
@@ -29,8 +37,9 @@ PRODUCT_PACKAGES += \
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0-impl \
-    android.hardware.gatekeeper@1.0-service
+    android.hardware.gatekeeper-V1-ndk.vendor \
+    android.hardware.gatekeeper@1.0.vendor \
+    libgatekeeper.vendor
 
 # Health
 PRODUCT_PACKAGES += \
@@ -44,14 +53,15 @@ PRODUCT_PACKAGES += \
 
 # Keymaster
 PRODUCT_PACKAGES += \
+    android.hardware.hardware_keystore.xml \
     android.hardware.keymaster@4.1.vendor \
+    android.hardware.keymaster-V3-ndk.vendor \
     android.hardware.keymaster-V4-ndk.vendor \
-    libkeymaster_messages.vendor \
-    libkeymaster4_1support.vendor
+    libkeymaster4_1support.vendor \
+    libkeymaster_messages.vendor
 
 # Keymint
 PRODUCT_PACKAGES += \
-    android.hardware.hardware_keystore.xml \
     android.hardware.security.keymint-V1-ndk.vendor \
     android.hardware.security.keymint-V2-ndk.vendor \
     android.hardware.security.keymint-V3-ndk.vendor \
@@ -59,17 +69,28 @@ PRODUCT_PACKAGES += \
     android.hardware.security.secureclock-V1-ndk.vendor \
     android.hardware.security.sharedsecret-V1-ndk.vendor \
     android.hardware.security.sharedsecret-V2-ndk.vendor \
-    android.hardware.weaver-V2-ndk.vendor
+    android.hardware.weaver-V2-ndk.vendor \
 
-# idk FIXME
+# Weaver
 PRODUCT_PACKAGES += \
+    android.hardware.weaver@1.0
+
+# QMI
+PRODUCT_PACKAGES += \
+    libcurl.vendor \
     libjson \
     libjsoncpp.vendor \
+    libqti_vndfwk_detect.vendor \
+    libqti_vndfwk_detect_vendor \
+    libsqlite.vendor \
+    libvndfwk_detect_jni.qti.vendor \
+    libvndfwk_detect_jni.qti_vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.keystore.app_attest_key.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.keystore.app_attest_key.xml \
-    hardware/interfaces/security/keymint/aidl/default/android.hardware.hardware_keystore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.hardware_keystore.xml
-
+    hardware/interfaces/security/keymint/aidl/default/android.hardware.hardware_keystore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.hardware_keystore.xml \
+    frameworks/native/data/etc/android.software.device_id_attestation.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.device_id_attestation.xml \
+    $(LOCAL_PATH)/configs/permissions/android.hardware.strongbox_keystore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.strongbox_keystore.xml
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
@@ -119,12 +140,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.qcom \
     init.e3q.rc \
-    init.qcom.factory.rc \
     init.qcom.rc \
     init.qcom.usb.rc \
     init.qti.kernel.rc \
-    init.qti.ss-ramdump.sh \
-    init.qti.ufs.rc \
     init.samsung.bsp.rc \
     init.samsung.display.rc \
     init.samsung.dp.rc \
@@ -139,12 +157,30 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
 
+# Memtrack
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.memtrack-service
+
+# Overlays
+PRODUCT_ENFORCE_RRO_TARGETS := *
+
+# Protobuf
+PRODUCT_PACKAGES += \
+    libprotobuf-cpp-full-3.9.1-vendorcompat \
+    libprotobuf-cpp-full \
+    libprotobuf-cpp-lite \
+    libprotobuf-cpp-lite-3.9.1-vendorcompat \
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/samsung \
     kernel/samsung/sm8650 \
     kernel/samsung/sm8650-modules
+
+# Verified Boot
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml
 
 # Vendor service manager
 PRODUCT_PACKAGES += \
@@ -153,6 +189,11 @@ PRODUCT_PACKAGES += \
 # VNDK
 PRODUCT_PACKAGES += \
     libcrypto-v33
+
+PRODUCT_PACKAGES += \
+    libnetutils.vendor \
+    libstagefright_xmlparser.vendor \
+    libnl \
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/samsung/e3q/e3q-vendor.mk)

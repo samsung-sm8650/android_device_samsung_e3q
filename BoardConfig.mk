@@ -55,6 +55,7 @@ BOARD_KERNEL_CMDLINE := \
     loop.max_part=7 \
     printk.devkmsg=on \
     video=vfb:640x400,bpp=32,memsize=3072000 \
+    audit=0
 
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
@@ -197,7 +198,7 @@ BOARD_INCLUDE_RECOVERY_DTBO := true
 BOARD_USES_FULL_RECOVERY_IMAGE := true
 BOARD_RECOVERY_MKBOOTIMG_ARGS := --header_version 2
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
-TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_USERIMAGES_USE_F2FS := true
 
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
