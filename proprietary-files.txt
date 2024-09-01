@@ -1,4 +1,9 @@
 # Unpinned blobs from e3qxxx-user 14 UP1A.231005.007 S928BXXS3AXGF release-keys|
+
+# FIXME
+vendor/lib64/hw/vendor.qti.hardware.bttpi-impl.so
+vendor/lib64/vendor.qti.hardware.bttpi-V3-ndk.so
+
 # ADSP
 vendor/bin/adsprpcd
 vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc
@@ -380,6 +385,7 @@ vendor/lib64/vendor.qti.hardware.display.mapperextensions@1.2.so
 vendor/lib64/vendor.qti.hardware.display.mapperextensions@1.3.so
 vendor/lib64/vendor.qti.hardware.display.postproc-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
+vendor/lib64/libclstc_algorithm_adapter.so
 
 # Display configs
 vendor/etc/display/DPU10__.xml
@@ -574,13 +580,6 @@ lib64/libhdcp2.so
 lib64/libhdcp_client_aidl.so
 lib64/libmedia_codeclist.so
 lib64/libomafldrm.so
-lib64/libstagefright_aidl_bufferpool2.so
-lib64/libstagefright_bufferpool@2.0.1.so
-lib64/libstagefright_codecbase.so
-lib64/libstagefright_framecapture_utils.so
-lib64/libstagefright_hdcp.so
-lib64/libstagefright_httplive_sec.so
-lib64/libstagefright_surface_utils.so
 lib64/vendor.samsung.hardware.security.hdcp.wifidisplay-V2-ndk.so
 vendor/bin/hw/android.hardware.media.omx@1.0-service
 vendor/bin/hw/vendor.qti.media.c2@1.0-service
@@ -601,14 +600,11 @@ vendor/lib64/librechdr10plus.sec.so
 vendor/lib64/librechdr10plus.so
 vendor/lib64/libsavscmn.so
 vendor/lib64/libsdynatm.so
-vendor/lib64/libstagefright_aidl_bufferpool2.so
-vendor/lib64/libstagefright_bufferpool@2.0.1.so
-vendor/lib64/libstagefright_bufferqueue_helper_vendor.so
-vendor/lib64/libstagefright_foundation_vendor.so
-vendor/lib64/libstagefright_omx_vendor.so
-vendor/lib64/libstagefrighthw.so
 vendor/lib64/libvicom.so
 vendor/lib64/vintf-codecsolution-V2-ndk.so
+vendor/lib64/libstagefright_omx_vendor.so
+vendor/lib64/libstagefright_foundation_vendor.so
+vendor/lib64/libstagefright_bufferqueue_helper_vendor.so
 
 # Media (Dolby)
 vendor/etc/dolby/dax-default.xml
@@ -858,6 +854,7 @@ vendor/lib64/libsnsutils.so
 vendor/lib64/sensors.flicker.so
 vendor/lib64/sensors.grip.so
 vendor/lib64/sensors.qsh.so
+vendor/lib64/libsensorndkbridge.so
 
 # Sensors configs
 vendor/etc/sensors/config/akmlib.json
@@ -2218,3 +2215,5 @@ vendor/saiv/swisp_1.0/db/denoise_model_e3000_832X1088X4_v10.0_S22Realgfjdndm_l11
 vendor/saiv/swisp_1.0/db/denoise_model_e3000_832X1088X4_v9.4_C3P3S22Real_l113ssim35dists25lpips25.dlc
 vendor/saiv/swisp_1.0/db/dmdnde_model_e3100_832X1088X4_v9.5_front.dlc
 vendor/saiv/swisp_1.0/db/dmdnde_model_e708_832X1088X4_v11.7.exp8_S22v2v5_S23v1v2_bls_avg.dlc
+vendor/lib64/vendor.samsung.hardware.hyper-V2-ndk.so
+vendor/lib64/libhypervintf.so

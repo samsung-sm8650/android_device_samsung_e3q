@@ -66,12 +66,29 @@ PRODUCT_PACKAGES += \
 # Codec2
 PRODUCT_PACKAGES += \
     android.hardware.media.bufferpool@2.0.vendor \
+    android.hardware.media.c2@1.0.vendor \
     android.hardware.media.c2@1.2.vendor \
     libavservices_minijail.vendor \
+    libavservices_minijail\
+    libpalclient \
     libcodec2_hidl@1.0.vendor \
     libcodec2_vndk.vendor \
     libstagefright_bufferpool@2.0.1.vendor \
-    android.hardware.media.bufferpool2-V1-ndk
+    android.hardware.media.bufferpool2-V1-ndk \
+    libcodec2_hidl@1.2.vendor \
+    libstagefright_softomx_plugin.vendor \
+    libsfplugin_ccodec_utils.vendor \
+    libcodec2_soft_common.vendor
+
+PRODUCT_COPY_FILES += \
+    frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_c2_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2_audio.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_c2_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2_video.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_telephony.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video_le.xml
+
 
 # Display
 PRODUCT_PACKAGES += \
@@ -102,7 +119,18 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@1.1.vendor \
     vendor.qti.hardware.display.mapper@2.0.vendor \
     vendor.qti.hardware.display.mapper@3.0.vendor \
-    vendor.qti.hardware.display.mapper@4.0.vendor
+    vendor.qti.hardware.display.mapper@4.0.vendor \
+    android.frameworks.displayservice@1.0 \
+    android.frameworks.displayservice@1.0.vendor \
+    android.hardware.graphics.allocator@2.0-impl \
+    android.hardware.graphics.allocator@2.0-service \
+    android.hardware.graphics.composer@2.1-service \
+    android.hardware.graphics.mapper@2.0-impl-2.1 \
+    android.hardware.memtrack@1.0-impl \
+    android.hardware.memtrack@1.0-service \
+    libtinyxml \
+    vendor.display.config@1.9 \
+    vendor.display.config@1.9.vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
@@ -175,6 +203,25 @@ PRODUCT_PACKAGES += \
     libvndfwk_detect_jni.qti.vendor \
     libvndfwk_detect_jni.qti_vendor
 
+# RIL
+PRODUCT_PACKAGES += \
+    android.hardware.radio@1.2.vendor \
+    android.hardware.radio.config@1.3.vendor \
+    android.hardware.radio.deprecated@1.0.vendor \
+    android.hardware.radio-V1-ndk.vendor \
+    android.hardware.radio.config-V1-ndk.vendor \
+    android.hardware.radio.config-V2-ndk.vendor \
+    android.hardware.radio.data-V1-ndk.vendor \
+    android.hardware.radio.messaging-V1-ndk.vendor \
+    android.hardware.radio.modem-V1-ndk.vendor \
+    android.hardware.radio.network-V1-ndk.vendor \
+    android.hardware.radio.sim-V1-ndk.vendor \
+    android.hardware.radio.voice-V1-ndk.vendor \
+    libprotobuf-cpp-full \
+    libprotobuf-cpp-lite-3.9.1-vendorcompat \
+    librmnetctl \
+    secril_config_svc
+
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.keystore.app_attest_key.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.keystore.app_attest_key.xml \
     hardware/interfaces/security/keymint/aidl/default/android.hardware.hardware_keystore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.hardware_keystore.xml \
@@ -186,7 +233,9 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 
 # OMX
 PRODUCT_PACKAGES += \
+    android.hardware.media.c2@1.0.vendor \
     libOmxCore \
+    libmm-omxcore \
     libstagefrighthw
 
 # Partitions
@@ -281,6 +330,22 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vndservicemanager
 
+# Trusted User Interface
+PRODUCT_PACKAGES += \
+    android.hidl.memory.block@1.0.vendor \
+    vendor.qti.hardware.systemhelper@1.0.vendor
+
+# USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb-service.qti \
+    android.hardware.usb-V1-ndk.vendor
+
+PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/usb/etc
+
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.usb.accessory.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.accessory.xml \
+    frameworks/native/data/etc/android.hardware.usb.host.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.host.xml
+
 # VNDK
 PRODUCT_PACKAGES += \
     libcrypto-v33
@@ -288,8 +353,32 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libnetutils.vendor \
     libstagefright_xmlparser.vendor \
+    libnl.vendor \
+    android.hardware.gnss-V3-ndk.vendor \
+    android.hardware.biometrics.fingerprint-V3-ndk.vendor
+
+# WiFi
+PRODUCT_PACKAGES += \
+    android.hardware.wifi-service \
+    android.hardware.wifi.supplicant-V1-ndk.vendor \
+    android.hardware.wifi.supplicant-V2-ndk.vendor \
+    android.hardware.wifi-V1-ndk.vendor \
+    android.hardware.wifi.hostapd-V1-ndk.vendor \
+
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.wifi.aware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.aware.xml \
+    frameworks/native/data/etc/android.hardware.wifi.direct.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.direct.xml \
+    frameworks/native/data/etc/android.hardware.wifi.passpoint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.passpoint.xml \
+    frameworks/native/data/etc/android.hardware.wifi.rtt.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.rtt.xml \
+    frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml \
+    frameworks/native/data/etc/android.software.ipsec_tunnels.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnels.xml
+
+# WiFi Display
+PRODUCT_PACKAGES += \
+    android.media.audio.common.types-V2-cpp \
     libnl \
-    libnl.vendor
+    libpng.vendor \
+    libwfdaac_vendor
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/samsung/e3q/e3q-vendor.mk)
