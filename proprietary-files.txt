@@ -1,5 +1,4 @@
-# Unpinned blobs from e3qxxx-user 14 UP1A.231005.007 S928BXXS3AXGF release-keys
-
+# Unpinned blobs from e3qxxx-user 14 UP1A.231005.007 S928BXXS3AXGF release-keys|
 # ADSP
 vendor/bin/adsprpcd
 vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc
@@ -704,8 +703,8 @@ vendor/etc/pwr/StandbyFeature.xml
 vendor/etc/pwr/VideoPowerOptFeature.xml
 
 # Protobuf
-# vendor/lib64/libprotobuf-cpp-full-21.7.so
-# vendor/lib64/libprotobuf-cpp-lite-21.7.so
+vendor/lib64/libprotobuf-cpp-full-21.7.so
+vendor/lib64/libprotobuf-cpp-lite-21.7.so
 
 # QCC
 system_ext/etc/init/vendor.qti.hardware.qccsyshal@1.2-service.rc
@@ -955,6 +954,8 @@ vendor/lib64/vendor.qti.hardware.trustedui-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.trustedui@1.0.so
 vendor/lib64/vendor.qti.hardware.trustedui@1.1.so
 vendor/lib64/vendor.qti.hardware.trustedui@1.2.so
+vendor/lib64/libtrustedapploader.so
+vendor/lib64/libcpion.so
 
 # USB
 vendor/bin/hw/android.hardware.usb-service.qti
@@ -1799,7 +1800,6 @@ vendor/lib64/libcapiv2uvvendor.so
 vendor/lib64/libcdfw.so
 vendor/lib64/libcdfw_remote_api.so
 vendor/lib64/libclconverter.so
-vendor/lib64/libclstc_algorithm_adapter.so
 vendor/lib64/libclstc_gcp_adapter.so
 vendor/lib64/libclstc_tm.so
 vendor/lib64/libcodec2_sec_aacdec.so
@@ -1869,7 +1869,6 @@ vendor/lib64/libhdcpsrm.so
 vendor/lib64/libhdr_backlight_adapter.so
 vendor/lib64/libhdr_backlight_adapter_qti.so
 vendor/lib64/libhdr_stub.so
-vendor/lib64/libhdr_tm.so
 vendor/lib64/libhdradaptivecustom.so
 vendor/lib64/libhdraid.gpu.arcsoft.so
 vendor/lib64/libhdraid.npu.arcsoft.so
