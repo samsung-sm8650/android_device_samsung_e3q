@@ -553,7 +553,6 @@ vendor/bin/hw/android.hardware.security.keymint-service
 vendor/bin/hw/android.hardware.security.keymint-service-spu-qti
 vendor/etc/init/android.hardware.security.keymint-service.rc
 vendor/etc/init/android.hardware.security.keymint-service-spu-qti.rc
-vendor/etc/vintf/manifest/android.hardware.security.keymint-service-spu-qti.xml
 vendor/lib64/android.hardware.security.keymint-V1-ndk.so
 vendor/lib64/libcppbor_external.so
 vendor/lib64/libhermes_cred.so
@@ -927,32 +926,28 @@ vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
 
 # Trusted UI
-system_ext/lib64/vendor.qti.hardware.trustedui-V1-ndk.so
-system_ext/lib64/vendor.qti.hardware.trustedui@1.0.so
-system_ext/lib64/vendor.qti.hardware.tui_comm@1.0.so
-vendor/bin/hw/vendor.qti.hardware.trustedui-aidl-service-qti
 vendor/bin/hw/vendor.qti.hardware.trustedui@1.0-service-qti
-vendor/bin/TrustedUISampleTest
-vendor/etc/init/vendor.qti.hardware.trustedui-aidl-service-qti.rc
+vendor/bin/hw/vendor.qti.hardware.trustedui-aidl-service-qti
 vendor/etc/init/vendor.qti.hardware.trustedui@1.0-service-qti.rc
+vendor/etc/init/vendor.qti.hardware.trustedui-aidl-service-qti.rc
 vendor/etc/vintf/manifest/vendor.qti.hardware.trustedui-aidl-service.xml
-vendor/lib64/libTouchInputVM.so
-vendor/lib64/libTrustedInput.so
-vendor/lib64/libTrustedInputAIDL.so
-vendor/lib64/libTrustedInputTZ.so
-vendor/lib64/libTrustedUI.so
-vendor/lib64/libTrustedUIAIDL.so
-vendor/lib64/libTrustedUITZ.so
-vendor/lib64/libTrustedUIVM.so
+vendor/lib64/libcpion.so
 vendor/lib64/libqdutils.so
 vendor/lib64/libsi.so
+vendor/lib64/libTouchInputVM.so
+vendor/lib64/libtrustedapploader.so
+vendor/lib64/libTrustedInputAIDL.so
+vendor/lib64/libTrustedInput.so
+vendor/lib64/libTrustedInputTZ.so
+vendor/lib64/libTrustedUIAIDL.so
+vendor/lib64/libTrustedUI.so
+vendor/lib64/libTrustedUITZ.so
+vendor/lib64/libTrustedUIVM.so
 vendor/lib64/vendor.qti.hardware.systemhelper@1.0.so
-vendor/lib64/vendor.qti.hardware.trustedui-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.trustedui@1.0.so
 vendor/lib64/vendor.qti.hardware.trustedui@1.1.so
 vendor/lib64/vendor.qti.hardware.trustedui@1.2.so
-vendor/lib64/libtrustedapploader.so
-vendor/lib64/libcpion.so
+vendor/lib64/vendor.qti.hardware.trustedui-V1-ndk.so
 
 # USB
 vendor/bin/hw/android.hardware.usb-service.qti
@@ -980,7 +975,6 @@ vendor/bin/hw/vendor.samsung.hardware.biometrics.face-service
 vendor/bin/hw/vendor.samsung.hardware.biometrics.fingerprint-service
 vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
 vendor/bin/hw/vendor.samsung.hardware.frcmc-service
-vendor/bin/hw/vendor.samsung.hardware.hyper-service
 vendor/bin/hw/vendor.samsung.hardware.khdm-service
 vendor/bin/hw/vendor.samsung.hardware.media.converter@1.0-service
 vendor/bin/hw/vendor.samsung.hardware.mpos-service
@@ -1159,9 +1153,6 @@ vendor/etc/eva/facelandmark/weight_2.dat
 vendor/etc/eva/facelandmark/weight_3_1.dat
 vendor/etc/eva/facelandmark/weight_3_2.dat
 vendor/etc/eva/itof/tuning_params_sensor_type_1.json
-vendor/etc/hyper/config_chipset.json
-vendor/etc/hyper/config_hyper_permission.json
-vendor/etc/hyper/config_vendor.json
 vendor/etc/init/boringssl_self_test.rc
 vendor/etc/init/camera.unihal.rc
 vendor/etc/init/cas-default-lazy.rc
@@ -1174,7 +1165,6 @@ vendor/etc/init/face-default-sec.rc
 vendor/etc/init/fingerprint_common.rc
 vendor/etc/init/hermesd.rc
 vendor/etc/init/hostapd.android.rc
-vendor/etc/init/hyper-default-sec.rc
 vendor/etc/init/ims-dataservice-daemon.rc
 vendor/etc/init/imsdaemon.rc
 vendor/etc/init/init.audio.samsung.rc
@@ -1424,7 +1414,6 @@ vendor/etc/vintf/manifest/mpos-default-sec.xml
 vendor/etc/vintf/manifest/power-samsung.xml
 vendor/etc/vintf/manifest/qms-saidl.xml
 vendor/etc/vintf/manifest/sec_c2_manifest_default0_1_2.xml
-vendor/etc/vintf/manifest/secure_element-service-nxp.xml
 vendor/etc/vintf/manifest/vendor.qti.camera.aon-impl.xml
 vendor/etc/vintf/manifest/vendor.qti.camera.offlinecamera-impl.xml
 vendor/etc/vintf/manifest/vendor.qti.camera.postproc-impl.xml
@@ -1878,9 +1867,6 @@ vendor/lib64/libhfp_pal.so
 vendor/lib64/libhme.so
 vendor/lib64/libhotword_intf.so
 vendor/lib64/libhwvault.so
-vendor/lib64/libhyper.so
-vendor/lib64/libhypermotion_core.so
-vendor/lib64/libhypermotion_interface.so
 vendor/lib64/libiccprofile.so
 vendor/lib64/libiddqd.uniplugin@1.0.so
 vendor/lib64/libimage_enhancement.arcsoft.so
@@ -2215,5 +2201,11 @@ vendor/saiv/swisp_1.0/db/denoise_model_e3000_832X1088X4_v10.0_S22Realgfjdndm_l11
 vendor/saiv/swisp_1.0/db/denoise_model_e3000_832X1088X4_v9.4_C3P3S22Real_l113ssim35dists25lpips25.dlc
 vendor/saiv/swisp_1.0/db/dmdnde_model_e3100_832X1088X4_v9.5_front.dlc
 vendor/saiv/swisp_1.0/db/dmdnde_model_e708_832X1088X4_v11.7.exp8_S22v2v5_S23v1v2_bls_avg.dlc
-vendor/lib64/vendor.samsung.hardware.hyper-V2-ndk.so
-vendor/lib64/libhypervintf.so
+vendor/lib64/android.hardware.power-V4-ndk.so
+vendor/lib64/android.media.audio.common.types-V2-cpp.so
+vendor/lib64/android.hardware.biometrics.face-V3-ndk.so
+vendor/lib64/hw/android.hardware.gnss-aidl-impl-qti.so
+vendor/etc/vintf/manifest/vendor.samsung.hardware.camera.provider-service.xml
+vendor/lib64/android.hardware.camera.provider-V2-ndk.so
+vendor/lib64/libril_sem.so
+vendor/lib64/android.hardware.vibrator-V2-ndk.so

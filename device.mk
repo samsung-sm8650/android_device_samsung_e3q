@@ -144,6 +144,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper-V1-ndk.vendor \
     android.hardware.gatekeeper@1.0.vendor \
+    android.hardware.gatekeeper@1.0 \
     libgatekeeper.vendor
 
 # Health
@@ -164,6 +165,8 @@ PRODUCT_PACKAGES += \
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.hardware_keystore.xml \
+    android.hardware.keymaster@4.0.vendor \
+    android.hardware.keymaster@4.0 \
     android.hardware.keymaster@4.1.vendor \
     android.hardware.keymaster-V3-ndk.vendor \
     android.hardware.keymaster-V4-ndk.vendor \
@@ -355,7 +358,9 @@ PRODUCT_PACKAGES += \
     libstagefright_xmlparser.vendor \
     libnl.vendor \
     android.hardware.gnss-V3-ndk.vendor \
-    android.hardware.biometrics.fingerprint-V3-ndk.vendor
+    android.hardware.biometrics.fingerprint-V3-ndk.vendor \
+    android.hardware.secure_element@1.2 \
+    android.hardware.secure_element@1.2.vendor \
 
 # WiFi
 PRODUCT_PACKAGES += \
