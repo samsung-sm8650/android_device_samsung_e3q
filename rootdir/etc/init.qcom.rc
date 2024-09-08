@@ -63,6 +63,7 @@ import /vendor/etc/init/hw/init.qti.ufs.rc
 import /vendor/etc/init/hw/init.qcom.usb.rc
 import /vendor/etc/init/hw/init.qcom.test.rc
 import /vendor/etc/init/hw/init.target.rc
+import /vendor/etc/init/hw/init.qcom.factory.rc
 
 on early-init
     mount tracefs tracefs /sys/kernel/tracing
@@ -155,18 +156,6 @@ on boot
     chmod 0660 /sys/class/rfkill/rfkill0/device/extldo
     chown media audio /sys/kernel/snd_card/card_state
 
-    # for BT MAC address
-    mkdir /mnt/vendor/efs/bluetooth 0770 system bluetooth
-    # if already exist
-    chown system bluetooth /mnt/vendor/efs/bluetooth
-    chown system bluetooth /mnt/vendor/efs/bluetooth/bt_addr
-    chmod 0770 /mnt/vendor/efs/bluetooth
-    chmod 0660 /mnt/vendor/efs/bluetooth/bt_addr
-
-    # permissions for bluetooth.
-    setprop ro.bt.bdaddr_path "/mnt/vendor/efs/bluetooth/bt_addr"
-    chown bluetooth bluetooth ro.bt.bdaddr_path
-
     # This location is used by QCRIL to host UNIX domain
     # socket files used for internal IPC within QCRIL
     # modules
@@ -241,15 +230,14 @@ on boot
     chown system system /sys/class/backlight/panel1-backlight/max_brightness
 
     # Allow access to sensors device attributes
-    # SS_SLPI_PROJECT
-    #chown system system /sys/class/sensors/MPU6050-accel/enable
-    #chown system system /sys/class/sensors/MPU6050-accel/poll_delay
-    #chown system system /sys/class/sensors/MPU6050-gyro/enable
-    #chown system system /sys/class/sensors/MPU6050-gyro/poll_delay
-    #chown system system /sys/class/sensors/apds9930-light/enable
-    #chown system system /sys/class/sensors/apds9930-light/poll_delay
-    #chown system system /sys/class/sensors/apds9930-proximity/enable
-    #chown system system /sys/class/sensors/apds9930-proximity/poll_delay
+    chown system system /sys/class/sensors/MPU6050-accel/enable
+    chown system system /sys/class/sensors/MPU6050-accel/poll_delay
+    chown system system /sys/class/sensors/MPU6050-gyro/enable
+    chown system system /sys/class/sensors/MPU6050-gyro/poll_delay
+    chown system system /sys/class/sensors/apds9930-light/enable
+    chown system system /sys/class/sensors/apds9930-light/poll_delay
+    chown system system /sys/class/sensors/apds9930-proximity/enable
+    chown system system /sys/class/sensors/apds9930-proximity/poll_delay
 
     # Create directory used for display
     # for backward compatibility
@@ -259,6 +247,8 @@ on boot
     # Create vpp directory
     mkdir /mnt/vendor/persist/vpp 0770 media media
 
+    # Create hexlp directory
+    mkdir /mnt/vendor/persist/hexlp 0770 media media
 
     # Create hvdcp_opti directory
     mkdir /mnt/vendor/persist/hvdcp_opti 0770 root system
@@ -292,9 +282,8 @@ on post-fs-data
     mkdir /data/vendor/qtee 0770 system system
 
     #Create folder of camera
-    mkdir /data/vendor/camera 0770 camera system
-    mkdir /data/vendor/camera/logdump 0770 camera system
-    chmod 0664 /data/vendor/camera/camxoverridesettings.txt
+    mkdir /data/vendor/camera 0770 camera camera
+
 
     #Create directory for tftp
     mkdir /data/vendor/tombstones 0771 system system
@@ -436,6 +425,9 @@ on post-fs-data
     # Create vpp directory
     mkdir /data/vendor/vpp 0770 media media
 
+    # Create hexlp directory
+    mkdir /data/vendor/hexlp 0770 media media
+
     #Create dir for TUI
     mkdir /data/vendor/tui 0700 system drmrpc
 
@@ -452,6 +444,22 @@ service iop /system/vendor/bin/iop
     disabled
     socket iop seqpacket 0666 root system
 
+service qcomsysd /system/vendor/bin/qcom-system-daemon
+    class main
+    user root
+    group root diag oem_2901
+    disabled
+
+# Not launch qcomsysd process in USER BUILD
+on property:persist.vendor.qcomsysd.enabled=1 && property:ro.build.type=userdebug
+    enable qcomsysd
+
+on property:persist.vendor.qcomsysd.enabled=1 && property:ro.build.type=eng
+    enable qcomsysd
+
+on property:persist.vendor.qcomsysd.enabled=0
+    stop qcomsysd
+
 service vendor.ssr_setup /system/vendor/bin/ssr_setup
     oneshot
     disabled
@@ -462,12 +470,6 @@ service vendor.ss_ramdump /system/vendor/bin/subsystem_ramdump
     group system
     ioprio rt 4
     disabled
-
-service qti-ss-ramdump /vendor/bin/sh /vendor/etc/init/hw/init.qti.ss-ramdump.sh ${persist.vendor.ssr.enable_ramdumps}
-    class core
-    user root
-    oneshot
-    #seclabel u:r:vendor-qti-testscripts:s0
 
 on property:ro.vendor.iocgrp.config=1
     mkdir /dev/blkio
@@ -499,15 +501,13 @@ on property:persist.vendor.ssr.restart_level=*
 on property:persist.vendor.ssr.enable_ramdumps=1
     write /sys/module/subsystem_restart/parameters/enable_ramdumps 1
     write /sys/module/qcom_ramdump/parameters/enable_dump_collection 1
-    start qti-ss-ramdump
     mkdir /data/vendor/ramdump_ssr 770 system system
     start vendor.ss_ramdump
 
 on property:persist.vendor.ssr.enable_ramdumps=0
     write /sys/module/subsystem_restart/parameters/enable_ramdumps 0
     write /sys/module/qcom_ramdump/parameters/enable_dump_collection 0
-    start qti-ss-ramdump
-    
+
 on property:persist.vendor.sys.rawdump_copy=1
     write /sys/kernel/dload/emmc_dload 1
 
@@ -519,7 +519,7 @@ on property:sys.boot_completed=1
     #Enable UFS clock scaling back
     write /sys/bus/platform/devices/1d84000.ufshc/clkscale_enable 1
     #Enable UFS auto_hibern8 back
-    write /sys/bus/platform/devices/1d84000.ufshc/auto_hibern8 2000
+    write /sys/bus/platform/devices/1d84000.ufshc/auto_hibern8 5000
     #Enable UFS clock gating back
     write /sys/bus/platform/devices/1d84000.ufshc/clkgate_enable 1
     #Reset read ahead for dm-0 and dm-1 to 512kb
@@ -759,7 +759,6 @@ service wifi-crda /vendor/bin/init.crda.sh
 on property:sys.boot_completed=1
     start qcom-post-boot
     start qti-testscripts
-    start init_time_daemon
 
 on property:ro.vendor.ril.mbn_copy_completed=1
     write /data/vendor/radio/copy_complete 1
@@ -886,12 +885,6 @@ service esepmdaemon /system/vendor/bin/esepmdaemon
     group nfc
 
 on charger
-    #Enable UFS clock scaling back
-    write /sys/bus/platform/devices/1d84000.ufshc/clkscale_enable 1
-    #Enable UFS auto_hibern8 back
-    write /sys/bus/platform/devices/1d84000.ufshc/auto_hibern8 2000
-    #Enable UFS clock gating back
-    write /sys/bus/platform/devices/1d84000.ufshc/clkgate_enable 1
     setprop persist.sys.usb.config mass_storage
     start qcom-post-boot
 
@@ -908,20 +901,6 @@ service time_daemon /vendor/bin/time_daemon
     user system
     group system
     capabilities SYS_TIME
-
-#Mixed HWC versions among targets 
-on property:init.svc.surfaceflinger=restarting
-    stop vendor.qti.hardware.display.composer
-    start vendor.qti.hardware.display.composer
-
-service init_time_daemon /vendor/bin/sh /vendor/bin/init.qti.time.daemon.sh ${persist.vendor.time_services.init}
-    class late_start
-    user system
-    group system
-    disabled
-    oneshot
-    capabilities SYS_TIME
-    seclabel u:r:vendor_init-qti-time-daemon-sh:s0
 
 # Set vendor-ril lib path based on Meta version
 on property:vendor.rild.libpath=*
@@ -943,23 +922,15 @@ service vendor.hbtp /vendor/bin/hbtp_daemon
      capabilities SYS_NICE
      disabled
 
-#service chre /vendor/bin/chre
-#    class late_start
-#    user system
-#    group system
-#    socket chre seqpacket 0660 root system
-#    shutdown critical
+service chre /vendor/bin/chre
+    class late_start
+    user system
+    group system
+    socket chre seqpacket 0660 root system
+    shutdown critical
 
-#on property:vendor.chre.enabled=0
-#   stop chre
-
-on property:sys.factory.running_pretest=true
-    write /sys/class/sensors/accelerometer_sensor/lowpassfilter 2
-    write /sys/class/sensors/sub_accelerometer_sensor/lowpassfilter 2
-
-on property:sys.factory.running_pretest=false
-    write /sys/class/sensors/accelerometer_sensor/lowpassfilter 1
-    write /sys/class/sensors/sub_accelerometer_sensor/lowpassfilter 1
+on property:vendor.chre.enabled=0
+   stop chre
 
 service bugreport /system/bin/dumpstate -d -p -B -z -o /data/user_de/0/com.android.shell/files/bugreports/bugreport
     class main

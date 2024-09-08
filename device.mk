@@ -249,57 +249,24 @@ PRODUCT_CHARACTERISTICS := phone
 
 # Rootdir
 PRODUCT_PACKAGES += \
-    dcc_extension.sh \
-    hdm_status.sh \
-    init.class_main.sh \
-    init.crda.sh \
-    init.kernel.post_boot-cliffs.sh \
-    init.kernel.post_boot-pineapple.sh \
-    init.kernel.post_boot.sh \
-    init.mdm.sh \
-    init.qcom.class_core.sh \
-    init.qcom.coex.sh \
-    init.qcom.early_boot.sh \
-    init.qcom.efs.sync.sh \
-    init.qcom.post_boot.sh \
-    init.qcom.sdio.sh \
-    init.qcom.sensors.sh \
-    init.qcom.sh \
-    init.qcom.usb.sh \
-    init.qti.display_boot.sh \
-    init.qti.kernel.debug-cliffs.sh \
-    init.qti.kernel.debug-pineapple.sh \
-    init.qti.kernel.debug.sh \
-    init.qti.kernel.early_debug-pineapple.sh \
-    init.qti.kernel.early_debug.sh \
-    init.qti.kernel.sh \
-    init.qti.media.sh \
-    init.qti.qcv.sh \
-    init.qti.time.daemon.sh \
-    init.qti.write.sh \
-    init.vendor.sensordebug.sh \
-    init.vendor.sensordebug.ssr_dump.sh \
-    install-recovery.sh \
-    qca6234-service.sh \
-    system_dlkm_modprobe.sh \
-    vendor_modprobe.sh \
-
-PRODUCT_PACKAGES += \
     fstab.qcom \
+    init.class_main.sh \
     init.e3q.rc \
+    init.mdm.sh \
     init.qcom.rc \
+    init.qcom.sh \
     init.qcom.usb.rc \
+    init.qcom.usb.sh \
     init.qti.kernel.rc \
+    init.recovery.qcom.rc \
     init.samsung.bsp.rc \
     init.samsung.display.rc \
     init.samsung.dp.rc \
     init.samsung.power.rc \
     init.samsung.rc \
     init.target.rc \
-    init.recovery.qcom.rc \
-    init.recovery.samsung.rc \
-    ueventd.qcom.rc \
-    ueventd-odm.rc
+    ueventd-odm.rc \
+    ueventd.qcom.rc
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
@@ -384,6 +351,11 @@ PRODUCT_PACKAGES += \
     libnl \
     libpng.vendor \
     libwfdaac_vendor
+
+# Recovery
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.recovery.ui.brightness_normal_percent=25 \
+    ro.recovery.ui.brightness_dimmed_percent=0
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/samsung/e3q/e3q-vendor.mk)
