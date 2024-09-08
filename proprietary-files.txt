@@ -299,9 +299,6 @@ vendor/bin/hw/vendor.qti.hardware.display.composer-service
 vendor/etc/init/vendor.qti.hardware.display.allocator-service.rc
 vendor/etc/init/vendor.qti.hardware.display.color-service.rc
 vendor/etc/init/vendor.qti.hardware.display.composer-service.rc
-vendor/etc/vintf/manifest/android.hardware.graphics.mapper-impl-qti-display.xml
-vendor/etc/vintf/manifest/vendor.qti.hardware.display.allocator-service.xml
-vendor/etc/vintf/manifest/vendor.qti.hardware.display.composer-service.xml
 vendor/lib64/egl/eglSubDriverAndroid.so
 vendor/lib64/egl/libEGL_adreno.so
 vendor/lib64/egl/libGLESv1_CM_adreno.so
@@ -843,7 +840,6 @@ vendor/bin/hw/android.hardware.sensors-service.multihal
 vendor/bin/sensors.qti
 vendor/bin/sscrpcd
 vendor/etc/init/android.hardware.sensors-service-multihal.rc
-vendor/etc/vintf/manifest/android.hardware.sensors-multihal.xml
 vendor/lib64/hw/sensors.dynamic_sensor_hal.so
 vendor/lib64/libhidparser.so
 vendor/lib64/libqsh.so
@@ -1159,7 +1155,6 @@ vendor/etc/init/cas-default-lazy.rc
 vendor/etc/init/cass.rc
 vendor/etc/init/dcfd.rc
 vendor/etc/init/dlsc.rc
-vendor/etc/init/dumpstate-default.rc
 vendor/etc/init/emservice.rc
 vendor/etc/init/face-default-sec.rc
 vendor/etc/init/fingerprint_common.rc
@@ -1403,13 +1398,11 @@ vendor/etc/sysconfig/vendor-apex-allowlist.xml
 vendor/etc/vintf/manifest/atfwd-saidl.xml
 vendor/etc/vintf/manifest/bttpi-saidl.xml
 vendor/etc/vintf/manifest/drk_manifest.xml
-vendor/etc/vintf/manifest/dumpstate-default.xml
 vendor/etc/vintf/manifest/face-default-sec.xml
 vendor/etc/vintf/manifest/iweaver_aidl_v2_manifest.xml
 vendor/etc/vintf/manifest/khdm-default-sec.xml
 vendor/etc/vintf/manifest/manifest_non_qmaa.xml
 vendor/etc/vintf/manifest/manifest_non_qmaa_extn.xml
-vendor/etc/vintf/manifest/memtrack_qti.xml
 vendor/etc/vintf/manifest/mpos-default-sec.xml
 vendor/etc/vintf/manifest/power-samsung.xml
 vendor/etc/vintf/manifest/qms-saidl.xml
@@ -1418,8 +1411,6 @@ vendor/etc/vintf/manifest/vendor.qti.camera.aon-impl.xml
 vendor/etc/vintf/manifest/vendor.qti.camera.offlinecamera-impl.xml
 vendor/etc/vintf/manifest/vendor.qti.camera.postproc-impl.xml
 vendor/etc/vintf/manifest/vendor.qti.diag.hal.service.xml
-vendor/etc/vintf/manifest/vendor.qti.hardware.display.demura-service.xml
-vendor/etc/vintf/manifest/vendor.qti.hardware.tetheroffload.service.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.authfw-manifest.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.biometrics.fingerprint-service.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.camera.provider-service.xml
@@ -2101,8 +2092,6 @@ vendor/lib64/libvideoutils.so
 vendor/lib64/libvk_cass_interface.so
 vendor/lib64/libvkmanager_vendor.so
 vendor/lib64/libvkservice.so
-vendor/lib64/libvndfwk_detect_jni.qti.so
-vendor/lib64/libvndfwk_detect_jni.qti_vendor.so
 vendor/lib64/libvui_dmgr.so
 vendor/lib64/libvui_dmgr_client.so
 vendor/lib64/libwpa_drv_oem.so
