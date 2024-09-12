@@ -980,7 +980,7 @@ SPDX-License-Identifier: BSD-3-Clause-Clear.
         </interface>
     </hal>
     <!-- Codec2 HAl service -->
-    <hal format="hidl" optional="true">
+    <!--hal format="hidl" optional="true">
         <name>android.hardware.media.c2</name>
         <version>1.0</version>
         <version>1.2</version>
@@ -989,7 +989,7 @@ SPDX-License-Identifier: BSD-3-Clause-Clear.
             <instance>default</instance>
             <instance>software</instance>
         </interface>
-    </hal>
+    </hal-->
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.display.allocator</name>
         <version>1.0</version>

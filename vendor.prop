@@ -354,3 +354,4 @@ vendor.qc2audio.per_frame.flac.dec.enabled=true
 vendor.qc2audio.suspend.enabled=true
 vendor.wv.oemcrypto.debug.enable_external_display_check=1
 vendor.wv.oemcrypto.debug.enable_hlos_data_path=true
+debug.renderengine.backend=skiaglthreaded
