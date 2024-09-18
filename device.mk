@@ -96,18 +96,18 @@ PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 PRODUCT_PACKAGES += \
     android.frameworks.cameraservice.common@2.0.vendor \
     android.frameworks.cameraservice.device@2.0.vendor \
+    android.frameworks.cameraservice.service@2.2.vendor \
     android.hardware.camera.provider@2.4-impl \
     android.frameworks.cameraservice.service-V1-ndk.vendor \
     libsensorndkbridge
 
 # Display
 PRODUCT_PACKAGES += \
-    android.frameworks.displayservice@1.0 \
-    android.frameworks.displayservice@1.0.vendor \
-    android.hardware.graphics.common-V4-ndk.vendor \
     android.hardware.graphics.allocator-V1-ndk.vendor \
     android.hardware.graphics.composer3-V2-ndk.vendor \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
+    android.hardware.graphics.allocator@4.0 \
+    android.hardware.graphics.allocator@4.0.vendor \
     init.qti.display_boot.rc \
     init.qti.display_boot.sh \
     libdisplayconfig.qti \
