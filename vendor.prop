@@ -157,7 +157,7 @@ vendor.display.scaling_source_opt_mode=4
 vendor.display.use_smooth_motion=0
 vendor.display.vds_allow_hwc=1
 vendor.gralloc.disable_ubwc=0
-vendor.gralloc.enable_logs=1
+vendor.gralloc.enable_logs=0
 
 # DRM
 drm.service.enabled=true
