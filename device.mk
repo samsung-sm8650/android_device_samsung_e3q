@@ -150,11 +150,8 @@ PRODUCT_PACKAGES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health-service.qti \
-    android.hardware.health-service.qti_recovery \
-    android.hardware.health-V1-ndk.vendor \
-    android.hardware.health-V2-ndk.vendor \
     android.hardware.health@1.0.vendor \
+    android.hardware.health@2.0.vendor \
     android.hardware.health@2.1.vendor
 
 # HIDL
@@ -225,6 +222,7 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.network-V1-ndk.vendor \
     android.hardware.radio.sim-V1-ndk.vendor \
     android.hardware.radio.voice-V1-ndk.vendor \
+    android.hardware.radio.data-V2-ndk.vendor \
     libprotobuf-cpp-full \
     libprotobuf-cpp-lite-3.9.1-vendorcompat \
     librmnetctl \
@@ -332,7 +330,7 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss-V3-ndk.vendor \
     android.hardware.biometrics.fingerprint-V3-ndk.vendor \
     android.hardware.secure_element@1.2 \
-    android.hardware.secure_element@1.2.vendor \
+    android.hardware.secure_element@1.2.vendor
 
 # WiFi
 PRODUCT_PACKAGES += \
@@ -340,7 +338,7 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi.supplicant-V1-ndk.vendor \
     android.hardware.wifi.supplicant-V2-ndk.vendor \
     android.hardware.wifi-V1-ndk.vendor \
-    android.hardware.wifi.hostapd-V1-ndk.vendor \
+    android.hardware.wifi.hostapd-V1-ndk.vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.aware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.aware.xml \

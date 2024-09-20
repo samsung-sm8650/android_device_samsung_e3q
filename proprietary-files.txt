@@ -1,4 +1,4 @@
-# Unpinned blobs from e3qxxx-user 14 UP1A.231005.007 S928BXXS3AXGF release-keys|
+# Unpinned blobs from e3qxxx-user 14 UP1A.231005.007 S928BXXS3AXI1 release-keys
 
 # FIXME
 vendor/lib64/hw/vendor.qti.hardware.bttpi-impl.so
@@ -972,6 +972,15 @@ vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-qti-display.so
 vendor/lib64/vendor.qti.hardware.display.mapper@3.0.so
 vendor/lib64/vendor.qti.hardware.display.mapper@1.0.so
 vendor/lib64/vendor.qti.hardware.display.mapper@2.0.so
+vendor/bin/hw/vendor.samsung.hardware.thermal-service
+vendor/etc/vintf/manifest/vendor.samsung.hardware.thermal-default.xml
+vendor/etc/init/vendor.samsung.hardware.thermal-default.rc
+vendor/lib64/vendor.samsung.hardware.thermal-V1-ndk.so
+vendor/lib64/vendor.samsung.hardware.thermal@1.0.so
+vendor/lib64/vendor.samsung.hardware.audio@1.0.so
+vendor/lib64/service-listener-ext-aidl-V1-ndk.so
+vendor/lib64/libgnss.so
+vendor/lib64/libdpps.so
 
 # QCV
 vendor/bin/init.qti.qcv.sh
