@@ -801,7 +801,14 @@ vendor/lib64/vendor.qti.voiceprint@1.0.so
 # Thermal (Qualcomm)
 system_ext/lib64/vendor.qti.hardware.limits@1.0.so
 system_ext/lib64/vendor.qti.hardware.limits@1.1.so
+vendor/bin/hw/vendor.samsung.hardware.thermal-service
+vendor/bin/thermal-engine-v2
+vendor/etc/init/init_thermal-engine-v2.rc
+vendor/etc/init/vendor.samsung.hardware.thermal-default.rc
+vendor/etc/vintf/manifest/vendor.samsung.hardware.thermal-default.xml
 -vendor/lib64/libthermalclient.so
+vendor/lib64/vendor.samsung.hardware.thermal@1.0.so
+vendor/lib64/vendor.samsung.hardware.thermal-V1-ndk.so
 
 # Thermal configs
 vendor/etc/thermal-engine.conf
@@ -972,15 +979,17 @@ vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-qti-display.so
 vendor/lib64/vendor.qti.hardware.display.mapper@3.0.so
 vendor/lib64/vendor.qti.hardware.display.mapper@1.0.so
 vendor/lib64/vendor.qti.hardware.display.mapper@2.0.so
-vendor/bin/hw/vendor.samsung.hardware.thermal-service
-vendor/etc/vintf/manifest/vendor.samsung.hardware.thermal-default.xml
-vendor/etc/init/vendor.samsung.hardware.thermal-default.rc
-vendor/lib64/vendor.samsung.hardware.thermal-V1-ndk.so
-vendor/lib64/vendor.samsung.hardware.thermal@1.0.so
 vendor/lib64/vendor.samsung.hardware.audio@1.0.so
 vendor/lib64/service-listener-ext-aidl-V1-ndk.so
 vendor/lib64/libgnss.so
 vendor/lib64/libdpps.so
+vendor/lib64/libdpps.so
+vendor/etc/seccomp_policy/codec2.vendor.base-arm64.policy
+vendor/etc/bluetooth_qti_hearing_aid_audio_policy_configuration.xml
+vendor/etc/audio/sku_pineapple_qssi/audio_policy_configuration.xml
+vendor/lib64/libqcodec2_core.so
+vendor/lib64/libqcodec2_base.so
+vendor/lib64/libqcodec2_hooks.so
 
 # QCV
 vendor/bin/init.qti.qcv.sh

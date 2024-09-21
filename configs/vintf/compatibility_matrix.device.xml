@@ -1108,7 +1108,7 @@ SPDX-License-Identifier: BSD-3-Clause-Clear.
         </interface>
     </hal>
     <!-- Trusted UI HAL Service -->
-    <hal format="hidl" optional="true">
+    <!--<hal format="hidl" optional="true">
         <name>vendor.qti.hardware.trustedui</name>
         <version>1.0-2</version>
         <interface>
@@ -1121,9 +1121,9 @@ SPDX-License-Identifier: BSD-3-Clause-Clear.
             <instance>default</instance>
             <instance>qtee-vm</instance>
         </interface>
-    </hal>
+    </hal>-->
     <!-- Trusted UI HAL AIDL Service -->
-    <hal format="aidl" optional="true">
+    <!--<hal format="aidl" optional="true">
         <name>vendor.qti.hardware.trustedui</name>
         <version>1</version>
         <interface>
@@ -1134,7 +1134,7 @@ SPDX-License-Identifier: BSD-3-Clause-Clear.
             <name>ITrustedInput</name>
             <instance>default</instance>
         </interface>
-    </hal>
+    </hal>-->
     <!-- Secure image data processor HAL Service -->
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.secureprocessor.device</name>

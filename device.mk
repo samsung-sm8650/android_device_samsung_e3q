@@ -152,7 +152,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.health@1.0.vendor \
     android.hardware.health@2.0.vendor \
-    android.hardware.health@2.1.vendor
+    android.hardware.health@2.1.vendor \
+    android.hardware.health-service.samsung \
+    android.hardware.health-service.samsung-recovery
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -186,6 +188,10 @@ PRODUCT_PACKAGES += \
     android.hardware.security.sharedsecret-V2-ndk.vendor \
     android.hardware.weaver-V2-ndk.vendor \
 
+# Net
+PRODUCT_PACKAGES += \
+    android.system.net.netd@1.1.vendor
+
 # Weaver
 PRODUCT_PACKAGES += \
     android.hardware.weaver@1.0 \
@@ -193,9 +199,11 @@ PRODUCT_PACKAGES += \
 
 # Thermal
 PRODUCT_PACKAGES += \
-    android.hardware.thermal-V1-ndk.vendor \
-    android.hardware.thermal@1.0.vendor \
-    android.hardware.thermal@2.0.vendor
+    android.frameworks.cameraservice.service@2.2.vendor \
+    android.hardware.thermal@2.0 \
+    android.hardware.thermal@2.0.vendor \
+    android.hardware.thermal-V1-ndk \
+    android.hardware.thermal-V1-ndk.vendor
 
 # QMI
 PRODUCT_PACKAGES += \
