@@ -1,14 +1,14 @@
 <manifest version="7.0" type="device" target-level="8">
-    <hal format="aidl">
+    <!--<hal format="aidl">
         <name>vendor.samsung.hardware.gnss</name>
         <version>2</version>
         <fqname>ISehGnss/default</fqname>
-    </hal>
-    <hal format="aidl">
+    </hal>-->
+    <!--<hal format="aidl">
         <name>vendor.samsung.hardware.hyper</name>
         <version>2</version>
         <fqname>ISehHyPer/default</fqname>
-    </hal>
+    </hal>-->
     <hal format="aidl">
         <name>vendor.samsung.hardware.media.mpp</name>
         <version>2</version>
@@ -45,5 +45,18 @@
         <name>vendor.samsung.hardware.keymint</name>
         <version>3</version>
         <fqname>ISehKeyMintFactory/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.samsung.hardware.bluetooth</name>
+        <transport>hwbinder</transport>
+        <fqname>@2.0::ISehBluetooth/default</fqname>
+    </hal>
+    <hal format="aidl" override="true">
+        <name>android.hardware.weaver</name>
+        <version>2</version>
+        <interface>
+            <name>IWeaver</name>
+            <instance>default</instance>
+        </interface>
     </hal>
 </manifest>

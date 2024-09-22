@@ -59,6 +59,11 @@ AUDIO_PAL_DIR := hardware/qcom-caf/sm8650/audio/pal
 PRODUCT_PACKAGES += \
     android.hardware.authsecret@1.0.vendor
 
+# Bluetooth
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0.vendor \
+    android.hardware.bluetooth@1.1.vendor \
+
 # ConfigStore
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.capabilityconfigstore@1.0.vendor
@@ -167,26 +172,25 @@ PRODUCT_PACKAGES += \
     android.hidl.memory.block@1.0.vendor
 
 # Keymaster
-PRODUCT_PACKAGES += \
-    android.hardware.hardware_keystore.xml \
-    android.hardware.keymaster@4.0.vendor \
-    android.hardware.keymaster@4.0 \
-    android.hardware.keymaster@4.1.vendor \
-    android.hardware.keymaster-V3-ndk.vendor \
-    android.hardware.keymaster-V4-ndk.vendor \
-    libkeymaster4_1support.vendor \
-    libkeymaster_messages.vendor
+# PRODUCT_PACKAGES += \
+#     android.hardware.hardware_keystore.xml \
+#     android.hardware.keymaster@4.0.vendor \
+#     android.hardware.keymaster@4.0 \
+#     android.hardware.keymaster@4.1.vendor \
+#     android.hardware.keymaster-V3-ndk.vendor \
+#     android.hardware.keymaster-V4-ndk.vendor \
+#     libkeymaster4_1support.vendor \
+#     libkeymaster_messages.vendor
 
-# Keymint
-PRODUCT_PACKAGES += \
-    android.hardware.security.keymint-V1-ndk.vendor \
-    android.hardware.security.keymint-V2-ndk.vendor \
-    android.hardware.security.keymint-V3-ndk.vendor \
-    android.hardware.security.rkp-V3-ndk.vendor \
-    android.hardware.security.secureclock-V1-ndk.vendor \
-    android.hardware.security.sharedsecret-V1-ndk.vendor \
-    android.hardware.security.sharedsecret-V2-ndk.vendor \
-    android.hardware.weaver-V2-ndk.vendor \
+# # Keymint
+# PRODUCT_PACKAGES += \
+#     android.hardware.security.keymint-V1-ndk.vendor \
+#     android.hardware.security.keymint-V2-ndk.vendor \
+#     android.hardware.security.keymint-V3-ndk.vendor \
+#     android.hardware.security.rkp-V3-ndk.vendor \
+#     android.hardware.security.secureclock-V1-ndk.vendor \
+#     android.hardware.security.sharedsecret-V1-ndk.vendor \
+#     android.hardware.security.sharedsecret-V2-ndk.vendor \
 
 # Net
 PRODUCT_PACKAGES += \
@@ -194,8 +198,9 @@ PRODUCT_PACKAGES += \
 
 # Weaver
 PRODUCT_PACKAGES += \
+    android.hardware.weaver@1.0.vendor \
     android.hardware.weaver@1.0 \
-    android.hardware.weaver@1.0.vendor
+    android.hardware.weaver-V2-ndk.vendor
 
 # Thermal
 PRODUCT_PACKAGES += \
@@ -218,22 +223,20 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
-    android.hardware.radio@1.2.vendor \
-    android.hardware.radio.config@1.3.vendor \
-    android.hardware.radio.deprecated@1.0.vendor \
-    android.hardware.radio-V1-ndk.vendor \
-    android.hardware.radio.config-V1-ndk.vendor \
+    android.hardware.radio@1.6.vendor \
     android.hardware.radio.config-V2-ndk.vendor \
-    android.hardware.radio.data-V1-ndk.vendor \
-    android.hardware.radio.messaging-V1-ndk.vendor \
-    android.hardware.radio.modem-V1-ndk.vendor \
-    android.hardware.radio.network-V1-ndk.vendor \
-    android.hardware.radio.sim-V1-ndk.vendor \
-    android.hardware.radio.voice-V1-ndk.vendor \
+    android.hardware.radio-V2-ndk.vendor \
+    android.hardware.radio.config-V2-ndk.vendor \
     android.hardware.radio.data-V2-ndk.vendor \
+    android.hardware.radio.messaging-V2-ndk.vendor \
+    android.hardware.radio.modem-V2-ndk.vendor \
+    android.hardware.radio.network-V2-ndk.vendor \
+    android.hardware.radio.sap-V1-ndk.vendor \
+    android.hardware.radio.sim-V2-ndk.vendor \
+    android.hardware.radio.voice-V2-ndk.vendor \
+    librmnetctl \
     libprotobuf-cpp-full \
     libprotobuf-cpp-lite-3.9.1-vendorcompat \
-    librmnetctl \
     secril_config_svc
 
 PRODUCT_COPY_FILES += \
