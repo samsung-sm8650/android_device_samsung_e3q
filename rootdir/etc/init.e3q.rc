@@ -27,7 +27,7 @@
 #
 #
 
-service logger /system/bin/logcat -b all -D -f /metadata/boot_log.txt
+service logger /system/bin/logcat -b all -D > /dev/kmsg
     class main
     user root
     group root system

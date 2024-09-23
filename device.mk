@@ -148,9 +148,6 @@ PRODUCT_COPY_FILES += \
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper-V1-ndk.vendor \
-    android.hardware.gatekeeper@1.0.vendor \
-    android.hardware.gatekeeper@1.0 \
     libgatekeeper.vendor
 
 # Health
@@ -341,7 +338,8 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss-V3-ndk.vendor \
     android.hardware.biometrics.fingerprint-V3-ndk.vendor \
     android.hardware.secure_element@1.2 \
-    android.hardware.secure_element@1.2.vendor
+    android.hardware.secure_element@1.2.vendor \
+    libsqlite.vendor
 
 # WiFi
 PRODUCT_PACKAGES += \
