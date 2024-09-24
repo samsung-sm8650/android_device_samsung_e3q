@@ -339,7 +339,8 @@ PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint-V3-ndk.vendor \
     android.hardware.secure_element@1.2 \
     android.hardware.secure_element@1.2.vendor \
-    libsqlite.vendor
+    libsqlite.vendor \
+    FrameworksResTarget
 
 # WiFi
 PRODUCT_PACKAGES += \

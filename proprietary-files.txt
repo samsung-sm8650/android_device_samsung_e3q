@@ -1072,6 +1072,12 @@ vendor/bin/trusteduilistener
 vendor/etc/init/trusteduilistener.rc
 vendor/lib64/vendor.qti.hardware.display.config-V7-ndk.so
 vendor/lib64/libTrustedInputUtils.so
+vendor/lib64/libdk_vnd_service_core.so
+vendor/etc/seccomp_policy/qwesd@2.0.policy
+vendor/lib64/libcdfw.so
+vendor/lib64/libmeters.so
+vendor/lib64/libvkmanager_vendor.so
+vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 
 # QCV
 vendor/bin/init.qti.qcv.sh
