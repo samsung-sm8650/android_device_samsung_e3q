@@ -1078,6 +1078,8 @@ vendor/lib64/libcdfw.so
 vendor/lib64/libmeters.so
 vendor/lib64/libvkmanager_vendor.so
 vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
+vendor/etc/vintf/manifest/drk_manifest.xml
+vendor/bin/hw/vendor.samsung.hardware.security.drk@2.0-service
 
 # QCV
 vendor/bin/init.qti.qcv.sh
