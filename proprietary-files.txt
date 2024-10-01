@@ -363,18 +363,23 @@ vendor/lib64/libqmiservices.so
 vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
 # Gatekeeper
+vendor/bin/hw/android.hardware.gatekeeper-service
+vendor/bin/hw/android.hardware.gatekeeper-service-spu-qti
 vendor/bin/hw/vendor.qti.hardware.secureprocessor@1.0
+vendor/etc/init/android.hardware.gatekeeper-service.rc
+vendor/etc/init/android.hardware.gatekeeper-service-spu-qti.rc
 vendor/etc/init/vendor.qti.hardware.secureprocessor@1.0.rc
 vendor/lib64/hw/gatekeeper.mdfpp.so
 vendor/lib64/hw/libspuqtigatekeeper.so
+vendor/lib64/libgpt.so
+vendor/lib64/librpmb.so
 vendor/lib64/libspcom.so
+vendor/lib64/libssd.so
 vendor/lib64/vendor.qti.hardware.secureprocessor.common@1.0-helper.so
 vendor/lib64/vendor.qti.hardware.secureprocessor.common@1.0.so
 vendor/lib64/vendor.qti.hardware.secureprocessor.config@1.0.so
 vendor/lib64/vendor.qti.hardware.secureprocessor.device@1.0.so
-vendor/lib64/librpmb.so
-vendor/lib64/libssd.so
-vendor/lib64/libgpt.so
+
 
 # GNSS
 vendor/bin/hw/android.hardware.gnss-aidl-service-qti
@@ -412,6 +417,9 @@ vendor/lib64/vendor.qti.gnss-V5-ndk.so
 vendor/lib64/vendor.qti.gnss-service.so
 vendor/lib64/vendor.samsung.hardware.gnss-V2-ndk_platform.so
 vendor/lib64/hw/android.hardware.gnss-aidl-impl-qti.so
+vendor/lib64/libloc_api_wds.so
+vendor/etc/init/loc-launcher.rc
+vendor/lib64/libcld80211.so
 
 # GNSS configs
 vendor/etc/gps.conf
@@ -971,7 +979,6 @@ vendor/lib64/vendor.samsung.hardware.audio@1.0.so
 vendor/lib64/service-listener-ext-aidl-V1-ndk.so
 vendor/lib64/libgnss.so
 vendor/lib64/libdpps.so
-vendor/lib64/libdpps.so
 vendor/etc/seccomp_policy/codec2.vendor.base-arm64.policy
 vendor/etc/seccomp_policy/codec2.vendor.ext-arm64.policy
 vendor/etc/bluetooth_qti_hearing_aid_audio_policy_configuration.xml
@@ -1051,11 +1058,6 @@ vendor/etc/secnvm/k250a_47000400_0.img
 vendor/etc/secnvm/k250a_47000403_1.img
 vendor/etc/secnvm/k250a_47000403_f.img
 vendor/lib64/libhermes.so
-vendor/bin/hw/android.hardware.gatekeeper-service
-vendor/bin/hw/android.hardware.gatekeeper-service-spu-qti
-vendor/etc/init/android.hardware.gatekeeper-service-spu-qti.rc
-vendor/etc/init/android.hardware.gatekeeper-service.rc
-vendor/lib64/android.hardware.gatekeeper-V1-ndk.so
 vendor/etc/ssg/tz_whitelist.json
 vendor/etc/ssg/ta_config.json
 vendor/bin/qwesd
@@ -1080,6 +1082,34 @@ vendor/lib64/libvkmanager_vendor.so
 vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 vendor/etc/vintf/manifest/drk_manifest.xml
 vendor/bin/hw/vendor.samsung.hardware.security.drk@2.0-service
+vendor/etc/init/vendor.samsung.hardware.frcmc-service.rc
+vendor/bin/hw/vendor.samsung.hardware.frcmc-service
+vendor/lib64/vendor.samsung.hardware.frcmc-V1-ndk.so
+vendor/lib64/android.system.keystore2-V1-ndk.so
+vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
+vendor/lib64/libGPMTEEC_vendor.so
+vendor/lib64/libGPTEE_vendor.so
+vendor/etc/vintf/manifest/vendor.qti.hardware.trustedui-aidl-service.xml
+vendor/lib64/libloc_socket.so
+vendor/etc/init/face-default-sec.rc
+vendor/etc/init/init.embmssl_server.rc
+vendor/etc/init/vendor.samsung.hardware.sysinput-default.rc
+vendor/etc/init/init.qlm-service.rc
+vendor/etc/init/memtrack_qti.rc
+vendor/etc/init/vendor.qsap.location.rc
+vendor/etc/init/qdcmss.rc
+vendor/etc/proca.db
+vendor/lib64/libsynergy_loc_api.so
+#vendor/etc/init/vendor.samsung.hardware.security.vaultkeeper-service.rc
+vendor/bin/vendor.samsung.hardware.security.vaultkeeper-service
+vendor/bin/vaultkeeperd
+vendor/etc/vintf/manifest/vendor.samsung.hardware.security.vaultkeeper-manifest.xml
+#vendor/etc/init/vaultkeeper_common.rc
+vendor/lib64/vendor.samsung.hardware.security.vaultkeeper-V1-ndk.so
+vendor/lib64/libdsms_vendor.so
+vendor/lib64/libvkservice.so
+vendor/lib64/vendor.samsung.frameworks.security.dsms-V1-ndk.so
+vendor/lib64/libstork_shared.so
 
 # QCV
 vendor/bin/init.qti.qcv.sh

@@ -85,14 +85,6 @@ PRODUCT_PACKAGES += \
     libsfplugin_ccodec_utils.vendor \
     libcodec2_soft_common.vendor
 
-PRODUCT_COPY_FILES += \
-    frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
-    frameworks/av/media/libstagefright/data/media_codecs_google_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2.xml \
-    frameworks/av/media/libstagefright/data/media_codecs_google_c2_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2_audio.xml \
-    frameworks/av/media/libstagefright/data/media_codecs_google_c2_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2_video.xml \
-    frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_telephony.xml \
-    frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml \
-    frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video_le.xml
 
 # DebugFS
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
@@ -148,6 +140,8 @@ PRODUCT_COPY_FILES += \
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper-V1-ndk.vendor \
+    android.hardware.gatekeeper@1.0.vendor \
     libgatekeeper.vendor
 
 # Health
@@ -169,15 +163,8 @@ PRODUCT_PACKAGES += \
     android.hidl.memory.block@1.0.vendor
 
 # Keymaster
-# PRODUCT_PACKAGES += \
-#     android.hardware.hardware_keystore.xml \
-#     android.hardware.keymaster@4.0.vendor \
-#     android.hardware.keymaster@4.0 \
-#     android.hardware.keymaster@4.1.vendor \
-#     android.hardware.keymaster-V3-ndk.vendor \
-#     android.hardware.keymaster-V4-ndk.vendor \
-#     libkeymaster4_1support.vendor \
-#     libkeymaster_messages.vendor
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.1.vendor
 
 # # Keymint
 # PRODUCT_PACKAGES += \
@@ -364,11 +351,6 @@ PRODUCT_PACKAGES += \
     libnl \
     libpng.vendor \
     libwfdaac_vendor
-
-# Recovery
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.recovery.ui.brightness_normal_percent=25 \
-    ro.recovery.ui.brightness_dimmed_percent=0
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/samsung/e3q/e3q-vendor.mk)
