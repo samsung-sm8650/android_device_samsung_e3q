@@ -142,7 +142,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper-V1-ndk.vendor \
     android.hardware.gatekeeper@1.0.vendor \
-    libgatekeeper.vendor
+    libgatekeeper.vendor \
 
 # Health
 PRODUCT_PACKAGES += \

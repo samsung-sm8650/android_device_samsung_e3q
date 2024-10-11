@@ -54,6 +54,7 @@ BOARD_KERNEL_CMDLINE := \
     androidboot.load_modules_parallel=false \
     androidboot.hypervisor.protected_vm.supported=true \
     androidboot.selinux=permissive \
+    aosp_is_booting \
     firmware_class.path=/vendor/firmware_mnt/image \
     loop.max_part=7 \
     printk.devkmsg=on \
@@ -76,7 +77,7 @@ TARGET_KERNEL_SOURCE := kernel/samsung/sm8650
 TARGET_KERNEL_CONFIG := \
     gki_defconfig \
     vendor/pineapple_GKI.config \
-    vendor/e3q-lego.config
+    oem/e3q-lego.config
 
 # Prebuilt kernel
 # BOARD_PREBUILT_DTBOIMAGE := $(KERNEL_PATH)/dtbo.img

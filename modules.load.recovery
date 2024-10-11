@@ -75,7 +75,6 @@ cpu_hotplug.ko
 thermal_minidump.ko
 softdog.ko
 qcom-cpufreq-hw.ko
-sdhci-msm.ko
 cqhci.ko
 ufs_qcom.ko
 ufshcd-crypto-qti.ko
