@@ -23,37 +23,35 @@ $(call inherit-product, hardware/qcom-caf/common/common.mk)
 PRODUCT_SHIPPING_API_LEVEL := 34
 
 # Audio
-SOONG_CONFIG_NAMESPACES += android_hardware_audio
-SOONG_CONFIG_android_hardware_audio += \
-    run_64bit
-SOONG_CONFIG_android_hardware_audio_run_64bit := true
+PRODUCT_PACKAGES += \
+    android.hardware.audio@7.0-impl:64 \
+    android.hardware.audio.effect@7.0-impl:64 \
+    android.hardware.audio.service \
+    android.hardware.soundtrigger@2.3-impl:64 \
+    vendor.qti.hardware.AGMIPC@1.0-service
 
 PRODUCT_PACKAGES += \
-    android.hardware.audio@7.1-impl \
-    android.hardware.audio.common-V1-ndk.vendor \
-    android.hardware.audio.effect@7.0-impl \
-    android.hardware.audio.service \
-    android.hardware.bluetooth.audio-impl \
-    android.hardware.soundtrigger@2.3-impl \
-    audio.bluetooth.default \
-    audio.primary.pineapple \
-    audio.r_submix.default \
-    audio.usb.default \
-    audioadsprpcd \
-    libagmmixer \
-    libagm_compress_plugin \
-    libagm_mixer_plugin \
-    libagm_pcm_plugin \
-    libbatterylistener \
-    libqcompostprocbundle \
-    libqcomvisualizer \
-    libqcomvoiceprocessing \
-    libsndcardparser \
-    libtinycompress \
-    libvolumelistener
+    audio.bluetooth.default:64 \
+    audio.r_submix.default:64 \
+    audio.usb.default:64 \
 
-AUDIO_HAL_DIR := hardware/qcom-caf/sm8650/audio/primary-hal
-AUDIO_PAL_DIR := hardware/qcom-caf/sm8650/audio/pal
+PRODUCT_PACKAGES += \
+    audioadsprpcd
+
+PRODUCT_PACKAGES += \
+    libagm_compress_plugin:64 \
+    libagm_mixer_plugin:64 \
+    libagm_pcm_plugin:64 \
+    libagmclient:64 \
+    libagmmixer:64 \
+    libbatterylistener:64 \
+    libfmpal:64 \
+    libpalclient:64 \
+    libqcompostprocbundle:64 \
+    libqcomvisualizer:64 \
+    libqcomvoiceprocessing:64 \
+    libsndcardparser:64 \
+    libvolumelistener:64
 
 # Authsecret
 PRODUCT_PACKAGES += \
@@ -119,6 +117,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.config-V10-ndk.vendor \
     vendor.qti.hardware.display.demura-service \
     vendor.qti.hardware.display.demura-V1-ndk \
+    vendor.qti.hardware.display.composer-service.xml
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml

@@ -1,153 +1,12 @@
 # Unpinned blobs from e3qxxx-user 14 UP1A.231005.007 S928BXXS3AXI1 release-keys
 
-# ADSP
-vendor/bin/adsprpcd
-vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc
-vendor/lib64/libadsp_default_listener.so
-vendor/lib64/libadsprpc.so
--vendor/lib64/libvmmem.so
-
-# ADSP modules
-vendor/lib/rfsa/adsp/libdsp_streamer_binning.so
-vendor/lib/rfsa/adsp/libhme_dsp_skel.so
-vendor/lib64/rfs/dsp/snap/libQnnHtpV75Skel.so
-vendor/lib64/rfs/dsp/libSnpeHtpV75Skel.so
-vendor/lib64/rfs/dsp/libapn_dsp_skel.so
-vendor/lib64/rfs/dsp/libbitml_nsp_75na_skel.so
-vendor/lib64/rfs/dsp/libdpp_engine_skel.so
-vendor/lib64/rfs/dsp/libdspCV_skel.so
-vendor/lib64/rfs/dsp/libdsphist_qc_skel.so
-vendor/lib64/rfs/dsp/libdspmc_qc_skel.so
-vendor/lib64/rfs/dsp/libevadsp.so
-vendor/lib64/rfs/dsp/libfastcvadsp.so
-vendor/lib64/rfs/dsp/libfastcvdsp_skel.so
-vendor/lib64/rfs/dsp/libhdr_skel.so
-vendor/lib64/rfs/dsp/libqsegnetengine_dsp_skel.so
-vendor/lib64/rfs/dsp/libscveT2T_skel.so
-vendor/lib64/rfs/dsp/libworker_pool.so
-
-# ANT
-system_ext/lib64/com.qualcomm.qti.ant@1.0.so
-
-# Audio
-system_ext/lib64/vendor.qti.hardware.audiohalext@1.0.so
-vendor/lib64/hw/audio.primary.default.so
-vendor/lib64/hw/audio.primary.pineapple.so
-vendor/lib64/hw/audio.r_submix.default.so
-vendor/lib64/hw/audio.usb.default.so
-vendor/lib64/libPeripheralStateUtils.so
-vendor/lib64/lib_SamsungRec_08020.so
-vendor/lib64/lib_lvacfs.so
--vendor/lib64/libagm.so
-vendor/lib64/libagmclient.so
-vendor/lib64/libalsautils.so
-vendor/lib64/libar-acdb.so
-vendor/lib64/libar-gpr.so
--vendor/lib64/libar-gsl.so
--vendor/lib64/libar-pal.so
-vendor/lib64/libarmemlog.so
--vendor/lib64/libats.so
-vendor/lib64/libaudio_log_utils.so
-vendor/lib64/libdiag.so
-vendor/lib64/libfloatingfeature.so
-vendor/lib64/libjson.so
-vendor/lib64/liblx-ar_util.so
--vendor/lib64/liblx-osal.so
-vendor/lib64/libmediautils_vendor.so
-vendor/lib64/libminkdescriptor.so
-vendor/lib64/libminksocket_vendor.so
-vendor/lib64/libpdmapper.so
-vendor/lib64/libpdnotifier.so
-vendor/lib64/libqcbor.so
-vendor/lib64/libqmi_cci.so
-vendor/lib64/libqmi_common_so.so
-vendor/lib64/libqmi_encdec.so
-vendor/lib64/libqrtr.so
-vendor/lib64/librecordalive.so
-vendor/lib64/libsecaudioinfo.so
-vendor/lib64/libsecaudiolevel.so
-vendor/lib64/libsecnativefeature.so
-vendor/lib64/libspeakercalibration.so
-vendor/lib64/libvui_intf.so
--vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.AGMIPC@1.0.so
--vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.pal@1.0.so
-
-# Audio (FX modules)
-vendor/lib64/soundfx/libasphere.so
-vendor/lib64/soundfx/libaudioeffectoffload.so
-vendor/lib64/soundfx/libaudiosaplus_sec.so
-vendor/lib64/soundfx/libdynproc.so
-vendor/lib64/soundfx/libhapticgenerator.so
-vendor/lib64/soundfx/libmyspace.so
-vendor/lib64/soundfx/libqcompostprocbundle.so
-vendor/lib64/soundfx/libqcomvisualizer.so
-vendor/lib64/soundfx/libqcomvoiceprocessing.so
-vendor/lib64/soundfx/libquasar.so
-vendor/lib64/soundfx/libsamsungSoundbooster_plus.so
-vendor/lib64/soundfx/libshoebox.so
-vendor/lib64/soundfx/libswdap.so
-vendor/lib64/soundfx/libswspatializer.so
-vendor/lib64/soundfx/libvolumelistener.so
-vendor/lib64/audioclient-types-aidl-cpp.so
-vendor/lib64/audiopolicy-types-aidl-cpp.so
-vendor/lib64/framework-permission-aidl-cpp.so
-vendor/lib64/lib_SoundAlive_3DPosition_ver202.so
-vendor/lib64/lib_SoundAlive_AlbumArt_ver105.so
-vendor/lib64/lib_SoundBooster_ver2000.so
-vendor/lib64/libprofileparamstorage.so
-vendor/lib64/libsecaudiocoreutils.so
-vendor/lib64/libspatializerparamstorage.so
-vendor/lib64/libvibratorutils.so
-vendor/lib64/spatializer-aidl-cpp.so
-
-# Audio configs
-etc/audio_effects.xml
-etc/audio_effects_common.conf
-vendor/etc/audio/sku_cliffs/audio_effects.conf
-vendor/etc/audio/sku_cliffs/audio_effects.xml
-vendor/etc/audio/sku_cliffs/mixer_paths_cliffs_cdp.xml
-vendor/etc/audio/sku_cliffs/mixer_paths_cliffs_mtp.xml
-vendor/etc/audio/sku_cliffs/mixer_paths_cliffs_qrd.xml
-vendor/etc/audio/sku_cliffs/resourcemanager_cliffs_cdp.xml
-vendor/etc/audio/sku_cliffs/resourcemanager_cliffs_mtp.xml
-vendor/etc/audio/sku_cliffs/resourcemanager_cliffs_qrd.xml
-vendor/etc/audio/sku_cliffs_qssi/audio_policy_configuration.xml
-vendor/etc/audio/sku_pineapple/audio_effects.conf
-vendor/etc/audio/sku_pineapple/audio_effects.xml
-vendor/etc/audio/sku_pineapple/mixer_paths.xml
-vendor/etc/audio/sku_pineapple/mixer_paths_pineapple_cdp.xml
-vendor/etc/audio/sku_pineapple/mixer_paths_pineapple_cdp_wsa883x.xml
-vendor/etc/audio/sku_pineapple/mixer_paths_pineapple_mtp.xml
-vendor/etc/audio/sku_pineapple/mixer_paths_pineapple_qrd.xml
-vendor/etc/audio/sku_pineapple/mixer_paths_pineapple_qrd_sku2.xml
-vendor/etc/audio/sku_pineapple/resourcemanager.xml
-vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_cdp.xml
-vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_mtp.xml
-vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_qrd.xml
-vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_qrd_sku2.xml
-vendor/etc/audio/sku_pineapple_qssi/audio_policy_configuration.xml
-vendor/etc/audio_effects.xml
-vendor/etc/audio_effects_haptic.xml
-vendor/etc/audio_effects_sec.xml
-vendor/etc/audio_effects_spatializer.xml
-vendor/etc/audio_policy_configuration.xml
-vendor/etc/audio_policy_configuration_base.xml
-vendor/etc/audio_policy_volumes.xml
-vendor/etc/default_volume_tables.xml
-vendor/etc/hearing_aid_audio_policy_configuration.xml
-vendor/etc/r_submix_audio_policy_configuration.xml
-vendor/etc/situation_audio_policy_volumes_sec.xml
-vendor/etc/usb_audio_policy_configuration.xml
-
 # CDSP
 vendor/bin/cdsprpcd
 vendor/etc/init/vendor.qti.cdsprpc-service.rc
 vendor/lib64/libcdsp_default_listener.so
 vendor/lib64/libcdsprpc.so
 vendor/lib64/libfastcvdsp_stub.so
--vendor/lib64/libfastcvopt.so
+vendor/lib64/libfastcvopt.so
 
 # CNE
 system_ext/lib64/com.quicinc.cne.api@1.0.so
@@ -785,7 +644,6 @@ vendor/etc/sensors/sns_reg_config
 # Soundtrigger
 system_ext/lib64/vendor.qti.voiceprint@1.0.so
 vendor/lib64/hw/android.hardware.soundtrigger@2.2-impl.so
-vendor/lib64/hw/android.hardware.soundtrigger@2.3-impl.so
 vendor/lib64/hw/sound_trigger.primary.pineapple.so
 vendor/lib64/libVoiceSdk.so
 vendor/lib64/liblistensoundmodel2vendor.so
@@ -802,7 +660,7 @@ vendor/bin/thermal-engine-v2
 vendor/etc/init/init_thermal-engine-v2.rc
 vendor/etc/init/vendor.samsung.hardware.thermal-default.rc
 vendor/etc/vintf/manifest/vendor.samsung.hardware.thermal-default.xml
--vendor/lib64/libthermalclient.so
+vendor/lib64/libthermalclient.so
 vendor/lib64/vendor.samsung.hardware.thermal@1.0.so
 vendor/lib64/vendor.samsung.hardware.thermal-V1-ndk.so
 
@@ -910,7 +768,6 @@ vendor/lib64/libGPreqcancel.so
 vendor/lib64/libqrtrclient.so
 vendor/lib64/libGPreqcancel_svc.so
 vendor/lib64/libops.so
-vendor/etc/vintf/manifest/vendor.qti.hardware.display.composer-service.xml
 vendor/bin/hw/vendor.qti.hardware.display.composer-service
 vendor/etc/init/vendor.qti.hardware.display.composer-service.rc
 vendor/lib64/libhistogram.so
@@ -1110,6 +967,15 @@ vendor/lib64/libdsms_vendor.so
 vendor/lib64/libvkservice.so
 vendor/lib64/vendor.samsung.frameworks.security.dsms-V1-ndk.so
 vendor/lib64/libstork_shared.so
+vendor/lib64/libhfp_pal.so;DISABLE_CHECKELF
+-vendor/lib64/libar-pal.so;DISABLE_CHECKELF
+vendor/lib64/soundfx/libvolumelistener.so;DISABLE_CHECKELF
+vendor/lib64/soundfx/libqcompostprocbundle.so;DISABLE_CHECKELF
+vendor/lib64/soundfx/libqcomvisualizer.so;DISABLE_CHECKELF
+vendor/lib64/hw/audio.primary.pineapple.so;DISABLE_CHECKELF
+vendor/lib64/vendor.qti.hardware.AGMIPC@1.0.so;DISABLE_CHECKELF
+-vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so;DISABLE_CHECKELF
+-vendor/lib64/libagm.so
 
 # QCV
 vendor/bin/init.qti.qcv.sh

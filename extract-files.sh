@@ -17,6 +17,12 @@ if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
 ANDROID_ROOT="${MY_DIR}/../../.."
 
+export TARGET_ENABLE_CHECKELF=false
+
+# If XML files don't have comments before the XML header, use this flag
+# Can still be used with broken XML files by using blob_fixup
+export TARGET_DISABLE_XML_FIXING=true
+
 HELPER="${ANDROID_ROOT}/tools/extract-utils/extract_utils.sh"
 if [ ! -f "${HELPER}" ]; then
     echo "Unable to find helper script at ${HELPER}"
@@ -27,24 +33,29 @@ source "${HELPER}"
 # Default to sanitizing the vendor folder before extraction
 CLEAN_VENDOR=true
 
+ONLY_FIRMWARE=
 KANG=
 SECTION=
 
 while [ "${#}" -gt 0 ]; do
     case "${1}" in
-        -n | --no-cleanup )
-                CLEAN_VENDOR=false
-                ;;
-        -k | --kang )
-                KANG="--kang"
-                ;;
-        -s | --section )
-                SECTION="${2}"; shift
-                CLEAN_VENDOR=false
-                ;;
-        * )
-                SRC="${1}"
-                ;;
+        --only-firmware)
+            ONLY_FIRMWARE=true
+            ;;
+        -n | --no-cleanup)
+            CLEAN_VENDOR=false
+            ;;
+        -k | --kang)
+            KANG="--kang"
+            ;;
+        -s | --section)
+            SECTION="${2}"
+            shift
+            CLEAN_VENDOR=false
+            ;;
+        *)
+            SRC="${1}"
+            ;;
     esac
     shift
 done
@@ -60,12 +71,23 @@ function blob_fixup() {
             grep -q "android.hardware.security.rkp-V3-ndk.so" "${2}" || ${PATCHELF} --add-needed "android.hardware.security.rkp-V3-ndk.so" "${2}"
             ${PATCHELF} --replace-needed libcrypto.so libcrypto-v33.so "${2}"
             ;;
+        *)
+            return 1
+            ;;
     esac
+
+    return 0
+}
+
+function blob_fixup_dry() {
+    blob_fixup "$1" ""
 }
 
 # Initialize the helper
 setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
 
-extract "${MY_DIR}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
+if [ -z "${ONLY_FIRMWARE}" ]; then
+    extract "${MY_DIR}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
+fi
 
 "${MY_DIR}/setup-makefiles.sh"
