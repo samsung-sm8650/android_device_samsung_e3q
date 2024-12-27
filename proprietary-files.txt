@@ -69,10 +69,7 @@ vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_cdp.xml
 vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_mtp.xml
 vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_qrd.xml
 vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_qrd_sku2.xml
-vendor/etc/audio/sku_pineapple_qssi/audio_policy_configuration.xml
 vendor/etc/audio_effects.xml
-vendor/etc/audio_policy_configuration.xml
-vendor/etc/audio_policy_configuration_base.xml
 vendor/etc/audio_policy_volumes.xml
 vendor/etc/bluetooth_audio_policy_configuration.xml
 vendor/etc/bluetooth_qti_audio_policy_configuration.xml
@@ -81,9 +78,7 @@ vendor/etc/card-defs.xml
 vendor/etc/default_volume_tables.xml
 vendor/etc/hearing_aid_audio_policy_configuration.xml
 vendor/etc/mem_logger_config.xml
-vendor/etc/r_submix_audio_policy_configuration.xml
 vendor/etc/situation_audio_policy_volumes_sec.xml
-vendor/etc/usb_audio_policy_configuration.xml
 vendor/etc/usecaseKvManager.xml
 
 # Bluetooth
