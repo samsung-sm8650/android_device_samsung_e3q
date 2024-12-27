@@ -1,4 +1,4 @@
-# Unpinned blobs from e3qxxx-user 14 UP1A.231005.007 S928BXXS4AXJB release-keys
+# Unpinned blobs from e3qxxx-user 14 UP1A.231005.007 S928BXXU4AXK4 release-keys
 
 # ADSP
 vendor/bin/adsprpcd
@@ -201,6 +201,8 @@ vendor/bin/qti
 vendor/bin/shsusrd
 vendor/etc/data/dsi_config.xml
 vendor/etc/data/netmgr_config.xml
+vendor/etc/data/nicm_config.xml
+vendor/etc/data/tlpd_oem_config.xml
 vendor/etc/init/dataadpl.rc
 vendor/etc/init/dataqti.rc
 vendor/etc/init/init.embmssl_server.rc
@@ -688,7 +690,6 @@ vendor/bin/ipacm-diag
 vendor/bin/irsc_util
 vendor/bin/ks
 vendor/bin/qms;DISABLE_CHECKELF
-vendor/bin/secril_config_svc
 vendor/etc/init/init.vendor.onebinary.rc
 vendor/etc/init/init.vendor.rilcommon.rc
 vendor/etc/init/ipacm-diag.rc

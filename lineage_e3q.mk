@@ -23,5 +23,5 @@ PRODUCT_MANUFACTURER := samsung
 PRODUCT_GMS_CLIENTID_BASE := android-samsung-ss
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="e3qxxx-user 14 UP1A.231005.007 S928BXXS3AXI8 release-keys" \
-    BuildFingerprint="samsung/e3qxxx/qssi_64:14/UP1A.231005.007/S928BXXS3AXI8:user/release-keys"
+    BuildDesc="e3qxxx-user 14 UP1A.231005.007 S928BXXU4AXK4 release-keys" \
+    BuildFingerprint="samsung/e3qxxx/e3q:14/UP1A.231005.007/S928BXXU4AXK4:user/release-keys"
