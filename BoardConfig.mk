@@ -206,6 +206,10 @@ TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
 TARGET_ODM_DLKM_PROP += $(DEVICE_PATH)/odm_dlkm.prop
 TARGET_VENDOR_DLKM_PROP += $(DEVICE_PATH)/vendor_dlkm.prop
 
+# RIL
+ENABLE_VENDOR_RIL_SERVICE := true
+# TODO: SOONG_CONFIG_rfs_mpss_firmware_symlink_target := firmware_modem
+
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 BOARD_HAS_DOWNLOAD_MODE := true
