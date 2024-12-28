@@ -1,5 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="networkAttributes" translatable="false">
+        <item>wifi,1,1,1,-1,true</item>
+        <item>mobile,0,0,0,-1,true</item>
+        <item>mobile_mms,2,0,4,60000,true</item>
+        <item>mobile_supl,3,0,2,60000,true</item>
+        <item>mobile_dun,4,0,2,60000,true</item>
+        <item>mobile_hipri,5,0,3,60000,true</item>
+        <item>mobile_fota,10,0,2,60000,true</item>
+        <item>mobile_ims,11,0,2,60000,true</item>
+        <item>mobile_cbs,12,0,2,60000,true</item>
+        <item>bluetooth,7,7,2,-1,true</item>
+        <item>mobile_emergency,15,0,5,-1,true</item>
+        <item>ethernet,9,9,9,-1,true</item>
+    </string-array>
+    <string-array name="radioAttributes" translatable="false">
+        <item>1,1</item>
+        <item>0,1</item>
+        <item>7,1</item>
+    </string-array>
+    <bool name="config_hotswapCapable">true</bool>
+    <string name="config_defaultSms" translatable="false">com.android.mms</string>
+    <bool name="skip_restoring_network_selection" translatable="false">true</bool>
+    <bool name="config_stkNoAlphaUsrCnf">false</bool>
+    <bool name="config_device_volte_available">true</bool>
+    <bool name="config_device_vt_available">true</bool>
+    <bool name="config_sms_decode_gsm_8bit_data" translatable="false">true</bool>
+    <bool name="config_switch_phone_on_voice_reg_state_change">false</bool>
+    <integer name="config_default_cellular_usage_setting">-1</integer>
+    <bool name="config_telephony5gStandalone">true</bool>
+    <bool name="config_telephony5gNonStandalone">true</bool>
+    <bool name="config_voice_data_sms_auto_fallback">true</bool>
+    <bool name="config_enableNewAutoSelectNetworkUI">true</bool>
+    <bool name="config_device_wfc_ims_available">true</bool>
+    <string name="config_persistentDataPackageName" translatable="false">com.google.android.gms</string>
+    <string-array name="config_network_type_tcp_buffers">
+        <item>NR_SA_MMWAVE:2097152,6291456,16777216,512000,2097152,8388608</item>
+        <item>NR_SA:2097152,6291456,16777216,512000,2097152,8388608</item>
+        <item>NR_NSA_MMWAVE:2097152,6291456,16777216,512000,2097152,8388608</item>
+        <item>NR_NSA:2097152,6291456,16777216,512000,2097152,8388608</item>
+        <item>LTE:2097152,4194304,8388608,262144,524288,1048576</item>
+        <item>LTE_CA:4096,6291456,12582912,4096,1048576,2097152</item>
+        <item>UMTS:4094,87380,1220608,4096,16384,1220608</item>
+        <item>HSPA:4094,87380,1220608,4096,16384,1220608</item>
+        <item>HSUPA:4094,87380,1220608,4096,16384,1220608</item>
+        <item>HSDPA:4094,87380,1220608,4096,16384,1220608</item>
+        <item>HSPA+:4094,87380,1220608,4096,16384,1220608</item>
+        <item>EDGE:4093,26280,35040,4096,16384,35040</item>
+        <item>GPRS:4092,8760,11680,4096,8760,11680</item>
+        <item>EvDo_0:4094,87380,524288,4096,16384,262144</item>
+        <item>EvDo_A:4094,87380,524288,4096,16384,262144</item>
+        <item>EvDo_B:4094,87380,524288,4096,16384,262144</item>
+    </string-array>
     <bool name="config_supportDoubleTapWake">true</bool>
     <bool name="config_show_smooth_display">true</bool>
     <integer name="config_AFC_type">10</integer>

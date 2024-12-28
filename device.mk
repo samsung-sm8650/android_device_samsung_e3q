@@ -160,7 +160,8 @@ PRODUCT_PACKAGES += \
     librilutils \
     libnetutils.vendor \
     libsecril-client \
-    secril_config_svc
+    secril_config_svc \
+    sehradiomanager
 
 # Rootdir
 PRODUCT_PACKAGES += \
