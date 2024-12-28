@@ -3,9 +3,6 @@ ro.vendor.fingerprint.type=udfps
 ro.vendor.fingerprint.sensor_location=720|2327|147
 ro.vendor.fingerprint.request_touch_event=true
 
-# Radio
-ro.radio.noril=no
-
 # Audio
 aaudio.hw_burst_min_usec=2000
 aaudio.mmap_exclusive_policy=2
@@ -193,6 +190,7 @@ vendor.power.pasr.enabled=true
 persist.vendor.radio.atfwd.start=true
 persist.vendor.radio.enableadvancedscan=true
 ro.radio.noril=no
+ro.telephony.default_network=33,33
 ro.telephony.default_cdma_sub=0
 
 # USB

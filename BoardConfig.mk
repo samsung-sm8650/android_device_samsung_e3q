@@ -208,7 +208,7 @@ TARGET_VENDOR_DLKM_PROP += $(DEVICE_PATH)/vendor_dlkm.prop
 
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
-# TODO: SOONG_CONFIG_rfs_mpss_firmware_symlink_target := firmware_modem
+SOONG_CONFIG_rfs_mpss_firmware_symlink_target := firmware_modem
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom

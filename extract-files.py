@@ -57,6 +57,8 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libcrypto.so', 'libcrypto-v33.so'),
     'vendor/etc/seccomp_policy/atfwd@2.0.policy': blob_fixup()
         .add_line_if_missing('gettid: 1'),
+    'vendor/lib64/libsec-ril.so': blob_fixup()
+        .binary_regex_replace(b'ril.dds.call.ongoing', b'vendor.calls.slot_id'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
