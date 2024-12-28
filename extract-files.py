@@ -58,7 +58,9 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/etc/seccomp_policy/atfwd@2.0.policy': blob_fixup()
         .add_line_if_missing('gettid: 1'),
     'vendor/lib64/libsec-ril.so': blob_fixup()
-        .binary_regex_replace(b'ril.dds.call.ongoing', b'vendor.calls.slot_id'),
+        .binary_regex_replace(b'ril.dds.call.ongoing', b'vendor.calls.slot_id')
+        # mov x3, x21 -> mov x3, #0
+        .sig_replace('bf c2 00 f8 76 0e 40 f9 80 0e 40 f9 e1 03 16 aa 82 0c 80 52 e3 03 15 aa 24 00 80 52 08 00 40 f9', 'bf c2 00 f8 76 0e 40 f9 80 0e 40 f9 e1 03 16 aa 82 0c 80 52 03 00 80 d2 24 00 80 52 08 00 40 f9'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
