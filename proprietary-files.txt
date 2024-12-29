@@ -946,6 +946,12 @@ vendor/bin/hw/android.hardware.usb-service.qti
 # Ultra-wideband
 vendor/etc/libuwb-nxp.conf
 
+# Vibrator
+vendor/bin/hw/vendor.samsung.hardware.vibrator-service
+vendor/etc/init/vendor.samsung.hardware.vibrator-default.rc
+vendor/etc/vintf/manifest/vendor.samsung.hardware.vibrator-default.xml
+vendor/lib64/vendor.samsung.hardware.vibrator-V5-ndk.so
+
 # Wi-Fi
 vendor/bin/cnss-daemon
 vendor/bin/cnss_diag;DISABLE_DEPS
