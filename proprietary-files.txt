@@ -50,14 +50,7 @@ vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0.so
 vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so
 vendor/lib64/vendor.samsung.hardware.audio@1.0.so
 
-# Audio FX modules
-vendor/lib64/soundfx/libasphere.so
-vendor/lib64/soundfx/libquasar.so
-vendor/lib64/soundfx/libshoebox.so
-
-# Audio XML
-vendor/etc/audio/sku_pineapple/audio_effects.conf
-vendor/etc/audio/sku_pineapple/audio_effects.xml
+# Audio configs
 vendor/etc/audio/sku_pineapple/mixer_paths.xml
 vendor/etc/audio/sku_pineapple/mixer_paths_pineapple_cdp.xml
 vendor/etc/audio/sku_pineapple/mixer_paths_pineapple_cdp_wsa883x.xml
@@ -69,21 +62,16 @@ vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_cdp.xml
 vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_mtp.xml
 vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_qrd.xml
 vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_qrd_sku2.xml
-vendor/etc/audio_effects.xml
-vendor/etc/audio_policy_volumes.xml
-vendor/etc/bluetooth_audio_policy_configuration.xml
-vendor/etc/bluetooth_qti_audio_policy_configuration.xml
-vendor/etc/bluetooth_qti_hearing_aid_audio_policy_configuration.xml
-vendor/etc/card-defs.xml
-vendor/etc/default_volume_tables.xml
-vendor/etc/hearing_aid_audio_policy_configuration.xml
-vendor/etc/mem_logger_config.xml
-vendor/etc/situation_audio_policy_volumes_sec.xml
-vendor/etc/usecaseKvManager.xml
+
+# Audio FX modules
+vendor/lib64/soundfx/libasphere.so
+vendor/lib64/soundfx/libquasar.so
+vendor/lib64/soundfx/libshoebox.so
 
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.1-service-qti
 vendor/etc/init/android.hardware.bluetooth@1.1-service-qti.rc
+vendor/etc/vintf/manifest/bluetooth_audio.xml
 vendor/etc/vintf/manifest/bttpi-saidl.xml
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib64/hw/android.hardware.bluetooth@1.1-impl-qti.so
@@ -94,6 +82,7 @@ vendor/lib64/lib_bt_ble.so
 vendor/lib64/lib_bt_bundle.so
 vendor/lib64/libbtnv.so
 vendor/lib64/libsoc_helper.so
+vendor/lib64/vendor.qti.hardware.bttpi-V3-ndk.so
 vendor/lib64/vendor.samsung.hardware.bluetooth.audio-V2-ndk.so
 vendor/lib64/vendor.samsung.hardware.bluetooth@2.0.so
 
@@ -113,6 +102,17 @@ vendor/lib64/libsehbluetooth_audio_session_aidl.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 vendor/lib64/vendor.qti.hardware.fm@1.0.so
+vendor/lib64/vendor.samsung.hardware.bluetooth.audio-impl.so
+
+# Camera
+vendor/lib64/libOpenCv.camera.samsung.so
+vendor/lib64/libexifa.camera.samsung.so
+vendor/lib64/libimagecodec_native.quram.so
+vendor/lib64/libos.so
+vendor/lib64/libpadm.so
+vendor/lib64/libphotohdr.so
+vendor/lib64/libsynx.so
+vendor/lib64/libthreadutils.so
 
 # Camera firmware
 vendor/firmware/CAMERA_ICP.b00
@@ -361,6 +361,13 @@ vendor/lib64/libdrmfs.so
 vendor/lib64/vendor.qti.hardware.qseecom-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
 
+# EVA
+vendor/etc/eva/facedetection/bias.dat
+vendor/etc/eva/facedetection/weight.dat
+vendor/lib64/libcv_common.so
+vendor/lib64/libeva.so
+vendor/lib64/libeva_util.so
+
 # Fingerprint
 vendor/etc/init/init.fingerprint.rc
 vendor/lib64/libegis_fp_normal_sensor_test.so
@@ -605,6 +612,54 @@ vendor/lib64/vendor.samsung.hardware.security.hermes-V1-ndk.so
 vendor/lib64/libhypervintf.so
 vendor/lib64/vendor.samsung.hardware.hyper-V2-ndk.so
 
+# Media
+system_ext/lib64/libmmosal.so
+system_ext/lib64/libmmparser_lite.so
+vendor/bin/hw/vendor.qti.media.c2@1.0-service
+vendor/bin/init.qti.media.sh
+vendor/etc/init/init.qti.media.rc
+vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
+vendor/etc/media_codecs_performance_pineapple.xml
+vendor/etc/media_codecs_performance_pineapple_vendor.xml
+vendor/etc/media_codecs_pineapple_vendor.xml
+vendor/etc/media_pineapple/video_system_specs.json
+vendor/etc/media_profiles.xml
+vendor/etc/media_profiles_V1_0.xml
+vendor/etc/media_profiles_pineapple.xml
+vendor/etc/seccomp_policy/codec2.vendor.base-arm64.policy
+vendor/etc/seccomp_policy/codec2.vendor.ext-arm64.policy
+vendor/lib64/libQcelp13SwCodec.so
+vendor/lib64/libc2filterplugin.so
+vendor/lib64/libheifcapture.so
+vendor/lib64/libmmosal_vendor.so
+vendor/lib64/libqc2audio_base.so
+vendor/lib64/libqc2audio_basecodec.so
+vendor/lib64/libqc2audio_core.so
+vendor/lib64/libqc2audio_hooks.so
+vendor/lib64/libqc2audio_hwaudiocodec.so;DISABLE_CHECKELF
+vendor/lib64/libqc2audio_platform.so
+vendor/lib64/libqc2audio_swaudiocodec.so
+vendor/lib64/libqc2audio_utils.so
+vendor/lib64/libqcodec2_base.so
+vendor/lib64/libqcodec2_basecodec.so
+vendor/lib64/libqcodec2_core.so
+vendor/lib64/libqcodec2_cvpfilter.so
+vendor/lib64/libqcodec2_filterbase.so
+vendor/lib64/libqcodec2_hooks.so
+vendor/lib64/libqcodec2_imgtxrfilter.so
+vendor/lib64/libqcodec2_mockfilter.so
+vendor/lib64/libqcodec2_platform.so
+vendor/lib64/libqcodec2_streaminteg_filter.so
+vendor/lib64/libqcodec2_utils.so
+vendor/lib64/libqcodec2_v4l2codec.so
+vendor/lib64/libsavscmn.so
+vendor/lib64/libsavsvc.so
+vendor/lib64/libsec2imageformatfilter.so
+vendor/lib64/libsimba.media.samsung.so
+vendor/lib64/libstagefright_foundation_vendor.so
+vendor/lib64/libvideotxr.so
+vendor/lib64/qti.video.utils.videobufferlayout.so
+
 # Memory
 vendor/lib64/libvmmem.so
 
@@ -760,7 +815,6 @@ vendor/lib64/libtlpd_crypto.so
 vendor/lib64/libtlpd_internal.so
 vendor/lib64/libtlpd_logger.so
 vendor/lib64/libvkmanager_vendor.so
-vendor/lib64/vendor.qti.hardware.bttpi-V3-ndk.so
 vendor/lib64/vendor.samsung.hardware.radio-V1-ndk.so
 vendor/lib64/vendor.samsung.hardware.radio.bridge-V1-ndk.so
 vendor/lib64/vendor.samsung.hardware.radio.channel-V1-ndk.so
@@ -946,8 +1000,10 @@ vendor/bin/hw/android.hardware.usb-service.qti
 # Ultra-wideband
 vendor/etc/libuwb-nxp.conf
 
-# Vibrator
+# Vibration
 vendor/bin/hw/vendor.samsung.hardware.vibrator-service
+vendor/etc/Hapticsconfig.xml
+vendor/etc/audio_effects_haptic.xml
 vendor/etc/init/vendor.samsung.hardware.vibrator-default.rc
 vendor/etc/vintf/manifest/vendor.samsung.hardware.vibrator-default.xml
 vendor/lib64/vendor.samsung.hardware.vibrator-V5-ndk.so

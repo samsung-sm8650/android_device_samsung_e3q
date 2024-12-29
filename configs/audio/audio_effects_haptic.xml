@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<audio_effects_conf version="2.0" xmlns="http://schemas.android.com/audio/audio_effects_conf/v2_0">
+
+    <libraries>
+        <library name="haptic_generator" path="libhapticgenerator.so"/>
+    </libraries>
+
+    <effects>
+        <effect name="haptic_generator" library="haptic_generator" uuid="97c4acd1-8b82-4f2f-832e-c2fe5d7a9931"/>
+    </effects>
+
+</audio_effects_conf>
