@@ -587,12 +587,6 @@ vendor/lib64/libllvm-glnext.so
 vendor/lib64/libllvm-qcom.so
 vendor/lib64/libllvm-qgl.so
 
-# Health
-vendor/bin/hw/vendor.samsung.hardware.health-service
-vendor/etc/init/vendor.samsung.hardware.health-service.rc
-vendor/etc/vintf/manifest/vendor.samsung.hardware.health-service.xml
-vendor/lib64/vendor.samsung.hardware.health-V1-ndk.so
-
 # Hermes
 vendor/bin/hermesd
 vendor/bin/hw/vendor.samsung.hardware.security.hermes-service
@@ -873,7 +867,6 @@ vendor/etc/sensors/config/sns_rotv.json
 vendor/etc/sensors/config/sns_tilt.json
 vendor/etc/sensors/config/sns_tilt_sw_disabled.json
 vendor/etc/sensors/config/sns_tilt_sw_enabled.json
-vendor/etc/sensors/hals.conf
 vendor/etc/sensors/sns_reg_config
 vendor/lib64/libnanopb.so
 vendor/lib64/libqsh.so
@@ -888,6 +881,9 @@ vendor/lib64/libsnsapi.so
 vendor/lib64/libsnsdiaglog.so
 vendor/lib64/libsnsutils.so
 vendor/lib64/libssc_default_listener.so
+vendor/lib64/sensors.flicker.so
+vendor/lib64/sensors.grip.so
+vendor/lib64/sensors.qsh.so
 
 # SSR
 vendor/bin/ssr_diag
