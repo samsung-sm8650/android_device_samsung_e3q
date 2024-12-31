@@ -424,7 +424,6 @@ vendor/firmware/kiwi/regdb.bin
 vendor/firmware/max77775-extra-fw.bin
 vendor/firmware/max77775-fw.bin
 vendor/firmware/mfc/mfc_fw_flash_nu1668.bin
-vendor/firmware/nfc/libsn300u_fw.so
 vendor/firmware/ois_mcu_stm32g_fw.bin
 vendor/firmware/ois_rumba_fw.bin
 vendor/firmware/ss_dsi_panel_PBA_BOOTING_FHD.dat
@@ -666,6 +665,7 @@ vendor/lib64/libvmmem.so
 # NFC
 vendor/etc/libnfc-nxp.conf
 vendor/etc/nfc/libnfc-nxp_RF.conf
+vendor/firmware/nfc/libsn300u_fw.so
 
 # NVM
 vendor/bin/sec_nvm

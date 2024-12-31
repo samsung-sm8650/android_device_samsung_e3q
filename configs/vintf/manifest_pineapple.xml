@@ -79,16 +79,16 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
         </interface>
     </hal>
     <!-- NFC HAL service -->
-    <hal format="aidl">
+    <!--hal format="aidl">
         <name>android.hardware.nfc</name>
         <version>1</version>
         <fqname>INfc/default</fqname>
-    </hal>
-    <hal format="aidl">
+    </hal-->
+    <!--hal format="aidl">
         <name>vendor.nxp.nxpnfc_aidl</name>
         <version>1</version>
         <fqname>INxpNfc/default</fqname>
-    </hal>
+    </hal-->
     <hal format="aidl">
         <name>android.hardware.secure_element</name>
         <version>1</version>
