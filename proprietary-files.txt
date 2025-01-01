@@ -16,17 +16,43 @@ vendor/lib64/libloadalgo_stub.so
 # ADSP modules
 vendor/lib/rfsa/adsp/libdsp_streamer_binning.so
 vendor/lib/rfsa/adsp/libhme_dsp_skel.so
+vendor/lib64/rfs/dsp/libSnpeHtpV75Skel.so:vendor/lib/rfsa/adsp/libSnpeHtpV75Skel.so;SYMLINK=vendor/lib64/rfs/dsp/libSnpeHtpV75Skel.so
+vendor/lib64/rfs/dsp/libapn_dsp_skel.so:vendor/lib/rfsa/adsp/libapn_dsp_skel.so;SYMLINK=vendor/lib64/rfs/dsp/libapn_dsp_skel.so
+vendor/lib64/rfs/dsp/libbitml_nsp_75na_skel.so:vendor/lib/rfsa/adsp/libbitml_nsp_75na_skel.so;SYMLINK=vendor/lib64/rfs/dsp/libbitml_nsp_75na_skel.so
+vendor/lib64/rfs/dsp/libdpp_engine_skel.so:vendor/lib/rfsa/adsp/libdpp_engine_skel.so;SYMLINK=vendor/lib64/rfs/dsp/libdpp_engine_skel.so
+vendor/lib64/rfs/dsp/libdspCV_skel.so:vendor/lib/rfsa/adsp/libdspCV_skel.so;SYMLINK=vendor/lib64/rfs/dsp/libdspCV_skel.so
+vendor/lib64/rfs/dsp/libdsphist_qc_skel.so:vendor/lib/rfsa/adsp/libdsphist_qc_skel.so;SYMLINK=vendor/lib64/rfs/dsp/libdsphist_qc_skel.so
+vendor/lib64/rfs/dsp/libdspmc_qc_skel.so:vendor/lib/rfsa/adsp/libdspmc_qc_skel.so;SYMLINK=vendor/lib64/rfs/dsp/libdspmc_qc_skel.so
+vendor/lib64/rfs/dsp/libevadsp.so:vendor/lib/rfsa/adsp/libevadsp.so;SYMLINK=vendor/lib64/rfs/dsp/libevadsp.so
+vendor/lib64/rfs/dsp/libfastcvadsp.so:vendor/lib/rfsa/adsp/libfastcvadsp.so;SYMLINK=vendor/lib64/rfs/dsp/libfastcvadsp.so
+vendor/lib64/rfs/dsp/libfastcvdsp_skel.so:vendor/lib/rfsa/adsp/libfastcvdsp_skel.so;SYMLINK=vendor/lib64/rfs/dsp/libfastcvdsp_skel.so
+vendor/lib64/rfs/dsp/libhdr_skel.so:vendor/lib/rfsa/adsp/libhdr_skel.so;SYMLINK=vendor/lib64/rfs/dsp/libhdr_skel.so
+vendor/lib64/rfs/dsp/libqsegnetengine_dsp_skel.so:vendor/lib/rfsa/adsp/libqsegnetengine_dsp_skel.so;SYMLINK=vendor/lib64/rfs/dsp/libqsegnetengine_dsp_skel.so
+vendor/lib64/rfs/dsp/libscveT2T_skel.so:vendor/lib/rfsa/adsp/libscveT2T_skel.so;SYMLINK=vendor/lib64/rfs/dsp/libscveT2T_skel.so
+vendor/lib64/rfs/dsp/libworker_pool.so:vendor/lib/rfsa/adsp/libworker_pool.so
+vendor/lib64/rfs/dsp/snap/libQnnHtpV75Skel.so:vendor/lib/rfsa/adsp/snap/libQnnHtpV75Skel.so;SYMLINK=vendor/lib64/rfs/dsp/snap/libQnnHtpV75Skel.so
 
 # Audio
+vendor/etc/LVACFS_Calibration.dat
+vendor/etc/LVACFS_Configuration.txt
+vendor/etc/LVACFS_ControlParams.txt
 vendor/etc/audconf/OPEN/acdb_cal.acdb
 vendor/etc/audconf/OPEN/workspaceFileXml.qwsp
 vendor/etc/init/init.audio.samsung.rc
+vendor/etc/models/acd/environment.eai
+vendor/etc/models/acd/event.eai
+vendor/etc/models/acd/music.eai
+vendor/etc/models/acd/speech.eai
 vendor/lib64/hw/audio.primary.pineapple.so
 vendor/lib64/hw/vendor.samsung.hardware.audio@1.0-impl.so
+vendor/lib64/libAlacSwDec.so
+vendor/lib64/libApeSwDec.so
+vendor/lib64/libEvrcSwCodec.so
+vendor/lib64/libFlacSwDec.so
 vendor/lib64/libPeripheralStateUtils.so
 vendor/lib64/libVoiceSdk.so
-vendor/lib64/lib_SamsungRec_08020.so
 vendor/lib64/lib_lvacfs.so
+vendor/lib64/libadm.so
 vendor/lib64/libagm.so
 vendor/lib64/libar-acdb.so
 vendor/lib64/libar-gpr.so
@@ -35,14 +61,23 @@ vendor/lib64/libar-pal.so;DISABLE_CHECKELF
 vendor/lib64/libarmemlog.so
 vendor/lib64/libats.so
 vendor/lib64/libaudio_log_utils.so
+vendor/lib64/libcapiv2svacnnvendor.so
+vendor/lib64/libcapiv2svarnnvendor.so
+vendor/lib64/libcapiv2udk7vendor.so
+vendor/lib64/libcapiv2uvvendor.so
+vendor/lib64/libdsd2pcm.so
 vendor/lib64/libfloatingfeature.so
 vendor/lib64/liblistensoundmodel2vendor.so
 vendor/lib64/liblx-ar_util.so
 vendor/lib64/liblx-osal.so
+vendor/lib64/libprofileparamstorage.so
+vendor/lib64/libqtigefar.so
 vendor/lib64/librecordalive.so
+vendor/lib64/libsecaudiocoreutils.so
 vendor/lib64/libsecaudioinfo.so
 vendor/lib64/libsecaudiolevel.so
 vendor/lib64/libsecnativefeature.so
+vendor/lib64/libspatializerparamstorage.so
 vendor/lib64/libspeakercalibration.so
 vendor/lib64/libtensorflowlite_c.so
 vendor/lib64/libvui_dmgr_client.so
@@ -67,14 +102,24 @@ vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_qrd.xml
 vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_qrd_sku2.xml
 
 # Audio FX modules
+vendor/lib64/lib_SamsungRec_08020.so
+vendor/lib64/lib_SoundAlive_3DPosition_ver202.so
+vendor/lib64/lib_SoundAlive_AlbumArt_ver105.so
+vendor/lib64/lib_SoundAlive_play_plus_ver800.so
+vendor/lib64/lib_SoundBooster_ver2000.so
 vendor/lib64/soundfx/libasphere.so
+vendor/lib64/soundfx/libaudioeffectoffload.so
+vendor/lib64/soundfx/libaudiosaplus_sec.so
+vendor/lib64/soundfx/libmyspace.so
 vendor/lib64/soundfx/libquasar.so
+vendor/lib64/soundfx/libsamsungSoundbooster_plus.so
 vendor/lib64/soundfx/libshoebox.so
+vendor/lib64/soundfx/libswdap.so
+vendor/lib64/soundfx/libswspatializer.so
 
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.1-service-qti
 vendor/etc/init/android.hardware.bluetooth@1.1-service-qti.rc
-vendor/etc/vintf/manifest/bluetooth_audio.xml
 vendor/etc/vintf/manifest/bttpi-saidl.xml
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib64/hw/android.hardware.bluetooth@1.1-impl-qti.so
@@ -90,6 +135,7 @@ vendor/lib64/vendor.samsung.hardware.bluetooth.audio-V2-ndk.so
 vendor/lib64/vendor.samsung.hardware.bluetooth@2.0.so
 
 # Bluetooth (A2DP)
+vendor/etc/vintf/manifest/bluetooth_audio.xml
 vendor/lib64/btaudio_offload_if.so
 vendor/lib64/hw/android.hardware.bluetooth.audio-impl-qti.so
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
@@ -493,7 +539,6 @@ vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
 vendor/lib64/vendor.samsung.hardware.camera.device-V1-ndk.so
 vendor/lib64/vendor.samsung.hardware.camera.provider-V1-ndk.so
 
-
 # Camera firmware
 vendor/firmware/CAMERA_ICP.b00
 vendor/firmware/CAMERA_ICP.b01
@@ -528,6 +573,9 @@ vendor/lib64/libcdsp_default_listener.so
 vendor/lib64/libcdsprpc.so
 vendor/lib64/libmdsprpc.so
 vendor/lib64/libsdsprpc.so
+
+# Charger
+vendor/etc/charger_fw_fstab.qti
 
 # CNE
 vendor/etc/cne/mwqem.conf
@@ -900,7 +948,6 @@ vendor/etc/gnss_antenna_info.conf
 vendor/etc/gps.conf
 vendor/etc/init/android.hardware.gnss-aidl-service-qti.rc
 vendor/etc/init/loc-launcher.rc
-vendor/etc/init/vendor.qsap.location.rc
 vendor/etc/izat.conf
 vendor/etc/lowi.conf
 vendor/etc/sap.conf
@@ -1007,6 +1054,7 @@ vendor/etc/media_profiles_V1_0.xml
 vendor/etc/media_profiles_pineapple.xml
 vendor/etc/seccomp_policy/codec2.vendor.base-arm64.policy
 vendor/etc/seccomp_policy/codec2.vendor.ext-arm64.policy
+vendor/etc/vintf/manifest/sec_c2_manifest_default0_1_2.xml
 vendor/lib64/libQcelp13SwCodec.so
 vendor/lib64/libc2filterplugin.so
 vendor/lib64/libheifcapture.so
@@ -1070,6 +1118,7 @@ vendor/etc/perf/targetsysnodesconfigs.xml
 vendor/etc/perf/testcommonresourceconfigs.xml
 vendor/etc/perf/testtargetresourceconfigs.xml
 vendor/etc/powerhint.xml
+vendor/etc/task_profiles.json
 vendor/etc/vintf/manifest/vendor.qti.hardware.perf2.xml
 vendor/lib64/libperfconfig.so
 vendor/lib64/libperfgluelayer.so

@@ -1,12 +1,3 @@
-# Audio
-ro.audio.spatializer_enabled=true
-tunnel.audio.encode=true
-use.voice.path.for.pcm.voip=true
-
-# Bluetooth
-persist.vendor.btstack.aac_frm_ctl.enabled=true
-ro.bluetooth.library_name=libbluetooth_qti.so
-
 # Camera
 persist.vendor.camera.privapp.list=org.codeaurora.snapcam
 vendor.camera.aux.packagelist=org.codeaurora.snapcam
@@ -32,9 +23,6 @@ ro.opengles.version=196610
 
 # DRM
 ro.netflix.bsp_rev=Q8650-37577-1
-
-# GNSS
-persist.vendor.overlay.izat.optin=rro
 
 # Health
 ro.charger.enable_suspend=1
@@ -78,7 +66,6 @@ persist.debug.wfd.enable=1
 persist.sys.wfd.virtual=0
 
 # Miscellaneous
-DEVICE_PROVISIONED=1
 arm64.memtag.process.system_server=off
 com.samsung.speg.prelauncher.disable=true
 config.disable_rtt=true

@@ -65,6 +65,8 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libcodec2_shim.so'),
     'vendor/lib64/unihal_android.so': blob_fixup()
         .add_needed('libui_shim.so'),
+    ('vendor/etc/media_codecs_pineapple.xml', 'vendor/etc/media_codecs_pineapple_vendor.xml'): blob_fixup()
+        .regex_replace('.*media_codecs_(google_audio|google_c2|google_telephony|google_video|vendor_audio).*', ''),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
