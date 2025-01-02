@@ -65,7 +65,6 @@ vendor/lib64/libcapiv2svarnnvendor.so
 vendor/lib64/libcapiv2udk7vendor.so
 vendor/lib64/libcapiv2uvvendor.so
 vendor/lib64/libdsd2pcm.so
-vendor/lib64/libfloatingfeature.so
 vendor/lib64/liblistensoundmodel2vendor.so
 vendor/lib64/liblx-ar_util.so
 vendor/lib64/liblx-osal.so
@@ -154,9 +153,14 @@ vendor/lib64/vendor.samsung.hardware.bluetooth.audio-impl.so
 
 # Camera
 vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
+vendor/etc/DsgpPolicy.csv
+vendor/etc/external_camera_config.xml
 vendor/etc/external_camera_config.xml
 vendor/etc/init/camera.unihal.rc
 vendor/etc/init/vendor.samsung.hardware.camera.provider-service_64.rc
+vendor/etc/portrait_data/SRIB_ClatNetLite_INT8_V003_sm8650_vendor.tvm.so
+vendor/etc/portrait_data/dual_portrait_product.json
+vendor/etc/portrait_data/single_bokeh_feature_vendor.json
 vendor/etc/portrait_data/single_bokeh_feature_vendor.json
 vendor/etc/str/str_preference_data.dat
 vendor/etc/vintf/manifest/vendor.qti.camera.aon-impl.xml
@@ -403,9 +407,18 @@ vendor/lib64/libUniPluginUtils.so
 vendor/lib64/libUniScaler.uniplugin@1.0.so
 vendor/lib64/lib_profiler.so
 vendor/lib64/libai_denoiser_interface.so
+vendor/lib64/libai_tetra_text_zoom.arcsoft.so
 vendor/lib64/libaidenoiser.so
 vendor/lib64/libaidenoiserv2.so
 vendor/lib64/libaivideocentral.arcsoft.so
+vendor/lib64/libarcsoft_aieffectpk_detection.so
+vendor/lib64/libarcsoft_aieffectpk_dualcam_video_bokeh.so
+vendor/lib64/libarcsoft_aieffectpk_video.so
+vendor/lib64/libarcsoft_aieffectpk_video_bokeh.so
+vendor/lib64/libarcsoft_aieffectpk_video_depth.so
+vendor/lib64/libarcsoft_aieffectpk_video_effect.so
+vendor/lib64/libarcsoft_aieffectpk_video_plight.so
+vendor/lib64/libarcsoft_aiscenedetection.so
 vendor/lib64/libarcsoft_deflicker_native.so
 vendor/lib64/libarcsoft_dualcam_portraitlighting_preview.so
 vendor/lib64/libarcsoft_object_tracking.so
@@ -490,6 +503,7 @@ vendor/lib64/libmmcamera_mfnr_t4.so
 vendor/lib64/libmmcamera_pdpc.so
 vendor/lib64/libmpbase.so
 vendor/lib64/libmulticam_image_optical_zoom.so
+vendor/lib64/libmulticam_optical_zoom_control.so
 vendor/lib64/libmulticam_video_optical_zoom.so
 vendor/lib64/libmultiobject_tracker.so
 vendor/lib64/libnanopb.so
@@ -554,6 +568,7 @@ vendor/lib64/libtensorflowlite.camera.samsung.so
 vendor/lib64/libtensorflowlite_gpu.camera.samsung.so
 vendor/lib64/libtfestriping.so
 vendor/lib64/libtflitecore.so
+vendor/lib64/libthirdparty_zoomtranslator_imp.so
 vendor/lib64/libthreadutils.so
 vendor/lib64/libtswrappercommon.so
 vendor/lib64/libubifocus.so
@@ -614,6 +629,7 @@ vendor/lib64/libcdsp_default_listener.so
 vendor/lib64/libcdsprpc.so
 vendor/lib64/libmdsprpc.so
 vendor/lib64/libsdsprpc.so
+vendor/lib64/libsysmon_cdsp_skel.so
 
 # Charger
 vendor/etc/charger_fw_fstab.qti
@@ -833,6 +849,17 @@ vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
 # EVA
 vendor/etc/eva/facedetection/bias.dat
 vendor/etc/eva/facedetection/weight.dat
+vendor/etc/eva/facelandmark/bias_1_1.dat
+vendor/etc/eva/facelandmark/bias_1_2.dat
+vendor/etc/eva/facelandmark/bias_2.dat
+vendor/etc/eva/facelandmark/bias_3_1.dat
+vendor/etc/eva/facelandmark/bias_3_2.dat
+vendor/etc/eva/facelandmark/weight_1_1.dat
+vendor/etc/eva/facelandmark/weight_1_2.dat
+vendor/etc/eva/facelandmark/weight_2.dat
+vendor/etc/eva/facelandmark/weight_3_1.dat
+vendor/etc/eva/facelandmark/weight_3_2.dat
+vendor/etc/eva/itof/tuning_params_sensor_type_1.json
 vendor/lib64/libcv_common.so
 vendor/lib64/libeva.so
 vendor/lib64/libeva_util.so
@@ -963,6 +990,10 @@ vendor/lib64/bm4a73v08s12n60.bin
 vendor/lib64/bm4a73v08s12n61.bin
 vendor/lib64/bm4a73v08s12n62.bin
 
+# Floating feature
+vendor/etc/floating_feature.xml
+vendor/lib64/libfloatingfeature.so
+
 # Gatekeeper
 vendor/bin/hw/android.hardware.gatekeeper-service
 vendor/bin/hw/vendor.qti.hardware.secureprocessor@1.0
@@ -1076,12 +1107,16 @@ vendor/lib64/libshctrl.so
 vendor/lib64/vendor.samsung.hardware.security.hermes-V1-ndk.so
 
 # Hyper
+vendor/etc/hyper/config_chipset.json
+vendor/etc/hyper/config_hyper_permission.json
+vendor/etc/hyper/config_vendor.json
 vendor/lib64/libhypervintf.so
 vendor/lib64/vendor.samsung.hardware.hyper-V2-ndk.so
 
 # Media
 system_ext/lib64/libmmosal.so
 system_ext/lib64/libmmparser_lite.so
+vendor/bin/hw/samsung.software.media.c2@1.0-service
 vendor/bin/hw/vendor.qti.media.c2@1.0-service
 vendor/bin/init.qti.media.sh
 vendor/etc/init/init.qti.media.rc
@@ -1092,12 +1127,18 @@ vendor/etc/media_codecs_pineapple.xml
 vendor/etc/media_codecs_pineapple_vendor.xml
 vendor/etc/media_pineapple/video_system_specs.json
 vendor/etc/media_profiles.xml
+vendor/etc/media_profiles.xml
 vendor/etc/media_profiles_V1_0.xml
+vendor/etc/media_profiles_V1_0.xml
+vendor/etc/media_profiles_pineapple.xml
 vendor/etc/media_profiles_pineapple.xml
 vendor/etc/seccomp_policy/codec2.vendor.base-arm64.policy
 vendor/etc/seccomp_policy/codec2.vendor.ext-arm64.policy
+vendor/etc/seccomp_policy/samsung.software.media.c2-base-policy
+vendor/etc/seccomp_policy/samsung.software.media.c2-ext-policy
 vendor/etc/vintf/manifest/sec_c2_manifest_default0_1_2.xml
 vendor/lib64/libQcelp13SwCodec.so
+vendor/lib64/libSecC2ComponentStore.so
 vendor/lib64/libc2filterplugin.so
 vendor/lib64/libheifcapture.so
 vendor/lib64/libmmosal_vendor.so
@@ -1160,6 +1201,7 @@ vendor/etc/perf/targetsysnodesconfigs.xml
 vendor/etc/perf/testcommonresourceconfigs.xml
 vendor/etc/perf/testtargetresourceconfigs.xml
 vendor/etc/powerhint.xml
+vendor/etc/pwr/PSMPowerOptFeature.xml
 vendor/etc/task_profiles.json
 vendor/etc/vintf/manifest/vendor.qti.hardware.perf2.xml
 vendor/lib64/libperfconfig.so
@@ -1493,3 +1535,9 @@ vendor/etc/wifi/kiwi_v2/WCNSS_qcom_cfg.ini
 vendor/etc/wifi/p2p_supplicant_overlay.conf
 vendor/etc/wifi/wpa_supplicant.conf
 vendor/etc/wifi/wpa_supplicant_overlay.conf
+
+# Widevine DRM
+vendor/bin/hw/vendor.samsung.hardware.security.widevine.keyprov-service
+vendor/etc/init/vendor.samsung.hardware.security.widevine.keyprov-service.rc
+vendor/etc/vintf/manifest/vendor.samsung.hardware.security.widevine.keyprov-service.xml
+vendor/lib64/vendor.samsung.hardware.security.widevine.keyprov-V1-ndk.so
