@@ -155,12 +155,10 @@ vendor/lib64/vendor.samsung.hardware.bluetooth.audio-impl.so
 vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
 vendor/etc/DsgpPolicy.csv
 vendor/etc/external_camera_config.xml
-vendor/etc/external_camera_config.xml
 vendor/etc/init/camera.unihal.rc
 vendor/etc/init/vendor.samsung.hardware.camera.provider-service_64.rc
 vendor/etc/portrait_data/SRIB_ClatNetLite_INT8_V003_sm8650_vendor.tvm.so
 vendor/etc/portrait_data/dual_portrait_product.json
-vendor/etc/portrait_data/single_bokeh_feature_vendor.json
 vendor/etc/portrait_data/single_bokeh_feature_vendor.json
 vendor/etc/str/str_preference_data.dat
 vendor/etc/vintf/manifest/vendor.qti.camera.aon-impl.xml
@@ -805,6 +803,9 @@ vendor/etc/display/qdcm_calib_data_vtdr6130_amoled_qsync_cmd_mode_dsi_visionox_p
 vendor/etc/display/qdcm_calib_data_vtdr6130_amoled_qsync_video_mode_dsi_visionox_panel_with_DSC.json
 vendor/etc/display/qdcm_calib_data_vtdr6130_amoled_video_mode_dsi_visionox_panel_with_DSC.json
 
+# Dolby
+vendor/etc/media_codecs_dolby_audio.xml
+
 # DSP
 vendor/bin/dspservice
 vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc
@@ -1121,16 +1122,14 @@ vendor/bin/hw/vendor.qti.media.c2@1.0-service
 vendor/bin/init.qti.media.sh
 vendor/etc/init/init.qti.media.rc
 vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
+vendor/etc/media_codecs.xml
 vendor/etc/media_codecs_performance_pineapple.xml
 vendor/etc/media_codecs_performance_pineapple_vendor.xml
 vendor/etc/media_codecs_pineapple.xml
 vendor/etc/media_codecs_pineapple_vendor.xml
 vendor/etc/media_pineapple/video_system_specs.json
 vendor/etc/media_profiles.xml
-vendor/etc/media_profiles.xml
 vendor/etc/media_profiles_V1_0.xml
-vendor/etc/media_profiles_V1_0.xml
-vendor/etc/media_profiles_pineapple.xml
 vendor/etc/media_profiles_pineapple.xml
 vendor/etc/seccomp_policy/codec2.vendor.base-arm64.policy
 vendor/etc/seccomp_policy/codec2.vendor.ext-arm64.policy
@@ -1162,11 +1161,14 @@ vendor/lib64/libqcodec2_platform.so
 vendor/lib64/libqcodec2_streaminteg_filter.so
 vendor/lib64/libqcodec2_utils.so
 vendor/lib64/libqcodec2_v4l2codec.so
+vendor/lib64/libqtbase.so
+vendor/lib64/libqtnodes.so
 vendor/lib64/libsavscmn.so
 vendor/lib64/libsavsvc.so
 vendor/lib64/libsec2imageformatfilter.so
 vendor/lib64/libsimba.media.samsung.so
 vendor/lib64/libstagefright_foundation_vendor.so
+vendor/lib64/libstreamprocessor.so
 vendor/lib64/libvideotxr.so
 vendor/lib64/qti.video.utils.videobufferlayout.so
 
@@ -1338,6 +1340,23 @@ vendor/lib64/vendor.samsung.hardware.radio.sim-V1-ndk.so
 # RIL - UIM
 product/etc/permissions/UimService.xml
 product/framework/uimservicelibrary.jar
+
+# seccomp policies
+vendor/etc/seccomp_policy/c2audio.vendor.base-arm.policy
+vendor/etc/seccomp_policy/c2audio.vendor.base-arm64.policy
+vendor/etc/seccomp_policy/c2audio.vendor.ext-arm.policy
+vendor/etc/seccomp_policy/c2audio.vendor.ext-arm64.policy
+vendor/etc/seccomp_policy/imsrtp.policy
+vendor/etc/seccomp_policy/mediacodec.policy
+vendor/etc/seccomp_policy/mediaextractor_sec.policy
+vendor/etc/seccomp_policy/qesdksec.policy
+vendor/etc/seccomp_policy/qsap_dcfd.policy
+vendor/etc/seccomp_policy/qsap_qapeservice.policy
+vendor/etc/seccomp_policy/qsap_sensors.policy
+vendor/etc/seccomp_policy/qsap_voiceui.policy
+vendor/etc/seccomp_policy/wfdhdcphalservice.policy
+vendor/etc/seccomp_policy/wfdvndservice.policy
+vendor/etc/seccomp_policy/wifidisplayhalservice.policy
 
 # Secure element
 vendor/bin/hw/android.hardware.secure_element-service.nxp
@@ -1520,6 +1539,13 @@ vendor/etc/audio_effects_haptic.xml
 vendor/etc/init/vendor.samsung.hardware.vibrator-default.rc
 vendor/etc/vintf/manifest/vendor.samsung.hardware.vibrator-default.xml
 vendor/lib64/vendor.samsung.hardware.vibrator-V5-ndk.so
+
+# WFD
+vendor/lib64/libwfdcodecv4l2_proprietary.so
+vendor/lib64/libwfdcommonutils_proprietary.so
+vendor/lib64/libwfddisplayconfig_vendor.so
+vendor/lib64/libwfdmminterface_proprietary.so
+vendor/lib64/libwfdutils_proprietary.so
 
 # Wi-Fi
 vendor/bin/cnss-daemon
