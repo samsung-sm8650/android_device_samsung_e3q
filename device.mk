@@ -96,6 +96,11 @@ TARGET_SCREEN_HEIGHT := 3120
 TARGET_SCREEN_WIDTH := 1440
 
 # Camera
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.common-V4-ndk.vendor \
+    libjpeg.vendor \
+    libyuv.vendor
+
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.concurrent.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.concurrent.xml \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
@@ -277,7 +282,6 @@ PRODUCT_PACKAGES += \
     init.qti.write.sh \
     init.vendor.sensordebug.sh \
     init.vendor.sensordebug.ssr_dump.sh \
-    install-recovery.sh \
     qca6234-service.sh \
     system_dlkm_modprobe.sh \
     ueventd.qcom.rc \
@@ -306,9 +310,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/fstab.qcom
 
 # Sensors
-PRODUCT_PACKAGES += \
-    android.hardware.sensors-service.samsung-multihal \
-    sensors.dynamic_sensor_hal
+#PRODUCT_PACKAGES += \
+#    android.hardware.sensors-service.samsung-multihal \
+#    sensors.dynamic_sensor_hal
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf

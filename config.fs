@@ -1,3 +1,7 @@
+# TODO: Fix this file
+[AID_VENDOR_SECDIR]
+value:5050
+
 [AID_VENDOR_QTI_DIAG]
 value:2901
 

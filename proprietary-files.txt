@@ -36,6 +36,7 @@ vendor/lib64/rfs/dsp/snap/libQnnHtpV75Skel.so:vendor/lib/rfsa/adsp/snap/libQnnHt
 vendor/etc/LVACFS_Calibration.dat
 vendor/etc/LVACFS_Configuration.txt
 vendor/etc/LVACFS_ControlParams.txt
+vendor/etc/SoundBoosterParam.txt
 vendor/etc/audconf/OPEN/acdb_cal.acdb
 vendor/etc/audconf/OPEN/workspaceFileXml.qwsp
 vendor/etc/init/init.audio.samsung.rc
@@ -152,14 +153,44 @@ vendor/lib64/vendor.qti.hardware.fm@1.0.so
 vendor/lib64/vendor.samsung.hardware.bluetooth.audio-impl.so
 
 # Camera
+vendor/bin/hw/android.hardware.camera.provider-V1-external-service
 vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
 vendor/etc/DsgpPolicy.csv
+vendor/etc/aip/config/PCC_Config-timestamp
+vendor/etc/aip/config/pcc_config.json
+vendor/etc/aip/model/1129_dummy_1441_cached.dlc
+vendor/etc/aip/model/CIGSOL_SWISP_200M_v1.6.2_Exp18_e12850_592x4176_A16W8_cached.dlc
+vendor/etc/aip/model/CIGSOL_fp32_ver220923_HTP_FP16_cached.dlc
+vendor/etc/aip/model/FP16_dummy_HTP_FP16_cached.dlc
+vendor/etc/aip/model/ModelSet2_AIMFISP-timestamp
+vendor/etc/aip/model/ModelSet2_eraw_AIMFISP-timestamp
+vendor/etc/aip/model/ModelSet_AIMFISP-timestamp
+vendor/etc/aip/model/ModelSet_AISR-timestamp
+vendor/etc/aip/model/ModelSet_eraw_AIMFISP-timestamp
+vendor/etc/aip/model/ModelSet_v-timestamp
+vendor/etc/aip/model/aiisp_1x_C2C_cached.dlc
+vendor/etc/aip/model/aiisp_1x_T2C_Indoor_cached.dlc
+vendor/etc/aip/model/aiisp_1x_T2C_Outdoor_cached.dlc
+vendor/etc/aip/model/aiisp_1x_ll_C2C_cached.dlc
+vendor/etc/aip/model/aiisp_2x_C2C_cached.dlc
+vendor/etc/aip/model/aiisp_2x_ll_C2C_cached.dlc
+vendor/etc/aip/model/aiisp_4x_C2C_cached.dlc
+vendor/etc/aip/model/mfisp_eraw_model_mf_Tetra_RGB_fp16.dlc
+vendor/etc/aip/model/mfisp_eraw_model_nl_Tetra_RGB_fp16.dlc
+vendor/etc/aip/model/mfisp_model_ll_Tetra_RGB_fp16.dlc
+vendor/etc/aip/model/mfisp_model_mf_Tetra_RGB_fp16.dlc
+vendor/etc/aip/model/mfisp_model_nl_Tetra_RGB_fp16.dlc
+vendor/etc/aip/model/mfisp_tmodel_ll_Tetra_RGB_fp16.dlc
+vendor/etc/aip/model/mfisp_tmodel_nl_Tetra_RGB_fp16.dlc
+vendor/etc/beauty/settings.dat
 vendor/etc/external_camera_config.xml
+vendor/etc/init/android.hardware.camera.provider-V1-external-service.rc
 vendor/etc/init/camera.unihal.rc
 vendor/etc/init/vendor.samsung.hardware.camera.provider-service_64.rc
 vendor/etc/portrait_data/SRIB_ClatNetLite_INT8_V003_sm8650_vendor.tvm.so
 vendor/etc/portrait_data/dual_portrait_product.json
 vendor/etc/portrait_data/single_bokeh_feature_vendor.json
+vendor/etc/sat/arcsat_fusion.config
 vendor/etc/str/str_preference_data.dat
 vendor/etc/vintf/manifest/vendor.qti.camera.aon-impl.xml
 vendor/etc/vintf/manifest/vendor.qti.camera.offlinecamera-impl.xml
@@ -168,6 +199,7 @@ vendor/etc/vintf/manifest/vendor.samsung.hardware.camera.provider-service.xml
 vendor/lib64/AIAwbModelFront_v1.0.tflite
 vendor/lib64/AIAwbModel_v2.3.tflite
 vendor/lib64/SWPD_libTsAf.so;FIX_SONAME
+vendor/lib64/android.hardware.camera.provider-V1-external-impl.so
 vendor/lib64/camera.device-external-impl.so;DISABLE_DEPS
 vendor/lib64/camera/bitmlconfig.bin
 vendor/lib64/camera/camxfl115indices.bin
@@ -519,6 +551,7 @@ vendor/lib64/libjump_shot.uniplugin@1.0.so
 vendor/lib64/liblivefocus_preview_engine.so
 vendor/lib64/liblivefocus_preview_interface.so
 vendor/lib64/liblocaltm_capture.uniplugin@1.0.so
+vendor/lib64/liblocaltm_preview.uniplugin@1.0.so
 vendor/lib64/libmaskdetection.uniplugin@1.0.so
 vendor/lib64/libmcaimegpu.samsung.so
 vendor/lib64/libmctfengine_stub.so
@@ -775,18 +808,25 @@ vendor/lib64/libqsocket.so
 vendor/lib64/vendor.qti.diaghal@1.0.so
 
 # Display
+vendor/bin/hw/vendor.qti.hardware.display.color-service
+vendor/bin/ppd
 vendor/bin/qdcmss
 vendor/etc/clstc_config_library.xml
+vendor/etc/displayconfig/display_id_4630947039571902851.xml
 vendor/etc/init/qdcmss.rc
+vendor/etc/init/vendor.qti.hardware.display.color-service.rc
 vendor/etc/snapdragon_color_libs_config.xml
+vendor/etc/vintf/manifest/androd.hardware.camera.provider-external-service.xml
 vendor/lib64/hw/vulkan.adreno.so
 vendor/lib64/libclstc_algorithm_adapter.so
 vendor/lib64/libclstc_gcp_adapter.so
 vendor/lib64/libclstc_tm.so
 vendor/lib64/libdigital-dimming.so
+vendor/lib64/libdisp-aba.so
 vendor/lib64/libdisplaydebug.so
 vendor/lib64/libdisplayqos.so
 vendor/lib64/libdisplayskuutils.so
+vendor/lib64/libdpps.so
 vendor/lib64/libgame_enhance.so
 vendor/lib64/libhdr_tm.so
 vendor/lib64/libhdradaptivecustom.so
@@ -812,6 +852,13 @@ vendor/lib64/libsnapdragoncolor-qdcm.so
 vendor/lib64/libtestutils.so
 vendor/lib64/libtinyxml2_1.so
 vendor/lib64/libvmfilexfer.so
+vendor/lib64/vendor.display.color@1.0.so
+vendor/lib64/vendor.display.color@1.1.so
+vendor/lib64/vendor.display.color@1.2.so
+vendor/lib64/vendor.display.color@1.3.so
+vendor/lib64/vendor.display.color@1.4.so
+vendor/lib64/vendor.display.color@1.5.so
+vendor/lib64/vendor.display.postproc@1.0.so
 
 # Display configs
 vendor/etc/display/DPU10__.xml
@@ -842,6 +889,7 @@ vendor/etc/display/qdcm_calib_data_vtdr6130_amoled_qsync_video_mode_dsi_visionox
 vendor/etc/display/qdcm_calib_data_vtdr6130_amoled_video_mode_dsi_visionox_panel_with_DSC.json
 
 # Dolby
+vendor/etc/dolby/dax-default.xml
 vendor/etc/media_codecs_dolby_audio.xml
 
 # DSP
@@ -1145,10 +1193,19 @@ vendor/lib64/libisosechw.so
 vendor/lib64/libshctrl.so
 vendor/lib64/vendor.samsung.hardware.security.hermes-V1-ndk.so
 
+# Health
+vendor/bin/hw/vendor.samsung.hardware.health-service
+vendor/etc/init/vendor.samsung.hardware.health-service.rc
+vendor/lib64/vendor.samsung.hardware.health-V1-ndk.so
+
 # Hyper
+vendor/bin/hw/vendor.samsung.hardware.hyper-service
 vendor/etc/hyper/config_chipset.json
 vendor/etc/hyper/config_hyper_permission.json
 vendor/etc/hyper/config_vendor.json
+vendor/etc/init/hyper-default-sec.rc
+vendor/etc/vintf/manifest/hyper-default-sec.xml
+vendor/lib64/libhyper.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libhypervintf.so
 vendor/lib64/vendor.samsung.hardware.hyper-V2-ndk.so
 
@@ -1465,10 +1522,13 @@ vendor/lib64/libqcbor.so
 
 # Sensors
 vendor/bin/factory.ssc
+vendor/bin/hw/android.hardware.sensors-service.multihal
 vendor/bin/init.qcom.sensors.sh
 vendor/bin/sensors.qti
 vendor/bin/sscrpcd
+vendor/etc/init/android.hardware.sensors-service-multihal.rc
 vendor/etc/init/init.vendor.sensors.rc
+vendor/etc/init/vendor.sensordebug.rc
 vendor/etc/init/vendor.sensors.qti.rc
 vendor/etc/init/vendor.sensors.sscrpcd.rc
 vendor/etc/sensors/config/akmlib.json
@@ -1512,6 +1572,7 @@ vendor/etc/sensors/config/sns_tilt.json
 vendor/etc/sensors/config/sns_tilt_sw_disabled.json
 vendor/etc/sensors/config/sns_tilt_sw_enabled.json
 vendor/etc/sensors/sns_reg_config
+vendor/etc/vintf/manifest/android.hardware.sensors-multihal.xml
 vendor/lib64/libqsh.so
 vendor/lib64/libsensorslog.so
 vendor/lib64/libsns_api.so
@@ -1598,15 +1659,6 @@ vendor/etc/init/vendor.samsung.hardware.vibrator-default.rc
 vendor/etc/vintf/manifest/vendor.samsung.hardware.vibrator-default.xml
 vendor/lib64/vendor.samsung.hardware.vibrator-V5-ndk.so
 
-# WFD
-vendor/lib64/libmmrtpdecoder_vendor.so
-vendor/lib64/libmmrtpencoder_vendor.so
-vendor/lib64/libwfdcodecv4l2_proprietary.so
-vendor/lib64/libwfdcommonutils_proprietary.so
-vendor/lib64/libwfddisplayconfig_vendor.so
-vendor/lib64/libwfdmminterface_proprietary.so
-vendor/lib64/libwfdutils_proprietary.so
-
 # Wi-Fi
 vendor/bin/cnss-daemon
 vendor/bin/cnss_diag;DISABLE_DEPS
@@ -1621,6 +1673,36 @@ vendor/etc/wifi/kiwi_v2/WCNSS_qcom_cfg.ini
 vendor/etc/wifi/p2p_supplicant_overlay.conf
 vendor/etc/wifi/wpa_supplicant.conf
 vendor/etc/wifi/wpa_supplicant_overlay.conf
+
+# Wi-Fi Display
+vendor/bin/wifidisplayhalservice
+vendor/etc/wfdconfig.xml
+vendor/lib64/hw/vendor.qti.hardware.wifidisplaysession@1.0-impl.so
+vendor/lib64/libmmrtpdecoder_vendor.so
+vendor/lib64/libmmrtpencoder_vendor.so
+vendor/lib64/libwfdaac_vendor.so
+vendor/lib64/libwfdcodecv4l2_proprietary.so
+vendor/lib64/libwfdcommonutils_proprietary.so
+vendor/lib64/libwfdconfigutils_proprietary.so
+vendor/lib64/libwfddisplayconfig_vendor.so
+vendor/lib64/libwfdhdcpcp.so
+vendor/lib64/libwfdhdcpservice_proprietary.so
+vendor/lib64/libwfdmminterface_proprietary.so
+vendor/lib64/libwfdmmservice_proprietary.so
+vendor/lib64/libwfdmmsrc_proprietary.so
+vendor/lib64/libwfdmodulehdcpsession.so
+vendor/lib64/libwfdrtsp_vendor.so
+vendor/lib64/libwfdsessionmodule.so
+vendor/lib64/libwfdsourcesession_proprietary.so
+vendor/lib64/libwfdsourcesm_proprietary.so
+vendor/lib64/libwfduibcinterface_vendor.so
+vendor/lib64/libwfduibcsink_vendor.so
+vendor/lib64/libwfduibcsinkinterface_vendor.so
+vendor/lib64/libwfduibcsrc_vendor.so
+vendor/lib64/libwfduibcsrcinterface_vendor.so
+vendor/lib64/libwfdutils_proprietary.so
+vendor/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so
+vendor/lib64/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so
 
 # Widevine DRM
 vendor/bin/hw/vendor.samsung.hardware.security.widevine.keyprov-service

@@ -174,12 +174,6 @@ sh_binary {
 }
 
 sh_binary {
-    name: "install-recovery.sh",
-    src: "bin/install-recovery.sh",
-    vendor: true,
-}
-
-sh_binary {
     name: "qca6234-service.sh",
     src: "bin/qca6234-service.sh",
     vendor: true,
