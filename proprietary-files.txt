@@ -31,6 +31,9 @@ vendor/lib64/rfs/dsp/libqsegnetengine_dsp_skel.so:vendor/lib/rfsa/adsp/libqsegne
 vendor/lib64/rfs/dsp/libscveT2T_skel.so:vendor/lib/rfsa/adsp/libscveT2T_skel.so;SYMLINK=vendor/lib64/rfs/dsp/libscveT2T_skel.so
 vendor/lib64/rfs/dsp/libworker_pool.so:vendor/lib/rfsa/adsp/libworker_pool.so
 vendor/lib64/rfs/dsp/snap/libQnnHtpV75Skel.so:vendor/lib/rfsa/adsp/snap/libQnnHtpV75Skel.so;SYMLINK=vendor/lib64/rfs/dsp/snap/libQnnHtpV75Skel.so
+vendor/lib64/snap/libQnnHtp.so
+vendor/lib64/snap/libQnnHtpV75Stub.so
+vendor/lib64/snap/libQnnSystem.so
 
 # Audio
 vendor/etc/LVACFS_Calibration.dat
@@ -65,6 +68,7 @@ vendor/lib64/libcapiv2svacnnvendor.so
 vendor/lib64/libcapiv2svarnnvendor.so
 vendor/lib64/libcapiv2udk7vendor.so
 vendor/lib64/libcapiv2uvvendor.so
+vendor/lib64/libcustomva_intf.so
 vendor/lib64/libdsd2pcm.so
 vendor/lib64/liblistensoundmodel2vendor.so
 vendor/lib64/liblx-ar_util.so
@@ -526,6 +530,7 @@ vendor/lib64/libfocuspeaking.so
 vendor/lib64/libfocuspeaking.uniplugin@1.0.so
 vendor/lib64/libformatConverter.unifunc.so
 vendor/lib64/libgaya.so
+vendor/lib64/libgralloc_helper.unifunc.so
 vendor/lib64/libhand_interaction.uniplugin@1.0.so
 vendor/lib64/libhandgesture.arcsoft.so
 vendor/lib64/libhdr10plus.so
@@ -1169,6 +1174,7 @@ vendor/lib64/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib64/libq3dtools_adreno.s
 vendor/lib64/egl/libq3dtools_esx.so
 vendor/lib64/libCB.so
 vendor/lib64/libOpenCL.so
+vendor/lib64/libOpenCL_adreno.so
 vendor/lib64/libadreno_app_profiles.so
 vendor/lib64/libadreno_utils.so
 vendor/lib64/libgpudataproducer.so
@@ -1198,15 +1204,7 @@ vendor/bin/hw/vendor.samsung.hardware.health-service
 vendor/etc/init/vendor.samsung.hardware.health-service.rc
 vendor/lib64/vendor.samsung.hardware.health-V1-ndk.so
 
-# Hyper
-vendor/bin/hw/vendor.samsung.hardware.hyper-service
-vendor/etc/hyper/config_chipset.json
-vendor/etc/hyper/config_hyper_permission.json
-vendor/etc/hyper/config_vendor.json
-vendor/etc/init/hyper-default-sec.rc
-vendor/etc/vintf/manifest/hyper-default-sec.xml
-vendor/lib64/libhyper.so;MODULE_SUFFIX=_vendor
-vendor/lib64/libhypervintf.so
+# HyPer
 vendor/lib64/vendor.samsung.hardware.hyper-V2-ndk.so
 
 # Media
@@ -1216,6 +1214,7 @@ vendor/bin/hw/samsung.software.media.c2@1.0-service
 vendor/bin/hw/vendor.qti.media.c2@1.0-service
 vendor/bin/init.qti.media.sh
 vendor/etc/init/init.qti.media.rc
+vendor/etc/init/samsung.software.media.c2@1.0-service.rc
 vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
 vendor/etc/media_codecs.xml
 vendor/etc/media_codecs_performance_pineapple.xml

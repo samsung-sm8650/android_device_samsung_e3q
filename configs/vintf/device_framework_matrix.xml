@@ -1,13 +1,5 @@
 <compatibility-matrix version="8.0" type="framework">
     <hal format="aidl" optional="true">
-        <name>vendor.samsung.hardware.hyper</name>
-        <version>2</version>
-        <interface>
-            <name>ISehHyPer</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
         <name>vendor.samsung.hardware.authfw</name>
         <interface>
             <name>ISehAuthenticationFramework</name>

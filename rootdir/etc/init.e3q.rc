@@ -79,6 +79,15 @@ on boot
     chown system radio /sys/class/sensors/range_sensor/file_p2p
     chown system radio /sys/class/sensors/range_sensor/file_shape
 # ] Permissions for Range Sensor
+
+    # mem_boost_mode
+    chmod 0664 /sys/kernel/mm/vmscan/mem_boost_mode
+    chown cameraserver system /sys/kernel/mm/vmscan/mem_boost_mode
+
+    # rbin mem_boost_mode
+    chmod 0664 /sys/kernel/rbin/mem_boost_mode
+    chown cameraserver system /sys/kernel/rbin/mem_boost_mode
+
 on shutdown
 
 # service definition
