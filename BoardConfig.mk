@@ -124,7 +124,6 @@ TARGET_KERNEL_EXT_MODULES := \
     qcom/opensource/mm-drivers/sync_fence \
     qcom/opensource/securemsm-kernel \
     qcom/opensource/audio-kernel \
-    qcom/opensource/camera-kernel \
     qcom/opensource/dataipa/drivers/platform/msm \
     qcom/opensource/datarmnet-ext/mem \
     qcom/opensource/datarmnet/core \
@@ -147,6 +146,7 @@ TARGET_KERNEL_EXT_MODULES := \
     qcom/opensource/spu-kernel \
     qcom/opensource/mm-sys-kernel/ubwcp \
     qcom/opensource/touch-drivers \
+    qcom/opensource/camera-kernel \
     nxp/opensource/driver
 
 # Metadata

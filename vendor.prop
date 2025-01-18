@@ -1,3 +1,8 @@
+# Media
+debug.c2.use_dmabufheaps=1
+debug.stagefright.c2inputsurface=-1
+vendor.media.omx=0
+
 # Fingerprint
 ro.vendor.fingerprint.type=udfps
 ro.vendor.fingerprint.sensor_location=720|2327|147
