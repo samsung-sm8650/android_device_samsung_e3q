@@ -222,17 +222,17 @@ vendor/firmware/tsp_stm/fts2ba61y_dm3q.bin
 # VPU firmware
 vendor/firmware/vpu30_4v.mbn
 
-# Vendor firmware - from S9180ZHU5CXK1
-vendor/firmware/CAMERA_ICP.b20:odm/firmware/CAMERA_ICP.b20|6ff68cc6192d7beb6667944ee027a51420a410db
-vendor/firmware/CAMERA_ICP.mbn:odm/firmware/CAMERA_ICP.mbn|9b794842d373d7c3dbd53b20d3281a723d5adca9
-vendor/firmware/CAMERA_ICP.mdt:odm/firmware/CAMERA_ICP.mdt|5015c5027968b247f4d36c99c2b8a86fc8b31fff
-vendor/firmware/a740_zap.b02:odm/firmware/a740_zap.b02|c6ac7bc689403ce93f0a4fb69e23c4e7899254dc
-vendor/firmware/a740_zap.mbn:odm/firmware/a740_zap.mbn|4239dfac3204c59b6547d97d3dbae8a29e0cabd2
-vendor/firmware/a740_zap.mdt:odm/firmware/a740_zap.mdt|1909ef243d4e497cbcae2460d1b10f08a507ccf3
-vendor/firmware/evass.b19:odm/firmware/evass.b19|2c0c77f48882a108a9155745839162bce0f339ad
-vendor/firmware/evass.mbn:odm/firmware/evass.mbn|4466db18fa997662badaf5594a3ae93ede51b403
-vendor/firmware/evass.mdt:odm/firmware/evass.mdt|b4924f6c945769d4ef80733904d82fab91d4aff8
-vendor/firmware/vpu30_4v.mbn:odm/firmware/vpu30_4v.mbn|f43dddae74012cd3e4d352869954d909ce6504ac
+# Vendor firmware - from S9180ZHS5CXL1
+vendor/firmware/CAMERA_ICP.b20:odm/firmware/CAMERA_ICP.b20|b997a38ee2bbdd27d869e99cbc9ac2d564e75c2e
+vendor/firmware/CAMERA_ICP.mbn:odm/firmware/CAMERA_ICP.mbn|724af45299925e75a131e92b03936de546033fb5
+vendor/firmware/CAMERA_ICP.mdt:odm/firmware/CAMERA_ICP.mdt|a571e025528ceaf955d776f727870b0c757c95f2
+vendor/firmware/a740_zap.b02:odm/firmware/a740_zap.b02|f835e4ef6c2f5f0dda82f8c6c8142d663d6b39e6
+vendor/firmware/a740_zap.mbn:odm/firmware/a740_zap.mbn|553f6033c7e19167e6c009f0fcb028b3f621d37f
+vendor/firmware/a740_zap.mdt:odm/firmware/a740_zap.mdt|f4414b71246ee99df7dc8f9dd5e68bc98a12f630
+vendor/firmware/evass.b19:odm/firmware/evass.b19|d6324263537b5675663256fec164bf8588f10dca
+vendor/firmware/evass.mbn:odm/firmware/evass.mbn|fd2cffbc3aab260d8c3d63f12a4233093c9a80c7
+vendor/firmware/evass.mdt:odm/firmware/evass.mdt|a06ae42c27258aeb1fc157a878d14912ca7def1b
+vendor/firmware/vpu30_4v.mbn:odm/firmware/vpu30_4v.mbn|401af2590d98971387072f6e95fc170497cc20ba
 
 # Vendor firmware
 vendor/firmware/00_generic_xtalk_shape.bin
