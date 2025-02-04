@@ -284,7 +284,6 @@ tz_log_dlkm.ko
 rmnet_wlan.ko
 rmnet_perf_tether.ko
 lpass_cdc_rx_macro_dlkm.ko
-qca_cld3_qca6490.ko
 machine_dlkm.ko
 hdcp_qseecom_dlkm.ko
 msm_drm.ko
