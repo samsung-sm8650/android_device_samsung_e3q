@@ -1,4 +1,4 @@
-# Unpinned blobs from e3qxxx-user 14 UP1A.231005.007 S928BXXU4AXK4 release-keys
+# Unpinned blobs from e3qxxx-user 14 UP1A.231005.007 S928BXXU4AYA5 release-keys
 
 # Current blobs with deps disabled:
 # com.qti.node.dewarp, com.qti.chi.override, libcamximageformatutils, depend on multiple versions of the same aidl_interface: android.hardware.graphics.allocator-V1-ndk, android.hardware.graphics.allocator-V2-ndk-source
@@ -85,7 +85,6 @@ vendor/lib64/libsecnativefeature.so
 vendor/lib64/libspatializerparamstorage.so
 vendor/lib64/libspeakercalibration.so
 vendor/lib64/libtensorflowlite_c.so
-vendor/lib64/libvui_dmgr_client.so
 vendor/lib64/libvui_intf.so
 vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0-impl.so
@@ -105,6 +104,14 @@ vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_cdp.xml
 vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_mtp.xml
 vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_qrd.xml
 vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_qrd_sku2.xml
+vendor/etc/audio_effects.xml
+vendor/etc/audio_effects_haptic.xml
+vendor/etc/audio_effects_sec.xml
+vendor/etc/audio_effects_spatializer.xml
+vendor/etc/card-defs.xml
+vendor/etc/mem_logger_config.xml
+vendor/etc/sec_audio_volume_curve.xml
+vendor/etc/situation_audio_policy_volumes_sec.xml
 vendor/etc/usecaseKvManager.xml
 
 # Audio FX modules
@@ -715,8 +722,13 @@ vendor/etc/charger_fw_fstab.qti
 vendor/etc/cne/mwqem.conf
 vendor/etc/cne/profileMwqem.xml
 vendor/etc/default-permissions/com.qualcomm.qti.cne.xml
+vendor/etc/default-permissions/vendor.qti.data.txpwradmin.xml
+vendor/etc/init/cnd.rc
 vendor/lib64/libshsc.so
+vendor/lib64/libxml.so
+vendor/lib64/vendor.qti.data.factoryservice-V1-ndk.so
 vendor/lib64/vendor.qti.data.mwqem@1.0.so
+vendor/lib64/vendor.qti.data.mwqemaidlservice-V1-ndk.so
 vendor/lib64/vendor.qti.data.slm@1.0.so
 vendor/lib64/vendor.qti.hardware.cacert@1.0.so
 vendor/lib64/vendor.qti.hardware.data.cne.internal.constants@1.0.so
@@ -724,17 +736,26 @@ vendor/lib64/vendor.qti.hardware.data.cne.internal.server@1.0.so
 vendor/lib64/vendor.qti.hardware.data.cne.internal.server@1.1.so
 vendor/lib64/vendor.qti.hardware.data.cne.internal.server@1.2.so
 vendor/lib64/vendor.qti.hardware.data.cne.internal.server@1.3.so
+vendor/lib64/vendor.qti.hardware.data.cneaidlservice.internal.api-V1-ndk.so
+vendor/lib64/vendor.qti.hardware.data.cneaidlservice.internal.constants-V1-ndk.so
+vendor/lib64/vendor.qti.hardware.data.cneaidlservice.internal.server-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so
 vendor/lib64/vendor.qti.hardware.data.dynamicdds@1.1.so
+vendor/lib64/vendor.qti.hardware.data.dynamicddsaidlservice-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.data.flow@1.0.so
 vendor/lib64/vendor.qti.hardware.data.flow@1.1.so
+vendor/lib64/vendor.qti.hardware.data.flowaidlservice-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.data.latency@1.0.so
 vendor/lib64/vendor.qti.hardware.data.lce@1.0.so
+vendor/lib64/vendor.qti.hardware.data.lceaidlservice-V1-ndk.so
+vendor/lib64/vendor.qti.hardware.data.qmiaidlservice-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.mwqemadapter@1.0.so
+vendor/lib64/vendor.qti.hardware.mwqemadapteraidlservice-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.slmadapter@1.0.so
 vendor/lib64/vendor.qti.latency@2.0.so
 vendor/lib64/vendor.qti.latency@2.1.so
 vendor/lib64/vendor.qti.latency@2.2.so
+vendor/lib64/vendor.qti.latencyaidlservice-V1-ndk.so
 
 # Configstore
 vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service
@@ -804,7 +825,6 @@ vendor/lib64/libnicm_utils.so
 vendor/lib64/libqcmaputils.so
 vendor/lib64/libqdi.so
 vendor/lib64/libqdp.so
-vendor/lib64/libxml.so
 vendor/lib64/vendor.qti.hardware.radio.atfwd-V1-ndk.so
 
 # Diag
@@ -813,7 +833,7 @@ vendor/etc/init/vendor.qti.diag.rc
 vendor/etc/vintf/manifest/vendor.qti.diag.hal.service.xml
 vendor/lib64/libdiag.so
 vendor/lib64/libqsocket.so
-vendor/lib64/vendor.qti.diaghal@1.0.so
+vendor/lib64/vendor.qti.diaghal@1.0.so;MODULE_SUFFIX=_vendor
 
 # Display
 vendor/bin/hw/vendor.qti.hardware.display.color-service
