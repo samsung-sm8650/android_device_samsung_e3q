@@ -13,7 +13,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 # Enforce generic ramdisk allow list
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 
-# Dalvik
+# Non_ab_device
+$(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
+
+# Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Enable updating of APEXes
@@ -63,10 +66,10 @@ AUDIO_HAL_DIR := hardware/qcom-caf/sm8650/audio/primary-hal
 AUDIO_PAL_DIR := hardware/qcom-caf/sm8650/audio/pal
 
 PRODUCT_COPY_FILES += \
+    $(AUDIO_HAL_DIR)/configs/common/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     $(AUDIO_HAL_DIR)/configs/pineapple/audio_effects.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_pineapple/audio_effects.conf \
     $(AUDIO_HAL_DIR)/configs/pineapple/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_pineapple/audio_effects.xml \
     $(AUDIO_HAL_DIR)/configs/pineapple/microphone_characteristics.xml:$(TARGET_COPY_OUT_VENDOR)/etc/microphone_characteristics.xml \
-    $(LOCAL_PATH)/configs/audio/audio_policy_configuration_base.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_pineapple_qssi/audio_policy_configuration.xml \
     $(LOCAL_PATH)/configs/audio/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml
 
@@ -211,7 +214,11 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service-qti
+    android.hardware.power-service.lineage-libperfmgr \
+    libqti-perfd-client
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -245,61 +252,29 @@ PRODUCT_PACKAGES += \
 
 # Rootdir
 PRODUCT_PACKAGES += \
-    dcc_extension.sh \
-    hdm_status.sh \
+    fstab.qcom \
     init.class_main.sh \
-    init.crda.sh \
-    init.kernel.post_boot-cliffs.sh \
-    init.kernel.post_boot-pineapple.sh \
-    init.kernel.post_boot.sh \
     init.mdm.sh \
-    init.qcom.class_core.sh \
-    init.qcom.coex.sh \
     init.qcom.early_boot.sh \
-    init.qcom.efs.sync.sh \
     init.qcom.post_boot.sh \
-    init.qcom.sdio.sh \
-    init.qcom.sensors.sh \
+    init.qcom.rc \
     init.qcom.sh \
-    init.qti.qcv.rc \
-    init.qti.qcv.sh \
-    init.qti.kernel.debug-cliffs.sh \
-    init.qti.kernel.debug-pineapple.sh \
-    init.qti.kernel.debug.sh \
-    init.qti.kernel.early_debug-pineapple.sh \
-    init.qti.kernel.early_debug.sh \
-    init.qti.kernel.sh \
-    init.qti.media.sh \
-    init.qti.time.daemon.sh \
-    init.qti.write.sh \
-    init.vendor.sensordebug.sh \
-    init.vendor.sensordebug.ssr_dump.sh \
-    qca6234-service.sh \
-    system_dlkm_modprobe.sh \
-    ueventd.qcom.rc \
-    vendor_modprobe.sh \
+    init.recovery.qcom.rc \
+    init.target.rc \
+    ueventd.qcom.rc
 
 PRODUCT_PACKAGES += \
-    fstab.qcom \
     init.e3q.rc \
-    init.qcom.factory.rc \
-    init.qcom.rc \
-    init.qti.kernel.rc \
-    init.qti.ss-ramdump.sh \
-    init.qti.ufs.rc \
     init.samsung.bsp.rc \
     init.samsung.display.rc \
     init.samsung.dp.rc \
-    init.samsung.factory.rc \
     init.samsung.power.rc \
     init.samsung.rc \
     init.samsung.user.rc \
-    init.target.rc \
-    init.recovery.qcom.rc \
-    init.recovery.samsung.rc \
+    init.recovery.samsung.rc
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/fstab.qcom
+    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
 
 # Sensors
 #PRODUCT_PACKAGES += \
@@ -322,6 +297,10 @@ PRODUCT_COPY_FILES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
+    hardware/google/interfaces \
+    hardware/google/pixel \
+    hardware/lineage/interfaces/power-libperfmgr \
+    hardware/qcom-caf/common/libqti-perfd-client \
     hardware/samsung \
     kernel/samsung/sm8650 \
     kernel/samsung/sm8650-modules
@@ -354,12 +333,16 @@ PRODUCT_PACKAGES += \
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb-service.qti \
-    android.hardware.usb.gadget-service.qti \
+    android.hardware.usb.gadget-service.qti
+
+PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.qcom.usb.sh
 
-PRODUCT_SOONG_NAMESPACES += \
-    vendor/qcom/opensource/usb/etc
+PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/usb/etc
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/usb/usb_compositions.conf:$(TARGET_COPY_OUT_ODM)/etc/usb_compositions.conf
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.accessory.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.accessory.xml \
