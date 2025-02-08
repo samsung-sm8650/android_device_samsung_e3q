@@ -5,6 +5,8 @@
 #
 
 BUILD_BROKEN_DUP_RULES := true
+#BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+#BUILD_BROKEN_INCORRECT_PARTITION_IMAGES := true
 
 DEVICE_PATH := device/samsung/e3q
 
@@ -68,17 +70,29 @@ BOARD_MKBOOTIMG_INIT_ARGS += --header_version $(BOARD_INIT_BOOT_HEADER_VERSION)
 
 # Kernel
 BOARD_KERNEL_CMDLINE := \
+    ignore_loglevel \
+    debug \
     androidboot.hardware=qcom \
     androidboot.memcg=1 \
     androidboot.usbcontroller=a600000.dwc3 \
+    androidboot.load_modules_parallel=false \
+    androidboot.hypervisor.protected_vm.supported=true \
     androidboot.selinux=permissive \
+    aosp_is_booting \
     firmware_class.path=/vendor/firmware_mnt/image \
+    loop.max_part=7 \
     printk.devkmsg=on \
+    video=vfb:640x400,bpp=32,memsize=3072000 \
+    audit=0
+
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
     androidboot.memcg=1 \
     androidboot.usbcontroller=a600000.dwc3 \
+    androidboot.load_modules_parallel=false \
+    androidboot.hypervisor.protected_vm.supported=true \
     androidboot.selinux=permissive
+
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
@@ -139,9 +153,6 @@ TARGET_KERNEL_EXT_MODULES := \
 BOARD_USES_METADATA_PARTITION := true
 
 # Partitions
--include vendor/lineage/config/BoardConfigReservedSize.mk
-BOARD_PRODUCTIMAGE_MINIMAL_PARTITION_RESERVED_SIZE := false
-
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
 BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
 BOARD_CACHEIMAGE_PARTITION_SIZE := 367001600
@@ -268,7 +279,6 @@ WIFI_DRIVER_DEFAULT := qca_cld3
 WIFI_DRIVER_STATE_CTRL_PARAM := "/dev/wlan"
 WIFI_DRIVER_STATE_OFF := "OFF"
 WIFI_DRIVER_STATE_ON := "ON"
-WIFI_HIDL_FEATURE_AWARE := true
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
