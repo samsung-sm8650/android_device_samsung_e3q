@@ -6,18 +6,6 @@
 
 // Init scripts
 sh_binary {
-    name: "dcc_extension.sh",
-    src: "bin/dcc_extension.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "hdm_status.sh",
-    src: "bin/hdm_status.sh",
-    vendor: true,
-}
-
-sh_binary {
     name: "init.class_main.sh",
     src: "bin/init.class_main.sh",
     vendor: true,

@@ -5,7 +5,8 @@
 #
 
 # Add common symlinks definitions for Qualcomm Samsung
-$(call inherit-product, hardware/samsung/symlinks/qcom-common.mk)
+$(call soong_config_set,rfs,mpss_firmware_symlink_target,firmware_modem)
+$(call inherit-product, hardware/qcom-caf/common/common.mk)
 
 # Enable project quotas and casefolding for emulated storage without sdcardfs
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
@@ -13,14 +14,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 # Enforce generic ramdisk allow list
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 
+# Non A/B device
+$(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
+
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
-
-# Enable updating of APEXes
-$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
-
-# Add common definitions for Qualcomm
-$(call inherit-product, hardware/qcom-caf/common/common.mk)
 
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
@@ -245,8 +243,6 @@ PRODUCT_PACKAGES += \
 
 # Rootdir
 PRODUCT_PACKAGES += \
-    dcc_extension.sh \
-    hdm_status.sh \
     init.class_main.sh \
     init.crda.sh \
     init.kernel.post_boot-cliffs.sh \
