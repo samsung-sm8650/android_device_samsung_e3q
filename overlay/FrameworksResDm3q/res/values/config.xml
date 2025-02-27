@@ -1413,4 +1413,7 @@
     <!-- Whether cbrs is supported on the device or not -->
     <bool name="config_cbrs_supported" translatable="false">true</bool>
 
+    <!-- Whether to cleanup fingerprints upon connection to the daemon and when user switches -->
+    <bool name="config_cleanupUnusedFingerprints">false</bool>
+
 </resources>
