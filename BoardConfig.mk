@@ -55,6 +55,9 @@ TARGET_KERNEL_EXT_MODULES := \
     qcom/opensource/wlan/qcacld-3.0/.kiwi_v2 \
     qcom/opensource/bt-kernel
 
+# Partitions
+BOARD_SUPER_PARTITION_SIZE := 12392071168
+
 # Vendor props
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
