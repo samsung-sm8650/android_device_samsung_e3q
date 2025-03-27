@@ -7,6 +7,34 @@ vendor/etc/audconf/OPEN/workspaceFileXml.qwsp
 # Audio configs
 vendor/etc/audio/sku_kalama/mixer_paths.xml
 vendor/etc/dolby/dax-default.xml
+vendor/etc/situation_audio_policy_volumes_sec.xml
+
+# Audio firmware
+vendor/firmware/SoundBoosterParam.bin
+vendor/firmware/cs35l43-bot-dsp1-spk-prot.bin
+vendor/firmware/cs35l43-bot-dsp1-spk-prot.wmfw
+vendor/firmware/cs35l43-rcv-dsp1-spk-prot.bin
+vendor/firmware/cs35l43-rcv-dsp1-spk-prot.wmfw
+vendor/firmware/cs40l26-a2h.bin
+vendor/firmware/cs40l26-calib.bin
+vendor/firmware/cs40l26-calib.wmfw
+vendor/firmware/cs40l26-dvl.bin
+vendor/firmware/cs40l26-svc.bin
+vendor/firmware/cs40l26-svc1.bin
+vendor/firmware/cs40l26-svc2.bin
+vendor/firmware/cs40l26-svc3.bin
+vendor/firmware/cs40l26-wt1.bin
+vendor/firmware/cs40l26-wt2.bin
+vendor/firmware/cs40l26-wt3.bin
+vendor/firmware/cs40l26.bin
+vendor/firmware/cs40l26.wmfw
+vendor/firmware/dax_param.bin
+
+# Audio FX modules
+vendor/lib64/soundfx/libaudiosaplus_sec.so
+vendor/lib64/soundfx/libsamsungSoundbooster_plus.so
+vendor/lib64/soundfx/libswdap.so
+vendor/lib64/soundfx/libswspatializer.so
 
 # Audio firmware
 vendor/firmware/SoundBoosterParam.bin
@@ -14,11 +42,10 @@ vendor/firmware/SoundBoosterParam.bin
 # Bluetooth firmware
 vendor/firmware/bt_nvm_loading.xml
 
+# Camera firmware
+vendor/firmware/ois_mcu_stm32g_fw.bin
+
 # Camera
-vendor/etc/sensors/config/kailua_irq.json
-vendor/etc/sensors/config/kailua_lps22hh_0.json
-vendor/etc/sensors/config/kailua_lsm6dso_0_0.json
-vendor/etc/sensors/config/lsm6dso_0.json
 vendor/lib64/camera/com.samsung.ois.mcu_stm32g.so
 vendor/lib64/camera/com.samsung.sensor.hi1337.so
 vendor/lib64/camera/com.samsung.sensor.hi847.so
@@ -145,6 +172,8 @@ vendor/lib64/com.qti.feature2.serializer.so
 vendor/lib64/com.qti.feature2.statsregeneration.so
 vendor/lib64/com.qti.feature2.stub.so
 vendor/lib64/com.qti.feature2.swmf.so
+vendor/lib64/com.qti.settings.sm8550.so
+vendor/lib64/com.qti.stats.common.so
 vendor/lib64/com.qualcomm.mcx.distortionmapper.so
 vendor/lib64/com.qualcomm.mcx.linearmapper.so
 vendor/lib64/com.qualcomm.mcx.nonlinearmapper.so
@@ -165,31 +194,16 @@ vendor/lib64/libcamximageformatutils.so
 vendor/lib64/libcamxswispiqmodule.so
 vendor/lib64/libchifeature2.so
 vendor/lib64/libcom.qti.chinodeutils.so
+vendor/lib64/libhypermotion_interface.so
 vendor/lib64/libmulticam_image_optical_zoom.so
 vendor/lib64/libmulticam_optical_zoom_control.so
 vendor/lib64/libmulticam_video_optical_zoom.so
 vendor/lib64/libswb_interface.so
 vendor/lib64/libthirdparty_zoomtranslator_imp.so
 
-# Camera firmware
-vendor/firmware/CAMERA_ICP.b20
-vendor/firmware/CAMERA_ICP.mbn
-vendor/firmware/CAMERA_ICP.mdt
-vendor/firmware/ois_mcu_stm32g_fw.bin
-
 # Display calibration data
 vendor/etc/display/qdcm_calib_data_DM3_S6E3HAE_AMB681AZ01.json
 vendor/firmware/DM3_S6E3HAE_AMB681AZ01.dat
-
-# EVA firmware
-vendor/firmware/evass.b19
-vendor/firmware/evass.mbn
-vendor/firmware/evass.mdt
-
-# Graphics (Adreno firmware)
-vendor/firmware/a740_zap.b02
-vendor/firmware/a740_zap.mbn
-vendor/firmware/a740_zap.mdt
 
 # NFC
 vendor/etc/nfc/libnfc-nxp_RF.conf
@@ -205,10 +219,14 @@ vendor/etc/sensors/config/kailua_ak991x_1.json
 vendor/etc/sensors/config/kailua_ak991x_2.json
 vendor/etc/sensors/config/kailua_ak991x_3.json
 vendor/etc/sensors/config/kailua_ak991x_8.json
+vendor/etc/sensors/config/kailua_irq.json
+vendor/etc/sensors/config/kailua_lps22hh_0.json
+vendor/etc/sensors/config/kailua_lsm6dso_0_0.json
 vendor/etc/sensors/config/kailua_lsm6dso_0_1.json
 vendor/etc/sensors/config/kailua_lsm6dso_0_8.json
 vendor/etc/sensors/config/kailua_stk3a9x_0.json
 vendor/etc/sensors/config/kailua_tmd4913_2.json
+vendor/etc/sensors/config/lsm6dso_0.json
 
 # Sensors
 vendor/bin/factory.ssc
@@ -216,10 +234,22 @@ vendor/lib64/sensors.flicker.so
 vendor/lib64/sensors.grip.so
 vendor/lib64/sensors.ssc.so
 
+# Thermal engine
+vendor/bin/hw/vendor.samsung.hardware.thermal@1.0-service
+
 # Touchscreen firmware
 vendor/firmware/tsp_stm/fts2ba61y_dm3q.bin
 
-# VPU firmware
+# Vendor firmware - from S918BXXS7CXL2
+vendor/firmware/CAMERA_ICP.b20
+vendor/firmware/CAMERA_ICP.mbn
+vendor/firmware/CAMERA_ICP.mdt
+vendor/firmware/a740_zap.b02
+vendor/firmware/a740_zap.mbn
+vendor/firmware/a740_zap.mdt
+vendor/firmware/evass.b19
+vendor/firmware/evass.mbn
+vendor/firmware/evass.mdt
 vendor/firmware/vpu30_4v.mbn
 
 # Vendor firmware - from S9180ZHS5CXL1
