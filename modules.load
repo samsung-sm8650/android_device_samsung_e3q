@@ -173,6 +173,7 @@ qcom-spmi-adc5-gen3.ko
 qcom-vadc-common.ko
 industrialio-buffer-cb.ko
 nvmem_qfprom.ko
+sec_reboot_cmd.ko
 switch_gpio.ko
 vibrator_vib_info.ko
 dev_ril_bridge.ko
