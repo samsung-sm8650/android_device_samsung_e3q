@@ -175,7 +175,6 @@ vendor/etc/aip/config/pcc_config.json
 vendor/etc/aip/model/1129_dummy_1441_cached.dlc
 vendor/etc/aip/model/CIGSOL_SWISP_200M_v1.6.2_Exp18_e12850_592x4176_A16W8_cached.dlc
 vendor/etc/aip/model/CIGSOL_fp32_ver220923_HTP_FP16_cached.dlc
-vendor/etc/aip/model/FP16_dummy_HTP_FP16_cached.dlc
 vendor/etc/aip/model/ModelSet2_AIMFISP-timestamp
 vendor/etc/aip/model/ModelSet2_eraw_AIMFISP-timestamp
 vendor/etc/aip/model/ModelSet_AIMFISP-timestamp
@@ -201,7 +200,7 @@ vendor/etc/external_camera_config.xml
 vendor/etc/init/android.hardware.camera.provider-V1-external-service.rc
 vendor/etc/init/camera.unihal.rc
 vendor/etc/init/vendor.samsung.hardware.camera.provider-service_64.rc
-vendor/etc/portrait_data/SRIB_ClatNetLite_INT8_V003_sm8650_vendor.tvm.so
+vendor/etc/portrait_data/SRIB_ClatNetLite_INT8_V004_sm8650_vendor.tvm.so
 vendor/etc/portrait_data/dual_portrait_product.json
 vendor/etc/portrait_data/single_bokeh_feature_vendor.json
 vendor/etc/sat/arcsat_fusion.config
@@ -459,7 +458,6 @@ vendor/lib64/libSceneDetector_v1.camera.samsung.so
 vendor/lib64/libSecExif.uniplugin@1.0.so
 vendor/lib64/libSecJpegEncoder.uniplugin@1.0.so
 vendor/lib64/libSecPhotoHdrEncoder.uniplugin@1.0.so
-vendor/lib64/libSingleTakeBlurDetection.uniplugin@1.0.so
 vendor/lib64/libSmartScan.camera.samsung.so
 vendor/lib64/libSnpeCpu.so;FIX_SONAME
 vendor/lib64/libSnpeGpu.so;FIX_SONAME
@@ -479,7 +477,6 @@ vendor/lib64/libUniScaler.uniplugin@1.0.so
 vendor/lib64/libWideDistortionCorrection.camera.samsung.so
 vendor/lib64/lib_profiler.so
 vendor/lib64/libai_denoiser_interface.so
-vendor/lib64/libai_tetra_text_zoom.arcsoft.so
 vendor/lib64/libaidenoiser.so
 vendor/lib64/libaidenoiserv2.so
 vendor/lib64/libaifrc.quram.so
@@ -938,7 +935,6 @@ vendor/lib64/vendor.qti.hardware.dpmservice@1.1.so
 
 # DRK
 vendor/bin/hw/vendor.samsung.hardware.security.drk-service
-vendor/bin/hw/vendor.samsung.hardware.security.drk@2.0-service
 vendor/etc/init/vendor.samsung.hardware.security.drk-service.rc
 vendor/etc/vintf/manifest/drk_manifest.xml
 vendor/lib64/libdk_vnd_service_core.so
@@ -1179,7 +1175,6 @@ vendor/lib64/liblowi_common.so
 vendor/lib64/liblowi_wifihal.so
 vendor/lib64/libmapdata_api.so
 vendor/lib64/libpal_net_if.so
-vendor/lib64/libsemnativecarrierfeature.so
 vendor/lib64/libsynergy_loc_api.so
 vendor/lib64/libsys_info_cache.so
 vendor/lib64/libwifiobserver.so
@@ -1444,16 +1439,15 @@ vendor/etc/pdpcnt-conf.xml
 vendor/etc/plmn_delta.bin
 vendor/etc/plmn_delta_attaio.bin
 vendor/etc/plmn_delta_hktw.bin
+vendor/etc/plmn_delta_ltn.bin
 vendor/etc/plmn_delta_usagsm.bin
-vendor/etc/plmn_se13.bin
+vendor/etc/plmn_se13_prebuilt.bin
 vendor/etc/qms_log_config
 vendor/etc/sec_config_oem
 vendor/etc/seccomp_policy/qms.policy
 vendor/etc/vintf/manifest/qms-saidl.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.radio_manifest_2_34.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.sehradio_manifest_2_34.xml
-vendor/lib64/libSemDataProps.so
-vendor/lib64/libSemTelephonyProps.so
 vendor/lib64/libengmode_client.so
 vendor/lib64/libqdpr.so
 vendor/lib64/libril_sem.so
@@ -1496,25 +1490,28 @@ vendor/etc/seccomp_policy/wifidisplayhalservice.policy
 
 # Secure element
 vendor/bin/hw/android.hardware.secure_element-service.nxp
-vendor/bin/hw/vendor.samsung.hardware.security.sem@1.0-service
+vendor/bin/hw/vendor.samsung.hardware.security.sem-service
 vendor/etc/init/secure_element-service-nxp.rc
-vendor/etc/init/vendor.samsung.hardware.security.sem@1.0-service.rc
+vendor/etc/init/vendor.samsung.hardware.security.sem-service.rc
 vendor/etc/libese-nxp.conf
-vendor/etc/vintf/manifest/vendor.samsung.hardware.security.sem@1.0-manifest.xml
+vendor/etc/vintf/manifest/vendor.samsung.hardware.security.sem-manifest.xml
+vendor/lib64/libVendorSemDataProps.so
+vendor/lib64/libVendorSemTelephonyProps.so
 vendor/lib64/libese-grdg.so
 vendor/lib64/libsec_esek.so
 vendor/lib64/libsec_semHalTlc.so
+vendor/lib64/libsemnativecarrierfeature.so
 vendor/lib64/vendor.qti.esepowermanager@1.0.so
-vendor/lib64/vendor.samsung.hardware.security.sem@1.0.so
+vendor/lib64/vendor.samsung.hardware.security.sem-V1-ndk.so
 
 # Security
 vendor/bin/hw/android.hardware.security.keymint-service
 vendor/bin/hw/android.hardware.security.keymint-service-spu-qti
-vendor/bin/hw/vendor.samsung.hardware.security.skpm@1.0-service
+vendor/bin/hw/vendor.samsung.hardware.security.skpm-service
 vendor/etc/init/android.hardware.security.keymint-service-spu-qti.rc
 vendor/etc/init/android.hardware.security.keymint-service.rc
-vendor/etc/init/vendor.samsung.hardware.security.skpm@1.0-service.rc
-vendor/etc/vintf/manifest/vendor.samsung.hardware.security.skpm@1.0-manifest.xml
+vendor/etc/init/vendor.samsung.hardware.security.skpm-service.rc
+vendor/etc/vintf/manifest/vendor.samsung.hardware.security.skpm-manifest.xml
 vendor/lib64/android.hardware.keymaster-V4-ndk.so;MODULE_SUFFIX=_vendor
 vendor/lib64/android.hardware.keymaster@3.0.so;MODULE_SUFFIX=_vendor
 vendor/lib64/android.hardware.keymaster@4.0.so;MODULE_SUFFIX=_vendor
@@ -1534,7 +1531,7 @@ vendor/lib64/libspukeymint.so
 vendor/lib64/libspukeymintdeviceutils.so
 vendor/lib64/libspukeymintutils.so
 vendor/lib64/vendor.samsung.hardware.keymint-V3-ndk.so
-vendor/lib64/vendor.samsung.hardware.security.skpm@1.0.so
+vendor/lib64/vendor.samsung.hardware.security.skpm-V1-ndk.so
 
 # SMC Invoke
 vendor/lib64/libminkdescriptor.so
@@ -1633,7 +1630,6 @@ vendor/etc/vintf/manifest/vendor.samsung.hardware.thermal-default.xml
 vendor/lib64/libthermalclient.so
 vendor/lib64/service-listener-ext-aidl-V1-ndk.so
 vendor/lib64/vendor.samsung.hardware.thermal-V1-ndk.so
-vendor/lib64/vendor.samsung.hardware.thermal@1.0.so
 
 # Time services
 vendor/app/TimeService/TimeService.apk
