@@ -1,4 +1,4 @@
-# Unpinned blobs from e3qxxx-user 14 UP1A.231005.007 S928BXXU4AYA5 release-keys
+# Unpinned blobs from e3qxxx-user 15 AP3A.240905.015.A2 S928BXXU4BYD9 release-keys
 
 # Current blobs with deps disabled:
 # com.qti.node.dewarp, com.qti.chi.override, libcamximageformatutils, depend on multiple versions of the same aidl_interface: android.hardware.graphics.allocator-V1-ndk, android.hardware.graphics.allocator-V2-ndk-source
