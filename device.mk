@@ -100,6 +100,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml \
     $(LOCAL_PATH)/configs/permissions/platform-samsung.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/platform-samsung.xml
 
+# Charger
+PRODUCT_PACKAGES += \
+    charger_res_images_vendor
+
 # DebugFS
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
@@ -237,9 +241,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     librilutils \
     libnetutils.vendor \
-    libsecril-client \
     secril_config_svc \
     sehradiomanager
+    #libsecril-client \
 
 # Rootdir
 PRODUCT_PACKAGES += \

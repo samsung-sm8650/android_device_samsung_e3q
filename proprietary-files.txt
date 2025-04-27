@@ -148,7 +148,7 @@ vendor/lib64/vendor.samsung.hardware.bluetooth.audio-V2-ndk.so
 vendor/lib64/vendor.samsung.hardware.bluetooth@2.0.so
 
 # Bluetooth (A2DP)
-vendor/etc/vintf/manifest/bluetooth_audio.xml
+#vendor/etc/vintf/manifest/bluetooth_audio.xml
 vendor/lib64/btaudio_offload_if.so
 vendor/lib64/hw/android.hardware.bluetooth.audio-impl-qti.so
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
@@ -1227,10 +1227,10 @@ vendor/lib64/vendor.samsung.hardware.health-V1-ndk.so
 vendor/lib64/vendor.samsung.hardware.hyper-V2-ndk.so
 
 # Media
+#vendor/bin/init.qti.media.sh
 system_ext/lib64/libmmosal.so
 system_ext/lib64/libmmparser_lite.so
 vendor/bin/hw/vendor.qti.media.c2@1.0-service
-vendor/bin/init.qti.media.sh
 vendor/etc/init/init.qti.media.rc
 vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
 vendor/etc/media_codecs.xml
@@ -1301,6 +1301,7 @@ vendor/lib64/libstagefright_foundation_vendor.so
 vendor/lib64/libstreamprocessor.so
 vendor/lib64/libvideotxr.so
 vendor/lib64/qti.video.utils.videobufferlayout.so
+vendor/lib64/vendor.samsung.hardware.media.mpp-V5-ndk.so
 vendor/lib64/vintf-codecsolution-V2-ndk.so
 
 # Memory
@@ -1385,7 +1386,7 @@ vendor/lib64/libqspm-mem-utils-vendor.so
 vendor/lib64/vendor.qti.qspmhal-V1-ndk.so
 
 # QMI
-vendor/bin/init.qti.write.sh
+#vendor/bin/init.qti.write.sh
 vendor/bin/qcom-system-daemon
 vendor/bin/qrtr-cfg
 vendor/bin/qrtr-lookup
@@ -1419,6 +1420,7 @@ vendor/etc/init/vendor.qti.smp2p.rc
 vendor/etc/init/vendor.qti.tftp.rc
 
 # RIL
+#vendor/lib64/vendor.samsung.hardware.radio.network-V1-ndk.so
 vendor/bin/hw/rild
 vendor/bin/irsc_util
 vendor/bin/ks
@@ -1505,24 +1507,24 @@ vendor/lib64/vendor.qti.esepowermanager@1.0.so
 vendor/lib64/vendor.samsung.hardware.security.sem-V1-ndk.so
 
 # Security
-vendor/bin/hw/android.hardware.security.keymint-service
+#vendor/lib64/android.hardware.keymaster-V4-ndk.so;MODULE_SUFFIX=_vendor
+#vendor/lib64/android.hardware.keymaster@3.0.so;MODULE_SUFFIX=_vendor
+#vendor/lib64/android.hardware.keymaster@4.0.so;MODULE_SUFFIX=_vendor
+#vendor/lib64/android.hardware.keymaster@4.1.so;MODULE_SUFFIX=_vendor
+#vendor/lib64/android.hardware.security.keymint-V1-ndk.so;MODULE_SUFFIX=_vendor
+#vendor/lib64/android.hardware.security.keymint-V3-ndk.so;MODULE_SUFFIX=_vendor
+#vendor/lib64/libkeymaster4_1support.so;MODULE_SUFFIX=_vendor
+#vendor/lib64/libkeymaster4support.so;MODULE_SUFFIX=_vendor
+#vendor/lib64/libkeymaster_messages.so;MODULE_SUFFIX=_vendor
+#vendor/lib64/libkeymaster_portable.so;MODULE_SUFFIX=_vendor
+#vendor/lib64/libpuresoftkeymasterdevice.so;MODULE_SUFFIX=_vendor
+vendor/bin/hw/android.hardware.security.keymint-service:vendor/bin/hw/android.hardware.security.keymint-service-qti
 vendor/bin/hw/android.hardware.security.keymint-service-spu-qti
 vendor/bin/hw/vendor.samsung.hardware.security.skpm-service
 vendor/etc/init/android.hardware.security.keymint-service-spu-qti.rc
-vendor/etc/init/android.hardware.security.keymint-service.rc
+vendor/etc/init/android.hardware.security.keymint-service.rc:vendor/etc/init/android.hardware.security.keymint-service-qti.rc
 vendor/etc/init/vendor.samsung.hardware.security.skpm-service.rc
 vendor/etc/vintf/manifest/vendor.samsung.hardware.security.skpm-manifest.xml
-vendor/lib64/android.hardware.keymaster-V4-ndk.so;MODULE_SUFFIX=_vendor
-vendor/lib64/android.hardware.keymaster@3.0.so;MODULE_SUFFIX=_vendor
-vendor/lib64/android.hardware.keymaster@4.0.so;MODULE_SUFFIX=_vendor
-vendor/lib64/android.hardware.keymaster@4.1.so;MODULE_SUFFIX=_vendor
-vendor/lib64/android.hardware.security.keymint-V1-ndk.so;MODULE_SUFFIX=_vendor
-vendor/lib64/android.hardware.security.keymint-V3-ndk.so;MODULE_SUFFIX=_vendor
-vendor/lib64/libkeymaster4_1support.so;MODULE_SUFFIX=_vendor
-vendor/lib64/libkeymaster4support.so;MODULE_SUFFIX=_vendor
-vendor/lib64/libkeymaster_messages.so;MODULE_SUFFIX=_vendor
-vendor/lib64/libkeymaster_portable.so;MODULE_SUFFIX=_vendor
-vendor/lib64/libpuresoftkeymasterdevice.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libsec_skpmHalTlc.so
 vendor/lib64/libskeymint10device.so
 vendor/lib64/libskeymint_cli.so
@@ -1539,9 +1541,9 @@ vendor/lib64/libminksocket_vendor.so
 vendor/lib64/libqcbor.so
 
 # Sensors
+#vendor/bin/init.qcom.sensors.sh
 vendor/bin/factory.ssc
 vendor/bin/hw/android.hardware.sensors-service.multihal
-vendor/bin/init.qcom.sensors.sh
 vendor/bin/sensors.qti
 vendor/bin/sscrpcd
 vendor/etc/init/android.hardware.sensors-service-multihal.rc

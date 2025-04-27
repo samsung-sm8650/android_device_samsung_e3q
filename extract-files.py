@@ -67,6 +67,12 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace('default0', 'software'),
     ('vendor/etc/media_codecs.xml', 'vendor/etc/media_codecs_pineapple.xml', 'vendor/etc/media_codecs_pineapple_vendor.xml'): blob_fixup()
         .regex_replace('.*media_codecs_(google_audio|google_c2|google_telephony|google_video|vendor_audio).*\n', ''),
+    ('vendor/lib64/libspukeymint.so', 'vendor/bin/hw/android.hardware.security.keymint-service-spu-qti'): blob_fixup()
+        .replace_needed('android.hardware.security.sharedsecret-V2-ndk.so', 'android.hardware.security.sharedsecret-V1-ndk.so'),
+    ('vendor/lib64/libsensorndkbridge.so', 'vendor/bin/hw/android.hardware.sensors-service.multihal'): blob_fixup()
+        .replace_needed('android.hardware.sensors-V2-ndk.so', 'android.hardware.sensors-V3-ndk.so'),
+    'vendor/etc/init/android.hardware.security.keymint-service-qti.rc': blob_fixup()
+        .regex_replace('android.hardware.security.keymint-service', 'android.hardware.security.keymint-service-qti'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(

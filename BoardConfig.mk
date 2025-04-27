@@ -124,8 +124,10 @@ TARGET_KERNEL_EXT_MODULES := \
     qcom/opensource/mm-drivers/sync_fence \
     qcom/opensource/securemsm-kernel \
     qcom/opensource/audio-kernel \
-    qcom/opensource/dataipa/drivers/platform/msm \
+    qcom/opensource/synx-kernel \
+    qcom/opensource/camera-kernel \
     qcom/opensource/datarmnet-ext/mem \
+    qcom/opensource/dataipa/drivers/platform/msm \
     qcom/opensource/datarmnet/core \
     qcom/opensource/datarmnet-ext/aps \
     qcom/opensource/datarmnet-ext/offload \
@@ -135,7 +137,6 @@ TARGET_KERNEL_EXT_MODULES := \
     qcom/opensource/datarmnet-ext/sch \
     qcom/opensource/datarmnet-ext/wlan \
     qcom/opensource/display-drivers/msm \
-    qcom/opensource/synx-kernel \
     qcom/opensource/dsp-kernel \
     qcom/opensource/eva-kernel \
     qcom/opensource/video-driver \
@@ -146,7 +147,6 @@ TARGET_KERNEL_EXT_MODULES := \
     qcom/opensource/spu-kernel \
     qcom/opensource/mm-sys-kernel/ubwcp \
     qcom/opensource/touch-drivers \
-    qcom/opensource/camera-kernel \
     nxp/opensource/driver
 
 # Metadata
