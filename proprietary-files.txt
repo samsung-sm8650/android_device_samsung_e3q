@@ -1,0 +1,147 @@
+# Unpinned blobs from e3qxxx-user 15 AP3A.240905.015.A2 S928BXXU4BYD9 release-keys
+
+# ACDB
+vendor/etc/audconf/OPEN/acdb_cal.acdb
+vendor/etc/audconf/OPEN/workspaceFileXml.qwsp
+
+# Audio configs
+vendor/etc/audio/sku_pineapple/mixer_paths.xml
+vendor/etc/audio/sku_pineapple/resourcemanager.xml
+vendor/etc/card-defs.xml
+vendor/etc/usecaseKvManager.xml
+
+# Audio firmware
+vendor/firmware/cs35l43-bot-dsp1-spk-prot.bin
+vendor/firmware/cs35l43-bot-dsp1-spk-prot.wmfw
+vendor/firmware/cs35l43-rcv-dsp1-spk-prot.bin
+vendor/firmware/cs35l43-rcv-dsp1-spk-prot.wmfw
+vendor/firmware/cs40l26-a2h.bin
+vendor/firmware/cs40l26-calib.bin
+vendor/firmware/cs40l26-calib.wmfw
+vendor/firmware/cs40l26-dvl.bin
+vendor/firmware/cs40l26-svc.bin
+vendor/firmware/cs40l26-svc1.bin
+vendor/firmware/cs40l26-svc2.bin
+vendor/firmware/cs40l26-svc3.bin
+vendor/firmware/cs40l26-wt1.bin
+vendor/firmware/cs40l26-wt2.bin
+vendor/firmware/cs40l26-wt3.bin
+vendor/firmware/cs40l26.bin
+vendor/firmware/cs40l26.wmfw
+
+# Audio params
+vendor/etc/LVACFS_Calibration.dat
+vendor/etc/LVACFS_Configuration.txt
+vendor/etc/LVACFS_ControlParams.txt
+vendor/etc/SoundBoosterParam.txt
+vendor/firmware/SoundBoosterParam.bin
+vendor/firmware/dax_param.bin
+
+# Display calibration
+vendor/etc/display/qdcm_calib_data_E3_S6E3HAF_AMB679FN01.json
+vendor/firmware/E3_S6E3HAE_AMB681AZ01.dat
+vendor/firmware/E3_S6E3HAF_AMB679FN01.dat
+vendor/firmware/ss_dsi_panel_PBA_BOOTING_FHD.dat
+
+# EVA firmware
+vendor/firmware/evass.b00
+vendor/firmware/evass.b01
+vendor/firmware/evass.b02
+vendor/firmware/evass.b03
+vendor/firmware/evass.b04
+vendor/firmware/evass.b05
+vendor/firmware/evass.b06
+vendor/firmware/evass.b07
+vendor/firmware/evass.b08
+vendor/firmware/evass.b09
+vendor/firmware/evass.b10
+vendor/firmware/evass.b11
+vendor/firmware/evass.b12
+vendor/firmware/evass.b13
+vendor/firmware/evass.b14
+vendor/firmware/evass.b15
+vendor/firmware/evass.b16
+vendor/firmware/evass.b17
+vendor/firmware/evass.b18
+vendor/firmware/evass.b19
+vendor/firmware/evass.mbn
+vendor/firmware/evass.mdt
+
+# Graphics (Adreno firmware)
+vendor/firmware/gen70900_aqe.fw
+vendor/firmware/gen70900_sqe.fw
+vendor/firmware/gen70900_zap.mbn
+vendor/firmware/gmu_gen70900.bin
+
+# Miscellaneous firmware
+vendor/firmware/max77775-extra-fw.bin
+vendor/firmware/max77775-fw.bin
+vendor/firmware/mfc/mfc_fw_flash_nu1668.bin
+
+# NFC configs
+vendor/etc/libnfc-nxp.conf
+vendor/etc/nfc/libnfc-nxp_RF.conf
+
+# Secure Element
+vendor/etc/libese-nxp.conf
+vendor/etc/secnvm/k250a_47000400_0.img
+vendor/etc/secnvm/k250a_47000403_1.img
+vendor/etc/secnvm/k250a_47000406_f.img
+
+# Sensor configs
+vendor/etc/sensors/config/akmlib.json
+vendor/etc/sensors/config/json.lst
+vendor/etc/sensors/config/lanai_ak991x_0.json
+vendor/etc/sensors/config/lanai_ak991x_4.json
+vendor/etc/sensors/config/lanai_ak991x_5.json
+vendor/etc/sensors/config/lanai_lps22df_0.json
+vendor/etc/sensors/config/lanai_lps22hh_0.json
+vendor/etc/sensors/config/lanai_lsm6dso_0_0.json
+vendor/etc/sensors/config/lanai_lsm6dsv_0_2.json
+vendor/etc/sensors/config/lanai_stk3af00_0.json
+vendor/etc/sensors/config/lanai_stk3afx_0.json
+vendor/etc/sensors/config/lsm6dso_0.json
+vendor/etc/sensors/config/lsm6dsv_2.json
+
+# Sensor firmware
+vendor/firmware/00_generic_xtalk_shape.bin
+vendor/firmware/vl53l8.bin
+
+# Touchscreen firmware
+vendor/firmware/tsp_stm/fts2ba61y_e3q.bin
+vendor/firmware/tsp_synaptics/s3916a_e3.bin
+vendor/firmware/tsp_synaptics/s3916t_e3.bin
+
+# Ultra-wideband
+vendor/firmware/uwb/libsr200t_dev_fw.bin
+vendor/firmware/uwb/libsr200t_prod_fw.so
+
+# VPU firmware
+vendor/firmware/vpu30_2v.mbn
+vendor/firmware/vpu30_2v_unsigned.mbn
+vendor/firmware/vpu33_4v.mbn
+vendor/firmware/vpu33_4v_unsigned.mbn
+
+# Wacom firmware
+vendor/firmware/wez02_e3_c0.bin
+vendor/firmware/wez02_e3_c1.bin
+vendor/firmware/wez02_e3_c2.bin
+vendor/firmware/wez02_e3_c3.bin
+
+# Wi-Fi and Bluetooth firmware
+vendor/firmware/Data.msc
+vendor/firmware/bt_nvm_loading.xml
+vendor/firmware/hmtbtfw20.tlv
+vendor/firmware/hmtnv20.b20
+vendor/firmware/hmtnv20.b39
+vendor/firmware/hmtnv20.b3c
+vendor/firmware/kiwi/amss20.bin
+vendor/firmware/kiwi/bdwlan.elf
+vendor/firmware/kiwi/bdwlan.elf1
+vendor/firmware/kiwi/bdwlan.elf10
+vendor/firmware/kiwi/bdwlan.elf2
+vendor/firmware/kiwi/phy_ucode20.elf
+vendor/firmware/kiwi/qdss_trace_config_v2.cfg
+vendor/firmware/kiwi/regdb.bin
+vendor/firmware/wlan-connection-roaming-backup.ini
+vendor/firmware/wlan-connection-roaming.ini
