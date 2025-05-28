@@ -1,13 +1,12 @@
 # Unpinned blobs from e3qxxx-user 15 AP3A.240905.015.A2 S928BXXU4BYD9 release-keys
 
 # ACDB
-vendor/etc/audconf/OPEN/acdb_cal.acdb
-vendor/etc/audconf/OPEN/workspaceFileXml.qwsp
+vendor/etc/audconf/OPEN/acdb_cal.acdb:vendor/etc/acdbdata/pineapple/acdb_cal.acdb
+vendor/etc/audconf/OPEN/workspaceFileXml.qwsp:vendor/etc/acdbdata/pineapple/workspaceFileXml.qwsp
 
 # Audio configs
-vendor/etc/audio/sku_pineapple/mixer_paths.xml
-vendor/etc/audio/sku_pineapple/resourcemanager.xml
-vendor/etc/card-defs.xml
+vendor/etc/audio/sku_pineapple/mixer_paths.xml:vendor/etc/audio/sku_pineapple/mixer_paths_pineapple.xml
+vendor/etc/audio/sku_pineapple/resourcemanager.xml:vendor/etc/audio/sku_pineapple/resourcemanager_pineapple.xml
 vendor/etc/usecaseKvManager.xml
 
 # Audio firmware
@@ -81,6 +80,9 @@ vendor/firmware/mfc/mfc_fw_flash_nu1668.bin
 # NFC configs
 vendor/etc/libnfc-nxp.conf
 vendor/etc/nfc/libnfc-nxp_RF.conf
+
+# Performance
+vendor/etc/powerhint.xml
 
 # Secure Element
 vendor/etc/libese-nxp.conf
