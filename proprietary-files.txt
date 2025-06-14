@@ -1,4 +1,4 @@
-# Unpinned blobs from e3qxxx-user 15 AP3A.240905.015.A2 S928BXXU4BYD9 release-keys
+# Unpinned blobs from e3qxxx-user 14 UP1A.231005.007 S928BXXU4BYE7 release-keys
 
 # ACDB
 #vendor/etc/audconf/OPEN/acdb_cal.acdb:vendor/etc/acdbdata/pineapple/acdb_cal.acdb
