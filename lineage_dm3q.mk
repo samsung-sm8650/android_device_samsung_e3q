@@ -23,6 +23,6 @@ PRODUCT_MANUFACTURER := Samsung
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc=$(call normalize-path-list, "dm3qxxx-user 14 UP1A.231005.007 S918BXXS7CXL2 release-keys")
+    BuildDesc=$(call normalize-path-list, "dm3qxxx-user 15 AP3A.240905.015.A2 S918BXXS8DYF2 release-keys")
 
-BUILD_FINGERPRINT := samsung/dm3qxxx/dm3q:14/UP1A.231005.007/S918BXXS7CXL2:user/release-keys
+BUILD_FINGERPRINT := samsung/dm3qxxx/dm3q:15/AP3A.240905.015.A2/S918BXXS8DYF2:user/release-keys
