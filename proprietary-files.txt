@@ -1,4 +1,4 @@
-# All unpinned blobs are extracted from S918BXXS8DYF2
+# All unpinned blobs are extracted from S9180ZHS6DYF1
 
 # ACDB
 vendor/etc/audconf/OPEN/acdb_cal.acdb
@@ -208,8 +208,10 @@ vendor/firmware/DM3_S6E3HAE_AMB681AZ01.dat
 # NFC
 vendor/etc/nfc/libnfc-nxp_RF.conf
 
+# RIL - from S918BXXS8DYF2
+vendor/etc/init/init.vendor.onebinary.rc|b3fab964774039b1f2f6eabf821556919b26369f
+
 # RIL
-vendor/etc/init/init.vendor.onebinary.rc
 vendor/etc/init/init.vendor.rilcommon.rc
 vendor/etc/init/vendor.samsung.rilchip.qcom.rc
 vendor/etc/init/vendor.samsung.rild.rc
@@ -252,17 +254,17 @@ vendor/firmware/evass.mbn
 vendor/firmware/evass.mdt
 vendor/firmware/vpu30_4v.mbn
 
-# Vendor firmware - from S9180ZHS5CXL1
-vendor/firmware/CAMERA_ICP.b20:odm/firmware/CAMERA_ICP.b20|b997a38ee2bbdd27d869e99cbc9ac2d564e75c2e
-vendor/firmware/CAMERA_ICP.mbn:odm/firmware/CAMERA_ICP.mbn|724af45299925e75a131e92b03936de546033fb5
-vendor/firmware/CAMERA_ICP.mdt:odm/firmware/CAMERA_ICP.mdt|a571e025528ceaf955d776f727870b0c757c95f2
-vendor/firmware/a740_zap.b02:odm/firmware/a740_zap.b02|f835e4ef6c2f5f0dda82f8c6c8142d663d6b39e6
-vendor/firmware/a740_zap.mbn:odm/firmware/a740_zap.mbn|553f6033c7e19167e6c009f0fcb028b3f621d37f
-vendor/firmware/a740_zap.mdt:odm/firmware/a740_zap.mdt|f4414b71246ee99df7dc8f9dd5e68bc98a12f630
-vendor/firmware/evass.b19:odm/firmware/evass.b19|d6324263537b5675663256fec164bf8588f10dca
-vendor/firmware/evass.mbn:odm/firmware/evass.mbn|fd2cffbc3aab260d8c3d63f12a4233093c9a80c7
-vendor/firmware/evass.mdt:odm/firmware/evass.mdt|a06ae42c27258aeb1fc157a878d14912ca7def1b
-vendor/firmware/vpu30_4v.mbn:odm/firmware/vpu30_4v.mbn|401af2590d98971387072f6e95fc170497cc20ba
+# Vendor firmware - from S918BXXS8DYF2
+vendor/firmware/CAMERA_ICP.b20:odm/firmware/CAMERA_ICP.b20|3db40123e2fd358766c9f35044a3dd68c9dfcb90
+vendor/firmware/CAMERA_ICP.mbn:odm/firmware/CAMERA_ICP.mbn|a1b2fa4debd96b59cdd00d6f5b72bb60f3b72cae
+vendor/firmware/CAMERA_ICP.mdt:odm/firmware/CAMERA_ICP.mdt|15b968cec8f97e0fe8aab827cef6d994ad6ef97b
+vendor/firmware/a740_zap.b02:odm/firmware/a740_zap.b02|8ce4afcc8f7ce0c61d2cb08dc416c2a53ebf0695
+vendor/firmware/a740_zap.mbn:odm/firmware/a740_zap.mbn|400b633b7d03d4c0230cf7f603fe4af904df440d
+vendor/firmware/a740_zap.mdt:odm/firmware/a740_zap.mdt|644ffa46a44f101e9342fd74772c0b59082e517d
+vendor/firmware/evass.b19:odm/firmware/evass.b19|46b8f860179d2f333cd13ee6b90bb36dc975f9e4
+vendor/firmware/evass.mbn:odm/firmware/evass.mbn|4bb30a141e27d938da787ad3e684f77e6114b5d4
+vendor/firmware/evass.mdt:odm/firmware/evass.mdt|2cf28669cd6a85ceec238d190855d3aa5717a206
+vendor/firmware/vpu30_4v.mbn:odm/firmware/vpu30_4v.mbn|d446cd60075524faf0c933ce0422e6a400033f9c
 
 # Vendor firmware
 vendor/firmware/00_generic_xtalk_shape.bin
