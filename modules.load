@@ -24,10 +24,10 @@ phy-qcom-ufs-qmp-v4.ko
 phy-qcom-ufs-qmp-v4-khaje.ko
 phy-qcom-ufs-qmp-v4-lahaina.ko
 phy-qcom-ufs-qmp-v4-kona.ko
+pinctrl-spmi-gpio.ko
 pinctrl-spmi-mpp.ko
 pwm-qti-lpg.ko
 lcd.ko
-debugcc-kalama.ko
 gpucc-kalama.ko
 bam_dma.ko
 msm_gpi.ko
@@ -95,6 +95,7 @@ frpc-adsprpc.ko
 rdbg.ko
 lt9611uxc.ko
 qseecom_proxy.ko
+hdmi_input_mux.ko
 sec_ap_pmic.ko
 pm8941-pwrkey.ko
 nfc_sec.ko
@@ -130,6 +131,7 @@ usb_notifier_qcom.ko
 qcom-hv-haptics.ko
 qti_battery_charger.ko
 sec_pon_alarm.ko
+i2c-gpio.ko
 i2c-msm-geni.ko
 i3c-master-msm-geni.ko
 qcom_ipc_lite.ko
@@ -157,6 +159,7 @@ leds-gpio.ko
 leds-qti-flash.ko
 leds-qti-tri-led.ko
 leds-s2mpb02.ko
+mfd_s2mpb02.ko
 memlat_vendor.ko
 cpufreq_stats_vendor.ko
 ep_pcie_drv.ko
@@ -169,12 +172,16 @@ snd_debug_proc.ko
 qcom_q6v5_pas.ko
 gh_irq_lend.ko
 extcon-ktm5030.ko
+extcon-lt8711uxe2.ko
 qcom-spmi-adc5-gen3.ko
 qcom-vadc-common.ko
 industrialio-buffer-cb.ko
 nvmem_qfprom.ko
+sec_key_notifier.ko
+sec_log_buf.ko
 sec_reboot_cmd.ko
 switch_gpio.ko
+pmic_class.ko
 vibrator_vib_info.ko
 dev_ril_bridge.ko
 max77705_charger.ko
@@ -202,9 +209,12 @@ hall_ic_notifier.ko
 flicker_test.ko
 flicker_sensor.ko
 max77705-fuelgauge.ko
+s2mpb03.ko
 sec-direct-charger.ko
 snvm.ko
+s2dos05-regulator.ko
 wez02.ko
+s2mpb02-regulator.ko
 uwb.ko
 sec_thermistor.ko
 hwmon.ko
@@ -286,6 +296,7 @@ tz_log_dlkm.ko
 rmnet_wlan.ko
 rmnet_perf_tether.ko
 lpass_cdc_rx_macro_dlkm.ko
+qca_cld3_qca6490.ko
 machine_dlkm.ko
 hdcp_qseecom_dlkm.ko
 msm_drm.ko

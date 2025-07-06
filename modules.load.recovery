@@ -132,6 +132,7 @@ iommu-logger.ko
 lt9611uxc.ko
 regmap-spmi.ko
 qseecom_proxy.ko
+hdmi_input_mux.ko
 qcom-spmi-pmic.ko
 sec_ap_pmic.ko
 nfc_sec.ko
@@ -247,6 +248,7 @@ gh_irq_lend.ko
 gh_mem_notifier.ko
 gunyah.ko
 extcon-ktm5030.ko
+extcon-lt8711uxe2.ko
 qcom-spmi-adc5-gen3.ko
 qcom-vadc-common.ko
 industrialio-buffer-cb.ko
