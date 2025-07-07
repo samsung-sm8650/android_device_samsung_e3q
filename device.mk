@@ -23,6 +23,7 @@ PRODUCT_SOONG_NAMESPACES += \
 # Overlays
 PRODUCT_PACKAGES += \
     FrameworksResDm3q \
+    LineageResDm3q \
     SystemUIResDm3q \
     WifiResTargetDm3q
 
