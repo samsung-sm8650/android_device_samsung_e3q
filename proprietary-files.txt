@@ -92,7 +92,7 @@ vendor/etc/powerhint.xml
 vendor/etc/libese-nxp.conf
 vendor/etc/secnvm/k250a_47000400_0.img
 vendor/etc/secnvm/k250a_47000403_1.img
-vendor/etc/secnvm/k250a_47000406_f.img
+vendor/etc/secnvm/k250a_47000407_c.img
 
 # Sensor configs
 vendor/etc/sensors/config/akmlib.json
