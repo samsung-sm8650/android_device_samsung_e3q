@@ -273,6 +273,15 @@
       "DefaultIndex": 0
     },
     {
+        "Name": "BatteryLcdStatus",
+        "Path": "/sys/class/power_supply/battery/lcd",
+        "Values": [
+            "1",
+            "0"
+        ],
+        "ResetOnInit": true
+    },
+    {
       "Name": "CPUBWHystTriggerCount",
       "Path": "/sys/devices/system/cpu/bus_dcvs/DDR/24091000.qcom,bwmon-ddr/hyst_trigger_count",
       "Values": [
@@ -663,6 +672,12 @@
       "Node": "TouchscreenEnable",
       "Duration": 0,
       "Value": "2,1"
+    },
+    {
+      "PowerHint": "INTERACTIVE",
+      "Node": "BatteryLcdStatus",
+      "Duration": 0,
+      "Value": "1"
     },
     {
       "PowerHint": "DOUBLE_TAP_TO_WAKE",
