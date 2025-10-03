@@ -31,6 +31,8 @@ vendor/firmware/cs40l26.wmfw
 vendor/firmware/dax_param.bin
 
 # Audio FX modules
+vendor/lib64/lib_SamsungRec_08020.so
+vendor/lib64/lib_SoundAlive_play_plus_ver800.so
 vendor/lib64/soundfx/libaudiosaplus_sec.so
 vendor/lib64/soundfx/libsamsungSoundbooster_plus.so
 vendor/lib64/soundfx/libswdap.so
