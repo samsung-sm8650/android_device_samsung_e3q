@@ -292,6 +292,19 @@ vendor/firmware/evass.mbn:odm/firmware/evass.mbn|4bb30a141e27d938da787ad3e684f77
 vendor/firmware/evass.mdt:odm/firmware/evass.mdt|2cf28669cd6a85ceec238d190855d3aa5717a206
 vendor/firmware/DM3_S6E3HAE_AMB681AZ01.dat
 
+# Graphics (Adreno firmware)
+vendor/firmware/a740_sqe.fw
+vendor/firmware/a740_zap.b00
+vendor/firmware/a740_zap.b01
+vendor/firmware/a740_zap.elf
+vendor/firmware/a740_zap.b02
+vendor/firmware/a740_zap.mbn
+vendor/firmware/a740_zap.mdt
+vendor/firmware/gmu_gen70200.bin
+vendor/firmware/a740_zap.b02:odm/firmware/a740_zap.b02|8ce4afcc8f7ce0c61d2cb08dc416c2a53ebf0695
+vendor/firmware/a740_zap.mbn:odm/firmware/a740_zap.mbn|400b633b7d03d4c0230cf7f603fe4af904df440d
+vendor/firmware/a740_zap.mdt:odm/firmware/a740_zap.mdt|644ffa46a44f101e9342fd74772c0b59082e517d
+
 # NFC
 vendor/etc/nfc/libnfc-nxp_RF.conf
 
@@ -340,16 +353,6 @@ vendor/firmware/vpu30_4v_unsigned.mbn
 vendor/firmware/vpu33_4v.mbn
 vendor/firmware/vpu33_4v_unsigned.mbn
 vendor/firmware/vpu30_4v.mbn:odm/firmware/vpu30_4v.mbn|d446cd60075524faf0c933ce0422e6a400033f9c
-
-# Vendor firmware - from S918BXXS7CXL2
-vendor/firmware/a740_zap.b02
-vendor/firmware/a740_zap.mbn
-vendor/firmware/a740_zap.mdt
-
-# Vendor firmware - from S918BXXS8DYF2
-vendor/firmware/a740_zap.b02:odm/firmware/a740_zap.b02|8ce4afcc8f7ce0c61d2cb08dc416c2a53ebf0695
-vendor/firmware/a740_zap.mbn:odm/firmware/a740_zap.mbn|400b633b7d03d4c0230cf7f603fe4af904df440d
-vendor/firmware/a740_zap.mdt:odm/firmware/a740_zap.mdt|644ffa46a44f101e9342fd74772c0b59082e517d
 
 # Vendor firmware
 vendor/firmware/00_generic_xtalk_shape.bin
