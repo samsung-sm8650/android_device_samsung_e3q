@@ -75,6 +75,34 @@ vendor/lib64/vendor.samsung.hardware.bluetooth@2.0.so
 vendor/firmware/bt_nvm_loading.xml
 
 # Camera firmware
+vendor/firmware/CAMERA_ICP.b00
+vendor/firmware/CAMERA_ICP.b01
+vendor/firmware/CAMERA_ICP.b02
+vendor/firmware/CAMERA_ICP.b03
+vendor/firmware/CAMERA_ICP.b04
+vendor/firmware/CAMERA_ICP.b05
+vendor/firmware/CAMERA_ICP.b06
+vendor/firmware/CAMERA_ICP.b07
+vendor/firmware/CAMERA_ICP.b08
+vendor/firmware/CAMERA_ICP.b09
+vendor/firmware/CAMERA_ICP.b10
+vendor/firmware/CAMERA_ICP.b11
+vendor/firmware/CAMERA_ICP.b12
+vendor/firmware/CAMERA_ICP.b13
+vendor/firmware/CAMERA_ICP.b14
+vendor/firmware/CAMERA_ICP.b15
+vendor/firmware/CAMERA_ICP.b16
+vendor/firmware/CAMERA_ICP.b17
+vendor/firmware/CAMERA_ICP.b18
+vendor/firmware/CAMERA_ICP.b19
+vendor/firmware/CAMERA_ICP.b20
+vendor/firmware/CAMERA_ICP.elf
+vendor/firmware/CAMERA_ICP.mbn
+vendor/firmware/CAMERA_ICP.mdt
+vendor/firmware/CAMERA_ICP_170.elf
+vendor/firmware/CAMERA_ICP.b20:odm/firmware/CAMERA_ICP.b20|3db40123e2fd358766c9f35044a3dd68c9dfcb90
+vendor/firmware/CAMERA_ICP.mbn:odm/firmware/CAMERA_ICP.mbn|a1b2fa4debd96b59cdd00d6f5b72bb60f3b72cae
+vendor/firmware/CAMERA_ICP.mdt:odm/firmware/CAMERA_ICP.mdt|15b968cec8f97e0fe8aab827cef6d994ad6ef97b
 vendor/firmware/ois_mcu_stm32g_fw.bin
 
 # Camera
@@ -303,18 +331,12 @@ vendor/bin/hw/vendor.samsung.hardware.thermal@1.0-service
 vendor/firmware/tsp_stm/fts2ba61y_dm3q.bin
 
 # Vendor firmware - from S918BXXS7CXL2
-vendor/firmware/CAMERA_ICP.b20
-vendor/firmware/CAMERA_ICP.mbn
-vendor/firmware/CAMERA_ICP.mdt
 vendor/firmware/a740_zap.b02
 vendor/firmware/a740_zap.mbn
 vendor/firmware/a740_zap.mdt
 vendor/firmware/vpu30_4v.mbn
 
 # Vendor firmware - from S918BXXS8DYF2
-vendor/firmware/CAMERA_ICP.b20:odm/firmware/CAMERA_ICP.b20|3db40123e2fd358766c9f35044a3dd68c9dfcb90
-vendor/firmware/CAMERA_ICP.mbn:odm/firmware/CAMERA_ICP.mbn|a1b2fa4debd96b59cdd00d6f5b72bb60f3b72cae
-vendor/firmware/CAMERA_ICP.mdt:odm/firmware/CAMERA_ICP.mdt|15b968cec8f97e0fe8aab827cef6d994ad6ef97b
 vendor/firmware/a740_zap.b02:odm/firmware/a740_zap.b02|8ce4afcc8f7ce0c61d2cb08dc416c2a53ebf0695
 vendor/firmware/a740_zap.mbn:odm/firmware/a740_zap.mbn|400b633b7d03d4c0230cf7f603fe4af904df440d
 vendor/firmware/a740_zap.mdt:odm/firmware/a740_zap.mdt|644ffa46a44f101e9342fd74772c0b59082e517d
