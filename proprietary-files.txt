@@ -330,17 +330,26 @@ vendor/bin/hw/vendor.samsung.hardware.thermal@1.0-service
 # Touchscreen firmware
 vendor/firmware/tsp_stm/fts2ba61y_dm3q.bin
 
+# VPU firmware
+vendor/firmware/vpu20_4v.mbn
+vendor/firmware/vpu20_4v_unsigned.mbn
+vendor/firmware/vpu30_4v.mbn
+vendor/firmware/vpu30_4v_16mb.mbn
+vendor/firmware/vpu30_4v_16mb_unsigned.mbn
+vendor/firmware/vpu30_4v_unsigned.mbn
+vendor/firmware/vpu33_4v.mbn
+vendor/firmware/vpu33_4v_unsigned.mbn
+vendor/firmware/vpu30_4v.mbn:odm/firmware/vpu30_4v.mbn|d446cd60075524faf0c933ce0422e6a400033f9c
+
 # Vendor firmware - from S918BXXS7CXL2
 vendor/firmware/a740_zap.b02
 vendor/firmware/a740_zap.mbn
 vendor/firmware/a740_zap.mdt
-vendor/firmware/vpu30_4v.mbn
 
 # Vendor firmware - from S918BXXS8DYF2
 vendor/firmware/a740_zap.b02:odm/firmware/a740_zap.b02|8ce4afcc8f7ce0c61d2cb08dc416c2a53ebf0695
 vendor/firmware/a740_zap.mbn:odm/firmware/a740_zap.mbn|400b633b7d03d4c0230cf7f603fe4af904df440d
 vendor/firmware/a740_zap.mdt:odm/firmware/a740_zap.mdt|644ffa46a44f101e9342fd74772c0b59082e517d
-vendor/firmware/vpu30_4v.mbn:odm/firmware/vpu30_4v.mbn|d446cd60075524faf0c933ce0422e6a400033f9c
 
 # Vendor firmware
 vendor/firmware/00_generic_xtalk_shape.bin
