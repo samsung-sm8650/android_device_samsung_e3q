@@ -4,6 +4,9 @@
 vendor/etc/audconf/OPEN/acdb_cal.acdb
 vendor/etc/audconf/OPEN/workspaceFileXml.qwsp
 
+# Audio
+vendor/lib64/lib_lvacfs.so
+
 # Audio configs
 vendor/etc/audio/sku_kalama/mixer_paths.xml
 vendor/etc/dolby/dax-default.xml
@@ -245,11 +248,13 @@ vendor/lib64/com.qualcomm.qti.mcx.usecase.extension.so
 vendor/lib64/hw/camera.qcom.so
 vendor/lib64/hw/com.qti.chi.offline.so
 vendor/lib64/hw/com.qti.chi.override.so
+vendor/lib64/libSWNDFilterPreview.camera.samsung.so
 vendor/lib64/libPdSdCore.so
 vendor/lib64/libSWB.camera.samsung.so
 vendor/lib64/libTsAf_DM123Q.so;FIX_SONAME
 vendor/lib64/libTsAwbFront_DM3.so
 vendor/lib64/libTsAwb_DM3.so
+vendor/lib64/libUniScaler.uniplugin@1.0.so
 vendor/lib64/libcamerapostproc.so
 vendor/lib64/libcamxexternalformatutils.so
 vendor/lib64/libcamximageformatutils.so
@@ -257,6 +262,7 @@ vendor/lib64/libcamxswispiqmodule.so
 vendor/lib64/libchifeature2.so
 vendor/lib64/libcom.qti.chinodeutils.so
 vendor/lib64/libhypermotion_interface.so
+vendor/lib64/libndfilter_preview.uniplugin@1.0.so
 vendor/lib64/libmulticam_image_optical_zoom.so
 vendor/lib64/libmulticam_optical_zoom_control.so
 vendor/lib64/libmulticam_video_optical_zoom.so
