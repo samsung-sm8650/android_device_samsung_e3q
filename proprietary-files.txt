@@ -235,6 +235,33 @@ vendor/lib64/libthirdparty_zoomtranslator_imp.so
 
 # Display calibration data
 vendor/etc/display/qdcm_calib_data_DM3_S6E3HAE_AMB681AZ01.json
+
+# EVA firmware
+vendor/firmware/evass.b00
+vendor/firmware/evass.b01
+vendor/firmware/evass.b02
+vendor/firmware/evass.b03
+vendor/firmware/evass.b04
+vendor/firmware/evass.b05
+vendor/firmware/evass.b06
+vendor/firmware/evass.b07
+vendor/firmware/evass.b08
+vendor/firmware/evass.b09
+vendor/firmware/evass.b10
+vendor/firmware/evass.b11
+vendor/firmware/evass.b12
+vendor/firmware/evass.b13
+vendor/firmware/evass.b14
+vendor/firmware/evass.b15
+vendor/firmware/evass.b16
+vendor/firmware/evass.b17
+vendor/firmware/evass.b18
+vendor/firmware/evass.b19
+vendor/firmware/evass.mbn
+vendor/firmware/evass.mdt
+vendor/firmware/evass.b19:odm/firmware/evass.b19|46b8f860179d2f333cd13ee6b90bb36dc975f9e4
+vendor/firmware/evass.mbn:odm/firmware/evass.mbn|4bb30a141e27d938da787ad3e684f77e6114b5d4
+vendor/firmware/evass.mdt:odm/firmware/evass.mdt|2cf28669cd6a85ceec238d190855d3aa5717a206
 vendor/firmware/DM3_S6E3HAE_AMB681AZ01.dat
 
 # NFC
@@ -282,9 +309,6 @@ vendor/firmware/CAMERA_ICP.mdt
 vendor/firmware/a740_zap.b02
 vendor/firmware/a740_zap.mbn
 vendor/firmware/a740_zap.mdt
-vendor/firmware/evass.b19
-vendor/firmware/evass.mbn
-vendor/firmware/evass.mdt
 vendor/firmware/vpu30_4v.mbn
 
 # Vendor firmware - from S918BXXS8DYF2
@@ -294,9 +318,6 @@ vendor/firmware/CAMERA_ICP.mdt:odm/firmware/CAMERA_ICP.mdt|15b968cec8f97e0fe8aab
 vendor/firmware/a740_zap.b02:odm/firmware/a740_zap.b02|8ce4afcc8f7ce0c61d2cb08dc416c2a53ebf0695
 vendor/firmware/a740_zap.mbn:odm/firmware/a740_zap.mbn|400b633b7d03d4c0230cf7f603fe4af904df440d
 vendor/firmware/a740_zap.mdt:odm/firmware/a740_zap.mdt|644ffa46a44f101e9342fd74772c0b59082e517d
-vendor/firmware/evass.b19:odm/firmware/evass.b19|46b8f860179d2f333cd13ee6b90bb36dc975f9e4
-vendor/firmware/evass.mbn:odm/firmware/evass.mbn|4bb30a141e27d938da787ad3e684f77e6114b5d4
-vendor/firmware/evass.mdt:odm/firmware/evass.mdt|2cf28669cd6a85ceec238d190855d3aa5717a206
 vendor/firmware/vpu30_4v.mbn:odm/firmware/vpu30_4v.mbn|d446cd60075524faf0c933ce0422e6a400033f9c
 
 # Vendor firmware
