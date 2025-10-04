@@ -261,6 +261,8 @@ icc-rpmh.ko
 qnoc-qos.ko
 sec_class.ko
 sec_key_notifier.ko
+sec_qc_rbcmd.ko
+sec_qc_qcom_reboot_reason.ko
 sec_log_buf.ko
 sec_reboot_cmd.ko
 switch_class.ko
