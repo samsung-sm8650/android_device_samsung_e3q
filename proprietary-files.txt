@@ -303,6 +303,11 @@ vendor/firmware/evass.mbn:odm/firmware/evass.mbn|4bb30a141e27d938da787ad3e684f77
 vendor/firmware/evass.mdt:odm/firmware/evass.mdt|2cf28669cd6a85ceec238d190855d3aa5717a206
 vendor/firmware/DM3_S6E3HAE_AMB681AZ01.dat
 
+# Fingerprint
+vendor/lib64/libsfp_sensor.so
+vendor/lib64/libqfp_sensortest.so
+vendor/lib64/libsfp_teegw.so
+
 # Graphics (Adreno firmware)
 vendor/firmware/a740_sqe.fw
 vendor/firmware/a740_zap.b00
@@ -329,6 +334,7 @@ vendor/etc/init/vendor.samsung.rilchip.qcom.rc
 vendor/etc/init/vendor.samsung.rild.rc
 
 # Sensors config
+vendor/etc/sensors/config/sns_gyro_cal.json
 vendor/etc/sensors/config/kailua_ak991x_1.json
 vendor/etc/sensors/config/kailua_ak991x_2.json
 vendor/etc/sensors/config/kailua_ak991x_3.json
