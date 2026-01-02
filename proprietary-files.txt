@@ -5,10 +5,11 @@ vendor/etc/audconf/OPEN/acdb_cal.acdb
 vendor/etc/audconf/OPEN/workspaceFileXml.qwsp
 
 # Audio
-vendor/lib64/lib_lvacfs.so
-vendor/lib64/librecordalive.so
-vendor/lib64/libar-pal.so
 vendor/lib64/hw/audio.primary.kalama.so
+vendor/lib64/lib_lvacfs.so
+vendor/lib64/libagm.so
+vendor/lib64/libar-pal.so
+vendor/lib64/librecordalive.so
 
 # Audio configs
 vendor/etc/audio/sku_kalama/mixer_paths.xml
