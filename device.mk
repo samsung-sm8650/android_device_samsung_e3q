@@ -12,6 +12,10 @@ PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 TARGET_SCREEN_HEIGHT := 2340
 TARGET_SCREEN_WIDTH := 1080
 
+# FlipFlap
+PRODUCT_PACKAGES += \
+    FlipFlap
+
 # Init
 PRODUCT_PACKAGES += \
     init.dm3q.rc
