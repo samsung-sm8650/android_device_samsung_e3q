@@ -1,25 +1,15 @@
-# All unpinned blobs are extracted from S9180ZHS6DYF1
+## All proprietary files from this list, unless pinned and noted otherwise,
+## Are from Samsung Galaxy S24 Ultra (S928BXXS4CYK2)
 
 # ACDB
-vendor/etc/audconf/OPEN/acdb_cal.acdb
-vendor/etc/audconf/OPEN/workspaceFileXml.qwsp
-
-# Audio
-vendor/lib64/hw/audio.primary.kalama.so
-vendor/lib64/lib_lvacfs.so
-vendor/lib64/libagm.so
-vendor/lib64/libar-pal.so
-vendor/lib64/librecordalive.so
+vendor/etc/audconf/OPEN/acdb_cal.acdb:vendor/etc/acdbdata/pineapple/acdb_cal.acdb
+vendor/etc/audconf/OPEN/workspaceFileXml.qwsp:vendor/etc/acdbdata/pineapple/workspaceFileXml.qwsp
 
 # Audio configs
-vendor/etc/audio/sku_kalama/mixer_paths.xml
-vendor/etc/audio/sku_kalama/resourcemanager.xml
-vendor/etc/dolby/dax-default.xml
-vendor/etc/situation_audio_policy_volumes_sec.xml
-vendor/etc/usecaseKvManager.xml
+vendor/etc/audio/sku_pineapple/mixer_paths.xml
+vendor/etc/audio/sku_pineapple/resourcemanager.xml
 
 # Audio firmware
-vendor/firmware/SoundBoosterParam.bin
 vendor/firmware/cs35l43-bot-dsp1-spk-prot.bin
 vendor/firmware/cs35l43-bot-dsp1-spk-prot.wmfw
 vendor/firmware/cs35l43-rcv-dsp1-spk-prot.bin
@@ -37,53 +27,14 @@ vendor/firmware/cs40l26-wt2.bin
 vendor/firmware/cs40l26-wt3.bin
 vendor/firmware/cs40l26.bin
 vendor/firmware/cs40l26.wmfw
-vendor/firmware/dax_param.bin
 
-# Audio FX modules
-vendor/lib64/lib_SamsungRec_08020.so
-vendor/lib64/lib_SoundAlive_play_plus_ver800.so
-vendor/lib64/soundfx/libaudiosaplus_sec.so
-vendor/lib64/soundfx/libsamsungSoundbooster_plus.so
-vendor/lib64/soundfx/libswdap.so
-vendor/lib64/soundfx/libswspatializer.so
-
-# Audio firmware
+# Audio params
+vendor/etc/LVACFS_Calibration.dat
+vendor/etc/LVACFS_Configuration.txt
+vendor/etc/LVACFS_ControlParams.txt
+vendor/etc/SoundBoosterParam.txt
 vendor/firmware/SoundBoosterParam.bin
-
-# Bluetooth
-vendor/bin/hw/android.hardware.bluetooth@1.1-service-qti
-vendor/etc/init/android.hardware.bluetooth@1.1-service-qti.rc
-vendor/etc/vintf/manifest/bttpi-saidl.xml
-vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
-vendor/lib64/hw/android.hardware.bluetooth@1.1-impl-qti.so
-vendor/lib64/hw/vendor.qti.hardware.bttpi-impl.so
-vendor/lib64/libbtnv.so
-vendor/lib64/libsoc_helper.so
-vendor/lib64/vendor.qti.hardware.bttpi-V2-ndk.so
-
-# Bluetooth (A2DP)
-vendor/lib64/btaudio_offload_if.so
-vendor/lib64/hw/android.hardware.bluetooth.audio-impl-qti.so
-vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
-vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so
-vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
-vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
-vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
-vendor/lib64/libbluetooth_audio_session_aidl_qti.so
-vendor/lib64/libbluetooth_audio_session_qti.so
-vendor/lib64/libbluetooth_audio_session_qti_2_1.so
-vendor/lib64/libbt-hidlclient.so
-vendor/lib64/libsehbluetooth_audio_session_aidl.so
-vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
-vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
-vendor/lib64/vendor.qti.hardware.fm@1.0.so;MODULE_SUFFIX=_vendor
-vendor/lib64/vendor.samsung.hardware.bluetooth.a2dpsink@1.0.so
-vendor/lib64/vendor.samsung.hardware.bluetooth.audio-V1-ndk.so
-vendor/lib64/vendor.samsung.hardware.bluetooth.audio-impl.so
-vendor/lib64/vendor.samsung.hardware.bluetooth@2.0.so
-
-# Bluetooth firmware
-vendor/firmware/bt_nvm_loading.xml
+vendor/firmware/dax_param.bin
 
 # Camera firmware
 vendor/firmware/CAMERA_ICP.b00
@@ -111,172 +62,64 @@ vendor/firmware/CAMERA_ICP.elf
 vendor/firmware/CAMERA_ICP.mbn
 vendor/firmware/CAMERA_ICP.mdt
 vendor/firmware/CAMERA_ICP_170.elf
-vendor/firmware/CAMERA_ICP.b20:odm/firmware/CAMERA_ICP.b20|3db40123e2fd358766c9f35044a3dd68c9dfcb90
-vendor/firmware/CAMERA_ICP.mbn:odm/firmware/CAMERA_ICP.mbn|a1b2fa4debd96b59cdd00d6f5b72bb60f3b72cae
-vendor/firmware/CAMERA_ICP.mdt:odm/firmware/CAMERA_ICP.mdt|15b968cec8f97e0fe8aab827cef6d994ad6ef97b
 vendor/firmware/ois_mcu_stm32g_fw.bin
+vendor/firmware/ois_rumba_fw.bin
+vendor/lib64/bm4a68v08s12n52.bin
+vendor/lib64/bm4a68v08s12n53.bin
+vendor/lib64/bm4a73v08s12n02.bin
+vendor/lib64/bm4a73v08s12n03.bin
+vendor/lib64/bm4a73v08s12n04.bin
+vendor/lib64/bm4a73v08s12n06.bin
+vendor/lib64/bm4a73v08s12n07.bin
+vendor/lib64/bm4a73v08s12n12.bin
+vendor/lib64/bm4a73v08s12n13.bin
+vendor/lib64/bm4a73v08s12n14.bin
+vendor/lib64/bm4a73v08s12n15.bin
+vendor/lib64/bm4a73v08s12n16.bin
+vendor/lib64/bm4a73v08s12n17.bin
+vendor/lib64/bm4a73v08s12n18.bin
+vendor/lib64/bm4a73v08s12n19.bin
+vendor/lib64/bm4a73v08s12n20.bin
+vendor/lib64/bm4a73v08s12n21.bin
+vendor/lib64/bm4a73v08s12n22.bin
+vendor/lib64/bm4a73v08s12n23.bin
+vendor/lib64/bm4a73v08s12n24.bin
+vendor/lib64/bm4a73v08s12n25.bin
+vendor/lib64/bm4a73v08s12n26.bin
+vendor/lib64/bm4a73v08s12n27.bin
+vendor/lib64/bm4a73v08s12n28.bin
+vendor/lib64/bm4a73v08s12n29.bin
+vendor/lib64/bm4a73v08s12n30.bin
+vendor/lib64/bm4a73v08s12n35.bin
+vendor/lib64/bm4a73v08s12n36.bin
+vendor/lib64/bm4a73v08s12n37.bin
+vendor/lib64/bm4a73v08s12n38.bin
+vendor/lib64/bm4a73v08s12n39.bin
+vendor/lib64/bm4a73v08s12n40.bin
+vendor/lib64/bm4a73v08s12n43.bin
+vendor/lib64/bm4a73v08s12n44.bin
+vendor/lib64/bm4a73v08s12n45.bin
+vendor/lib64/bm4a73v08s12n46.bin
+vendor/lib64/bm4a73v08s12n47.bin
+vendor/lib64/bm4a73v08s12n48.bin
+vendor/lib64/bm4a73v08s12n49.bin
+vendor/lib64/bm4a73v08s12n50.bin
+vendor/lib64/bm4a73v08s12n51.bin
+vendor/lib64/bm4a73v08s12n54.bin
+vendor/lib64/bm4a73v08s12n55.bin
+vendor/lib64/bm4a73v08s12n56.bin
+vendor/lib64/bm4a73v08s12n57.bin
+vendor/lib64/bm4a73v08s12n58.bin
+vendor/lib64/bm4a73v08s12n59.bin
+vendor/lib64/bm4a73v08s12n60.bin
+vendor/lib64/bm4a73v08s12n61.bin
+vendor/lib64/bm4a73v08s12n62.bin
 
-# Camera
-vendor/lib64/camera/com.samsung.ois.mcu_stm32g.so
-vendor/lib64/camera/com.samsung.sensor.hi1337.so
-vendor/lib64/camera/com.samsung.sensor.hi847.so
-vendor/lib64/camera/com.samsung.sensor.imx258.so
-vendor/lib64/camera/com.samsung.sensor.imx374.so
-vendor/lib64/camera/com.samsung.sensor.imx471.so
-vendor/lib64/camera/com.samsung.sensor.imx564.so
-vendor/lib64/camera/com.samsung.sensor.imx754.so
-vendor/lib64/camera/com.samsung.sensor.s5k2ld.so
-vendor/lib64/camera/com.samsung.sensor.s5k3j1.so
-vendor/lib64/camera/com.samsung.sensor.s5k3k1.so
-vendor/lib64/camera/com.samsung.sensor.s5k3lu.so
-vendor/lib64/camera/com.samsung.sensor.s5kgn3.so
-vendor/lib64/camera/com.samsung.sensor.s5khp2.so
-vendor/lib64/camera/com.samsung.sensormodule.0_lsi_s5khp2.bin
-vendor/lib64/camera/com.samsung.sensormodule.12_lsi_s5k3lu_full.bin
-vendor/lib64/camera/com.samsung.sensormodule.1_lsi_s5k3lu.bin
-vendor/lib64/camera/com.samsung.sensormodule.2_sony_imx564.bin
-vendor/lib64/camera/com.samsung.sensormodule.3_sony_imx754_x3.bin
-vendor/lib64/camera/com.samsung.sensormodule.6_sony_imx754_x10.bin
-vendor/lib64/camera/com.samsung.tuned.lsi_s5k3lu.bin
-vendor/lib64/camera/com.samsung.tuned.lsi_s5khp2.bin
-vendor/lib64/camera/com.samsung.tuned.sony_imx564.bin
-vendor/lib64/camera/com.samsung.tuned.sony_imx754_x10.bin
-vendor/lib64/camera/com.samsung.tuned.sony_imx754_x3.bin
-vendor/lib64/camera/components/com.qti.eisv2.so
-vendor/lib64/camera/components/com.qti.eisv3.so
-vendor/lib64/camera/components/com.qti.hvx.addconstant.so
-vendor/lib64/camera/components/com.qti.hvx.binning.so
-vendor/lib64/camera/components/com.qti.node.afbfusion.so
-vendor/lib64/camera/components/com.qti.node.aon.so
-vendor/lib64/camera/components/com.qti.node.customhwnode.so
-vendor/lib64/camera/components/com.qti.node.depth.so
-vendor/lib64/camera/components/com.qti.node.depthprovider.so
-vendor/lib64/camera/components/com.qti.node.dewarp.so
-vendor/lib64/camera/components/com.qti.node.dummydepth.so
-vendor/lib64/camera/components/com.qti.node.dummyrtb.so
-vendor/lib64/camera/components/com.qti.node.dummysat.so
-vendor/lib64/camera/components/com.qti.node.eisv2.so
-vendor/lib64/camera/components/com.qti.node.eisv3.so
-vendor/lib64/camera/components/com.qti.node.fcv.so
-vendor/lib64/camera/components/com.qti.node.formatconversion.so
-vendor/lib64/camera/components/com.qti.node.gme.so
-vendor/lib64/camera/components/com.qti.node.gpu.so
-vendor/lib64/camera/components/com.qti.node.gyrornn.so
-vendor/lib64/camera/components/com.qti.node.hdr10pgen.so
-vendor/lib64/camera/components/com.qti.node.hdr10phist.so
-vendor/lib64/camera/components/com.qti.node.memcpy.so
-vendor/lib64/camera/components/com.qti.node.ml.so
-vendor/lib64/camera/components/com.qti.node.muxer.so
-vendor/lib64/camera/components/com.qti.node.remosaic.so
-vendor/lib64/camera/components/com.qti.node.seg.so
-vendor/lib64/camera/components/com.qti.node.stich.so
-vendor/lib64/camera/components/com.qti.node.swaidenoiser.so
-vendor/lib64/camera/components/com.qti.node.swbestats.so
-vendor/lib64/camera/components/com.qti.node.swcac.so
-vendor/lib64/camera/components/com.qti.node.swec.so
-vendor/lib64/camera/components/com.qti.node.swfusion.so
-vendor/lib64/camera/components/com.qti.node.swhme.so
-vendor/lib64/camera/components/com.qti.node.swlsc.so
-vendor/lib64/camera/components/com.qti.node.swmctf.so
-vendor/lib64/camera/components/com.qti.node.swpdpc.so
-vendor/lib64/camera/components/com.qti.node.swpreprocess.so
-vendor/lib64/camera/components/com.qti.node.swregistration.so
-vendor/lib64/camera/components/com.qti.node.swvrt.so
-vendor/lib64/camera/components/com.qti.stats.aecxcore.so
-vendor/lib64/camera/components/com.qti.stats.af.so
-vendor/lib64/camera/components/com.qti.stats.afd.so
-vendor/lib64/camera/components/com.qti.stats.afwrapper.so
-vendor/lib64/camera/components/com.qti.stats.asd.so
-vendor/lib64/camera/components/com.qti.stats.awb.so
-vendor/lib64/camera/components/com.qti.stats.awbwrapper.so
-vendor/lib64/camera/components/com.qti.stats.cnndriver.so
-vendor/lib64/camera/components/com.qti.stats.haf.so
-vendor/lib64/camera/components/com.qti.stats.hafoverride.so
-vendor/lib64/camera/components/com.qti.stats.localhistogram.so
-vendor/lib64/camera/components/com.qti.stats.pdlib.so
-vendor/lib64/camera/components/com.qti.stats.pdlibsony.so
-vendor/lib64/camera/components/com.qti.stats.pdlibwrapper.so
-vendor/lib64/camera/components/com.qti.stats.statsgenerator.so
-vendor/lib64/camera/components/com.qti.stats.tracker.so
-vendor/lib64/camera/components/com.qtistatic.stats.af.so
-vendor/lib64/camera/components/com.qtistatic.stats.awb.so
-vendor/lib64/camera/components/com.qtistatic.stats.pdlib.so
-vendor/lib64/camera/components/com.samsung.node.capture_fusion.so
-vendor/lib64/camera/components/com.samsung.node.realtimebokeh.so
-vendor/lib64/camera/components/com.samsung.node.resolution.so
-vendor/lib64/camera/components/com.samsung.node.smooth_transition.so
-vendor/lib64/camera/components/com.samsung.node.uniplugin_capture.so
-vendor/lib64/camera/components/com.samsung.node.uniplugin_preview.so
-vendor/lib64/camera/components/com.samsung.node.uniplugin_recording.so
-vendor/lib64/camera/components/com.ss.stats.aec.so
-vendor/lib64/camera/components/com.ss.stats.af.so
-vendor/lib64/camera/components/com.ss.stats.awb.so
-vendor/lib64/camera/components/com.ss.stats.pdlib.so
-vendor/lib64/camera/components/libTsAeFront_dm3.so;FIX_SONAME
-vendor/lib64/camera/components/libTsAe_dm3.so;FIX_SONAME
-vendor/lib64/camera/components/libdepthmapwrapper_secure.so
-vendor/lib64/camera/t_t10_dual_calibration.bin
-vendor/lib64/camera/uw_dual_calibration.bin
-vendor/lib64/camera/w_dual_calibration.bin
-vendor/lib64/com.qti.camx.chiiqutils.so
-vendor/lib64/com.qti.chiusecaseselector.so
-vendor/lib64/com.qti.feature2.afbrckt.so
-vendor/lib64/com.qti.feature2.anchorsync.so
-vendor/lib64/com.qti.feature2.demux.so
-vendor/lib64/com.qti.feature2.derivedoffline.so
-vendor/lib64/com.qti.feature2.frameselect.so
-vendor/lib64/com.qti.feature2.fusion.so
-vendor/lib64/com.qti.feature2.generic.so
-vendor/lib64/com.qti.feature2.gs.sm8550.so
-vendor/lib64/com.qti.feature2.hdr.so
-vendor/lib64/com.qti.feature2.mcreprocrt.so
-vendor/lib64/com.qti.feature2.memcpy.so
-vendor/lib64/com.qti.feature2.mfsr.so
-vendor/lib64/com.qti.feature2.ml.so
-vendor/lib64/com.qti.feature2.mux.so
-vendor/lib64/com.qti.feature2.qcfa.so
-vendor/lib64/com.qti.feature2.rawhdr.so
-vendor/lib64/com.qti.feature2.realtimeserializer.so
-vendor/lib64/com.qti.feature2.rt.so
-vendor/lib64/com.qti.feature2.rtmcx.so
-vendor/lib64/com.qti.feature2.serializer.so
-vendor/lib64/com.qti.feature2.statsregeneration.so
-vendor/lib64/com.qti.feature2.stub.so
-vendor/lib64/com.qti.feature2.swmf.so
-vendor/lib64/com.qti.settings.sm8550.so
-vendor/lib64/com.qti.stats.common.so
-vendor/lib64/com.qualcomm.mcx.distortionmapper.so
-vendor/lib64/com.qualcomm.mcx.linearmapper.so
-vendor/lib64/com.qualcomm.mcx.nonlinearmapper.so
-vendor/lib64/com.qualcomm.mcx.policy.mfl.so
-vendor/lib64/com.qualcomm.mcx.policy.xr.so
-vendor/lib64/com.qualcomm.qti.mcx.usecase.extension.so
-vendor/lib64/hw/camera.qcom.so
-vendor/lib64/hw/com.qti.chi.offline.so
-vendor/lib64/hw/com.qti.chi.override.so
-vendor/lib64/libSWNDFilterPreview.camera.samsung.so
-vendor/lib64/libPdSdCore.so
-vendor/lib64/libSWB.camera.samsung.so
-vendor/lib64/libTsAf_DM123Q.so;FIX_SONAME
-vendor/lib64/libTsAwbFront_DM3.so
-vendor/lib64/libTsAwb_DM3.so
-vendor/lib64/libUniScaler.uniplugin@1.0.so
-vendor/lib64/libcamerapostproc.so
-vendor/lib64/libcamxexternalformatutils.so
-vendor/lib64/libcamximageformatutils.so
-vendor/lib64/libcamxswispiqmodule.so
-vendor/lib64/libchifeature2.so
-vendor/lib64/libcom.qti.chinodeutils.so
-vendor/lib64/libhypermotion_interface.so
-vendor/lib64/libndfilter_preview.uniplugin@1.0.so
-vendor/lib64/libmulticam_image_optical_zoom.so
-vendor/lib64/libmulticam_optical_zoom_control.so
-vendor/lib64/libmulticam_video_optical_zoom.so
-vendor/lib64/libswb_interface.so
-vendor/lib64/libthirdparty_zoomtranslator_imp.so
-
-# Display calibration data
-vendor/etc/display/qdcm_calib_data_DM3_S6E3HAE_AMB681AZ01.json
+# Display calibration
+vendor/etc/display/qdcm_calib_data_E3_S6E3HAF_AMB679FN01.json
+vendor/firmware/E3_S6E3HAE_AMB681AZ01.dat
+vendor/firmware/E3_S6E3HAF_AMB679FN01.dat
+vendor/firmware/ss_dsi_panel_PBA_BOOTING_FHD.dat
 
 # EVA firmware
 vendor/firmware/evass.b00
@@ -301,97 +144,78 @@ vendor/firmware/evass.b18
 vendor/firmware/evass.b19
 vendor/firmware/evass.mbn
 vendor/firmware/evass.mdt
-vendor/firmware/evass.b19:odm/firmware/evass.b19|46b8f860179d2f333cd13ee6b90bb36dc975f9e4
-vendor/firmware/evass.mbn:odm/firmware/evass.mbn|4bb30a141e27d938da787ad3e684f77e6114b5d4
-vendor/firmware/evass.mdt:odm/firmware/evass.mdt|2cf28669cd6a85ceec238d190855d3aa5717a206
-vendor/firmware/DM3_S6E3HAE_AMB681AZ01.dat
-
-# Fingerprint
-vendor/lib64/libsfp_sensor.so
-vendor/lib64/libqfp_sensortest.so
-vendor/lib64/libsfp_teegw.so
 
 # Graphics (Adreno firmware)
-vendor/firmware/a740_sqe.fw
-vendor/firmware/a740_zap.b00
-vendor/firmware/a740_zap.b01
-vendor/firmware/a740_zap.elf
-vendor/firmware/a740_zap.b02
-vendor/firmware/a740_zap.mbn
-vendor/firmware/a740_zap.mdt
-vendor/firmware/gmu_gen70200.bin
-vendor/firmware/a740_zap.b02:odm/firmware/a740_zap.b02|8ce4afcc8f7ce0c61d2cb08dc416c2a53ebf0695
-vendor/firmware/a740_zap.mbn:odm/firmware/a740_zap.mbn|400b633b7d03d4c0230cf7f603fe4af904df440d
-vendor/firmware/a740_zap.mdt:odm/firmware/a740_zap.mdt|644ffa46a44f101e9342fd74772c0b59082e517d
+vendor/firmware/gen70900_aqe.fw
+vendor/firmware/gen70900_sqe.fw
+vendor/firmware/gen70900_zap.mbn
+vendor/firmware/gmu_gen70900.bin
 
-# Media
-vendor/lib64/libqc2audio_hwaudiocodec.so
+# Miscellaneous firmware
+vendor/firmware/max77775-extra-fw.bin
+vendor/firmware/max77775-fw.bin
+vendor/firmware/mfc/mfc_fw_flash_nu1668.bin
 
-# NFC
+# NFC configs
+vendor/etc/libnfc-nxp.conf
 vendor/etc/nfc/libnfc-nxp_RF.conf
 
-# RIL - from S918BXXS8DYF2
-vendor/etc/init/init.vendor.onebinary.rc|b3fab964774039b1f2f6eabf821556919b26369f
+# Performance
+vendor/etc/powerhint.xml
 
-# RIL
-vendor/bin/qms
-vendor/etc/init/init.vendor.rilcommon.rc
-vendor/etc/init/vendor.samsung.rilchip.qcom.rc
-vendor/etc/init/vendor.samsung.rild.rc
+# Secure Element
+vendor/etc/libese-nxp.conf
+vendor/etc/secnvm/k250a_47000400_0.img
+vendor/etc/secnvm/k250a_47000403_1.img
+vendor/etc/secnvm/k250a_47000407_c.img
 
-# Sensors config
-vendor/etc/sensors/config/sns_gyro_cal.json
-vendor/etc/sensors/config/kailua_ak991x_1.json
-vendor/etc/sensors/config/kailua_ak991x_2.json
-vendor/etc/sensors/config/kailua_ak991x_3.json
-vendor/etc/sensors/config/kailua_ak991x_8.json
-vendor/etc/sensors/config/kailua_irq.json
-vendor/etc/sensors/config/kailua_lps22hh_0.json
-vendor/etc/sensors/config/kailua_lsm6dso_0_0.json
-vendor/etc/sensors/config/kailua_lsm6dso_0_1.json
-vendor/etc/sensors/config/kailua_lsm6dso_0_8.json
-vendor/etc/sensors/config/kailua_stk3a9x_0.json
-vendor/etc/sensors/config/kailua_tmd4913_2.json
+# Sensor configs
+vendor/etc/sensors/config/akmlib.json
+vendor/etc/sensors/config/json.lst
+vendor/etc/sensors/config/lanai_ak991x_0.json
+vendor/etc/sensors/config/lanai_ak991x_4.json
+vendor/etc/sensors/config/lanai_ak991x_5.json
+vendor/etc/sensors/config/lanai_lps22df_0.json
+vendor/etc/sensors/config/lanai_lps22hh_0.json
+vendor/etc/sensors/config/lanai_lsm6dso_0_0.json
+vendor/etc/sensors/config/lanai_lsm6dsv_0_2.json
+vendor/etc/sensors/config/lanai_stk3af00_0.json
+vendor/etc/sensors/config/lanai_stk3afx_0.json
 vendor/etc/sensors/config/lsm6dso_0.json
+vendor/etc/sensors/config/lsm6dsv_2.json
 
-# Sensors
-vendor/bin/factory.ssc
-vendor/lib64/sensors.flicker.so
-vendor/lib64/sensors.grip.so
-vendor/lib64/sensors.ssc.so
-
-# Thermal engine
-vendor/bin/hw/vendor.samsung.hardware.thermal@1.0-service
+# Sensor firmware
+vendor/firmware/00_generic_xtalk_shape.bin
+vendor/firmware/vl53l8.bin
 
 # Touchscreen firmware
-vendor/firmware/tsp_stm/fts2ba61y_dm3q.bin
+vendor/firmware/tsp_stm/fts2ba61y_e3q.bin
+vendor/firmware/tsp_synaptics/s3916a_e3.bin
+vendor/firmware/tsp_synaptics/s3916t_e3.bin
+
+# Ultra-wideband
+vendor/firmware/uwb/libsr200t_dev_fw.bin
+vendor/firmware/uwb/libsr200t_prod_fw.so
 
 # VPU firmware
-vendor/firmware/vpu20_4v.mbn
-vendor/firmware/vpu20_4v_unsigned.mbn
-vendor/firmware/vpu30_4v.mbn
-vendor/firmware/vpu30_4v_16mb.mbn
-vendor/firmware/vpu30_4v_16mb_unsigned.mbn
-vendor/firmware/vpu30_4v_unsigned.mbn
+vendor/firmware/vpu30_2v.mbn
+vendor/firmware/vpu30_2v_unsigned.mbn
 vendor/firmware/vpu33_4v.mbn
 vendor/firmware/vpu33_4v_unsigned.mbn
-vendor/firmware/vpu30_4v.mbn:odm/firmware/vpu30_4v.mbn|d446cd60075524faf0c933ce0422e6a400033f9c
 
-# Vendor firmware
-vendor/firmware/00_generic_xtalk_shape.bin
-vendor/firmware/hmtbtfw20.tlv
-vendor/firmware/hmtnv20.b21
-vendor/firmware/hmtnv20.bin
-vendor/firmware/mfc/mfc_fw_flash.bin
-vendor/firmware/mfc/mfc_fw_flash_cps4038.bin
-vendor/firmware/vl53l8.bin
-vendor/firmware/wez02_dm3_c0.bin
-vendor/firmware/wez02_dm3_c1.bin
-vendor/firmware/wez02_dm3_c2.bin
-vendor/firmware/wez02_dm3_c3.bin
+# Wacom firmware
+vendor/firmware/wez02_e3_c0.bin
+vendor/firmware/wez02_e3_c1.bin
+vendor/firmware/wez02_e3_c2.bin
+vendor/firmware/wez02_e3_c3.bin
 
-# Wifi firmware
+# Wi-Fi and Bluetooth firmware
 vendor/firmware/Data.msc
+vendor/firmware/bt_nvm_loading.xml
+vendor/firmware/hmtbtfw20.tlv
+vendor/firmware/hmtnv20.b20
+vendor/firmware/hmtnv20.b39
+vendor/firmware/hmtnv20.b3c
 vendor/firmware/kiwi/amss20.bin
 vendor/firmware/kiwi/bdwlan.elf
 vendor/firmware/kiwi/bdwlan.elf1
@@ -400,3 +224,5 @@ vendor/firmware/kiwi/bdwlan.elf2
 vendor/firmware/kiwi/phy_ucode20.elf
 vendor/firmware/kiwi/qdss_trace_config_v2.cfg
 vendor/firmware/kiwi/regdb.bin
+vendor/firmware/wlan-connection-roaming-backup.ini
+vendor/firmware/wlan-connection-roaming.ini
