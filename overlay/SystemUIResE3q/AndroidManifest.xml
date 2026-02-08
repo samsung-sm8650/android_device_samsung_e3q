@@ -3,11 +3,10 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.wifi.resources.overlay.target.dm3q">
+    package="com.android.systemui.overlay.e3q">
 
     <overlay
         android:isStatic="true"
-        android:priority="500"
-        android:targetName="WifiCustomization"
-        android:targetPackage="com.android.wifi.resources" />
+        android:priority="700"
+        android:targetPackage="com.android.systemui" />
 </manifest>

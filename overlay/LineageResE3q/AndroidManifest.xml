@@ -1,12 +1,12 @@
 <!--
-     Copyright (C) 2023 The LineageOS Project
+     Copyright (C) 2025 The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="android.overlay.dm3q">
+    package="lineageos.platform.overlay.e3q">
 
     <overlay
         android:isStatic="true"
         android:priority="700"
-        android:targetPackage="android" />
+        android:targetPackage="lineageos.platform" />
 </manifest>

@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_dm3q.mk
+    $(LOCAL_DIR)/lineage_e3q.mk

@@ -5,6 +5,6 @@
 //
 
 runtime_resource_overlay {
-    name: "SystemUIResDm3q",
-    device_specific: true,
+    name: "WifiResTargetE3q",
+    vendor: true,
 }

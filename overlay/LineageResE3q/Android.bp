@@ -5,6 +5,6 @@
 //
 
 runtime_resource_overlay {
-    name: "LineageResDm3q",
+    name: "LineageResE3q",
     device_specific: true,
 }
