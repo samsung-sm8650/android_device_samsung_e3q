@@ -1,6 +1,6 @@
 # Fingerprint
 ro.vendor.fingerprint.type=udfps
-ro.vendor.fingerprint.sensor_location=720|2350|91
+ro.vendor.fingerprint.sensor_location=720|2327|147
 ro.vendor.fingerprint.force_calibrate=true
 
 # Radio
