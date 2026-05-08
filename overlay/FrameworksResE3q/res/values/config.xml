@@ -93,7 +93,13 @@
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
         <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
         <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
         <item>25</item>
         <item>50</item>
         <item>100</item>
@@ -101,8 +107,14 @@
         <item>500</item>
         <item>1000</item>
         <item>2000</item>
+        <item>3000</item>
         <item>4000</item>
+        <item>5000</item>
+        <item>6000</item>
+        <item>7000</item>
         <item>8000</item>
+        <item>9000</item>
+        <item>10000</item>
         <item>12000</item>
         <item>50000</item>
         <item>999999</item>
@@ -122,7 +134,13 @@
          overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessDisplayValuesNits">
         <item>11</item>
+        <item>15</item>
+        <item>22</item>
+        <item>26</item>
         <item>31</item>
+        <item>35</item>
+        <item>46</item>
+        <item>62</item>
         <item>79</item>
         <item>88</item>
         <item>93</item>
@@ -130,8 +148,14 @@
         <item>111</item>
         <item>130</item>
         <item>200</item>
+        <item>400</item>
         <item>600</item>
+        <item>800</item>
+        <item>1000</item>
+        <item>1200</item>
         <item>1400</item>
+        <item>1600</item>
+        <item>1800</item>
         <item>2000</item>
         <item>2450</item>
         <item>2450</item>
