@@ -115,9 +115,6 @@ vendor/lib64/bm4a73v08s12n60.bin
 vendor/lib64/bm4a73v08s12n61.bin
 vendor/lib64/bm4a73v08s12n62.bin
 
-# Display configuration
-vendor/etc/displayconfig/display_id_4630947039571902851.xml
-
 # Display calibration
 vendor/etc/display/qdcm_calib_data_E3_S6E3HAF_AMB679FN01.json
 vendor/firmware/E3_S6E3HAE_AMB681AZ01.dat

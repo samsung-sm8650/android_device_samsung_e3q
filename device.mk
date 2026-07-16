@@ -12,6 +12,10 @@ PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 TARGET_SCREEN_HEIGHT := 3120
 TARGET_SCREEN_WIDTH := 1440
 
+# Display config (stock DDC renamed to live unique display id)
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/display/displayconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946315032985731.xml
+
 # FlipFlap
 PRODUCT_PACKAGES += \
     FlipFlap

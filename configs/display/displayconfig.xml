@@ -1,0 +1,105 @@
+<displayConfiguration>
+    <screenBrightnessMap>
+        <point>
+            <value>0.0</value>
+            <nits>1</nits>
+        </point>
+        <point>
+            <value>0.004</value>
+            <nits>4.1</nits>
+        </point>
+        <point>
+            <value>0.04</value>
+            <nits>62.58</nits>
+        </point>
+        <point>
+            <value>0.15</value>
+            <nits>344</nits>
+        </point>
+        <point>
+            <value>0.2</value>
+            <nits>500</nits>
+        </point>
+        <point>
+            <value>0.25</value>
+            <nits>624</nits>
+        </point>
+        <point>
+            <value>0.96</value>
+            <nits>2400</nits>
+        </point>
+        <point>
+            <value>0.98</value>
+            <nits>2449.5</nits>
+        </point>
+        <point>
+            <value>1.0</value>
+            <nits>2450</nits>
+        </point>
+    </screenBrightnessMap>
+
+    <highBrightnessMode enabled="true">
+        <transitionPoint>0.2</transitionPoint>
+        <minimumLux>3000</minimumLux>
+        <timing>
+            <timeWindowSecs>0</timeWindowSecs> // Window in which we restrict HBM.
+            <timeMaxSecs>0</timeMaxSecs>        // Maximum time of HBM allowed in that window.
+            <timeMinSecs>0</timeMinSecs>         // Minimum time remaining required to switch
+        </timing>                                 //   HBM on for.
+        <sdrHdrRatioMap>
+            <point>
+                <sdrNits>1.0</sdrNits>
+                <hdrRatio>1.0</hdrRatio>
+            </point>
+            <point>
+                <sdrNits>2.0</sdrNits>
+                <hdrRatio>2.0</hdrRatio>
+            </point>
+            <point>
+                <sdrNits>80.0</sdrNits>
+                <hdrRatio>4.0</hdrRatio>
+            </point>
+            <point>
+                <sdrNits>100.0</sdrNits>
+                <hdrRatio>5.0</hdrRatio>
+            </point>
+            <point>
+                <sdrNits>300.0</sdrNits>
+                <hdrRatio>5.0</hdrRatio>
+            </point>
+            <point>
+                <sdrNits>500.0</sdrNits>
+                <hdrRatio>3.0</hdrRatio>
+            </point>
+            <point>
+                <sdrNits>1500.0</sdrNits>
+                <hdrRatio>1.0</hdrRatio>
+            </point>
+            <point>
+                <sdrNits>2500.0</sdrNits>
+                <hdrRatio>1.0</hdrRatio>
+            </point>
+        </sdrHdrRatioMap>
+    </highBrightnessMode>
+
+    <autoBrightness enabled="true">
+        <brighteningLightDebounceMillis>1000</brighteningLightDebounceMillis>
+        <darkeningLightDebounceMillis>2000</darkeningLightDebounceMillis>
+        <brighteningLightDebounceIdleMillis>-1</brighteningLightDebounceIdleMillis>
+        <darkeningLightDebounceIdleMillis>-1</darkeningLightDebounceIdleMillis>
+    </autoBrightness>
+
+    <hdrBrightnessConfig>
+        <brightnessMap>
+        </brightnessMap>
+        <brightnessIncreaseDebounceMillis>0</brightnessIncreaseDebounceMillis>
+        <screenBrightnessRampIncrease>-1.0</screenBrightnessRampIncrease>
+        <brightnessDecreaseDebounceMillis>0</brightnessDecreaseDebounceMillis>
+        <screenBrightnessRampDecrease>-1.0</screenBrightnessRampDecrease>
+    </hdrBrightnessConfig>
+
+    <lightSensor>
+        <type>com.samsung.sensor.auto_brightness</type>
+        <name>STK33F11 Auto Brightness Sensor</name>
+    </lightSensor>
+</displayConfiguration>
