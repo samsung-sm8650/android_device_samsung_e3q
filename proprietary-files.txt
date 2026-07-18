@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## Are from Samsung Galaxy S24 Ultra (S928BXXS4CYK2)
+## are from Samsung Galaxy S24 Ultra (S928BXXS6DZF2)
 
 # ACDB
 vendor/etc/audconf/OPEN/acdb_cal.acdb:vendor/etc/acdbdata/pineapple/acdb_cal.acdb
